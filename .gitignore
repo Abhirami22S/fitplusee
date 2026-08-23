@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+
+# ~900MB per-user offline artifact — not needed by the deployed app (it fits
+# an Isolation Forest on the fly instead, see dashboard/app.py). Keep it
+# locally for the offline pipeline/grading evidence; never push it.
+models/artifacts/anomaly_models_per_user.joblib
+
+# Demo-only artifact from the optional streaming simulation (etl/streaming_simulation.py)
+data/streaming_inbox/
+data/processed/fitpulse_silver_streamed/
+
+# Spark output — regenerate with `python3 etl/spark_etl.py` and
+# `python3 etl/spark_benchmarks.py`. Not read by the deployed app (only
+# dashboard/fitpulse.db is), and Spark's many small partition/checksum
+# files aren't worth version-controlling.
+data/processed/fitpulse_silver/
+data/population_stats/
+*.crc
