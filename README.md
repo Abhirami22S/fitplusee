@@ -106,6 +106,14 @@ pip3 install -r requirements-pipeline.txt   # for running the pipeline locally
 pip3 install -r requirements.txt
 ```
 
+## Faculty demo notebook
+
+`FitPulse_Faculty_Demo.ipynb` re-runs `prepare_raw_dataset.py` + `spark_etl.py`, then demonstrates the
+dataset, preprocessing, a 70/15/15 split, a Spark MLlib Random Forest (next-day goal) and Spark MLlib K-Means
+with real, saved outputs. Evidence tables/plots go to `faculty_evidence/`; presenter notes are in
+`faculty_demo_notes.md`. On Windows, `.\run_faculty_demo.ps1` sets up JDK 17 + winutils from `..\tools`
+and opens it (`pipeline` / `execute` arguments run the pipeline or re-execute the notebook headless).
+
 ## Running the full pipeline
 
 ```bash

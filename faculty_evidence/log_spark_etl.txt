@@ -1,0 +1,21 @@
+$ python etl/spark_etl.py
+exit code: 0   elapsed: 27.5s
+
+[1/7] Reading Bronze layer (raw CSV) into a Spark DataFrame
+[2/7] Cleaning & validation
+[3/7] Feature engineering — day-of-week, rest-day flag, month partition key
+[4/7] Rolling averages & lag features (Spark Window functions)
+[5/7] Personalized goals — per-user MapReduce aggregation
+[6/7] Deriving goal_achieved / calorie_goal_achieved labels
+[7/7] Writing Silver layer as partitioned Parquet (HDFS-style storage)
+
+--- Summary ---
+Bronze rows read      : 100,122
+Rows after cleaning   : 100,122 (0 dropped)
+Silver rows written   : 100,122
+Silver columns        : 39
+Users                 : 437
+Written to            : data/processed/fitpulse_silver/ (partitioned by month)
+SUCCESS: The process with PID 16568 (child process of PID 14676) has been terminated.
+SUCCESS: The process with PID 14676 (child process of PID 22804) has been terminated.
+SUCCESS: The process with PID 22804 (child process of PID 25100) has been terminated.

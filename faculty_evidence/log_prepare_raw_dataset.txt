@@ -1,0 +1,6 @@
+$ python data/prepare_raw_dataset.py
+exit code: 0   elapsed: 6.9s
+
+Source: D:\bigdata\fitpulsee\tools\kagglehub\datasets\jijagallery\fitlife-health-and-fitness-tracking-dataset\versions\1\health_fitness_dataset.csv
+Wrote data/raw/fitpulse_raw.csv: 100,122 rows, 23 columns, 437 users
+Date range: 2024-01-01 to 2024-12-25

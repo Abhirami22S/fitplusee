@@ -1,0 +1,5 @@
+Set,Records,Percentage,Goal achieved (1),Goal missed (0),Positive rate
+Training,43996,70.07%,16258,27738,36.95%
+Validation,9384,14.95%,3562,5822,37.96%
+Test,9406,14.98%,3465,5941,36.84%
+Total,62786,100.00%,23285,39501,

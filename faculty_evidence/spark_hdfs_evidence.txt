@@ -1,0 +1,74 @@
+SPARK SESSION
+Spark version: 4.0.1
+Application name: FitPulse-Faculty-Demo
+Application id: local-1791224961473
+Master: local[*]
+Default parallelism (cores used): 12
+spark.sql.shuffle.partitions: 8
+Spark UI: http://127.0.0.1:4040
+JVM Java version: 17.0.20.1
+Hadoop client library version: 3.4.1
+fs.defaultFS (default filesystem): file:///
+
+hdfs command on PATH: None
+
+Silver: 96 parquet files, 12 month partitions
+               Parquet files  Size (KB)
+month=2024-01              8      626.5
+month=2024-02              8      635.7
+month=2024-03              8      691.3
+month=2024-04              8      677.3
+month=2024-05              8      670.1
+month=2024-06              8      617.8
+month=2024-07              8      588.1
+month=2024-08              8      549.0
+month=2024-09              8      515.5
+month=2024-10              8      530.2
+month=2024-11              8      535.6
+month=2024-12              8      502.6
+
+Bronze partitions: 3
+Silver partitions: 12
+
+--- Window / lag feature (spark_etl.py L79-82) ---
+== Physical Plan ==
+AdaptiveSparkPlan isFinalPlan=false
++- Window [lag(steps#58, -1, null) windowspecdefinition(user_id#56, date#57 ASC NULLS FIRST, specifiedwindowframe(RowFrame, -1, -1)) AS steps_lag1#133368], [user_id#56], [date#57 ASC NULLS FIRST]
+   +- Sort [user_id#56 ASC NULLS FIRST, date#57 ASC NULLS FIRST], false, 0
+      +- Exchange hashpartitioning(user_id#56, 8), ENSURE_REQUIREMENTS, [plan_id=11508]
+         +- FileScan csv [user_id#56,date#57,steps#58,calories_burned#59,distance_km#60,active_minutes#61,sedentary_minutes#62,resting_heart_rate#63,avg_heart_rate#64,max_heart_rate#65,sleep_minutes#66,sleep_quality_score#67,activity_type#68,intensity#69,age#70,gender#71,height_cm#72,weight_kg#73,bmi#74,health_condition#75,smoking_status#76,stress_level#77,hydration_level#78] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/D:/bigdata/fitpulsee/FitPulse/data/raw/fitpulse_raw.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<user_id:int,date:date,steps:int,calories_burned:double,distance_km:double,active_minutes:i...
+
+
+
+--- groupBy(user_id).agg - personalized goal (spark_etl.py L99-104) ---
+== Physical Plan ==
+AdaptiveSparkPlan isFinalPlan=false
++- HashAggregate(keys=[user_id#56], functions=[avg(steps#58)])
+   +- Exchange hashpartitioning(user_id#56, 8), ENSURE_REQUIREMENTS, [plan_id=11522]
+      +- HashAggregate(keys=[user_id#56], functions=[partial_avg(steps#58)])
+         +- FileScan csv [user_id#56,steps#58] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/D:/bigdata/fitpulsee/FitPulse/data/raw/fitpulse_raw.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<user_id:int,steps:int>
+
+
+
+--- Broadcast join (spark_etl.py L115) ---
+== Physical Plan ==
+AdaptiveSparkPlan isFinalPlan=false
++- Project [user_id#56, date#57, steps#58, calories_burned#59, distance_km#60, active_minutes#61, sedentary_minutes#62, resting_heart_rate#63, avg_heart_rate#64, max_heart_rate#65, sleep_minutes#66, sleep_quality_score#67, activity_type#68, intensity#69, age#70, gender#71, height_cm#72, weight_kg#73, bmi#74, health_condition#75, smoking_status#76, stress_level#77, hydration_level#78, user_avg_steps#133369]
+   +- BroadcastHashJoin [user_id#56], [user_id#133394], Inner, BuildRight, false
+      :- Filter isnotnull(user_id#56)
+      :  +- FileScan csv [user_id#56,date#57,steps#58,calories_burned#59,distance_km#60,active_minutes#61,sedentary_minutes#62,resting_heart_rate#63,avg_heart_rate#64,max_heart_rate#65,sleep_minutes#66,sleep_quality_score#67,activity_type#68,intensity#69,age#70,gender#71,height_cm#72,weight_kg#73,bmi#74,health_condition#75,smoking_status#76,stress_level#77,hydration_level#78] Batched: false, DataFilters: [isnotnull(user_id#56)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/D:/bigdata/fitpulsee/FitPulse/data/raw/fitpulse_raw.csv], PartitionFilters: [], PushedFilters: [IsNotNull(user_id)], ReadSchema: struct<user_id:int,date:date,steps:int,calories_burned:double,distance_km:double,active_minutes:i...
+      +- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, true] as bigint)),false), [plan_id=11562]
+         +- HashAggregate(keys=[user_id#133394], functions=[avg(steps#133396)])
+            +- Exchange hashpartitioning(user_id#133394, 8), ENSURE_REQUIREMENTS, [plan_id=11559]
+               +- HashAggregate(keys=[user_id#133394], functions=[partial_avg(steps#133396)])
+                  +- Filter isnotnull(user_id#133394)
+                     +- FileScan csv [user_id#133394,steps#133396] Batched: false, DataFilters: [isnotnull(user_id#133394)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/D:/bigdata/fitpulsee/FitPulse/data/raw/fitpulse_raw.csv], PartitionFilters: [], PushedFilters: [IsNotNull(user_id)], ReadSchema: struct<user_id:int,steps:int>
+
+
+
+--- Partition pruning ---
+== Physical Plan ==
+*(1) ColumnarToRow
++- FileScan parquet [user_id#79,date#80,steps#81,calories_burned#82,distance_km#83,active_minutes#84,sedentary_minutes#85,resting_heart_rate#86,avg_heart_rate#87,max_heart_rate#88,sleep_minutes#89,sleep_quality_score#90,activity_type#91,intensity#92,age#93,gender#94,height_cm#95,weight_kg#96,bmi#97,health_condition#98,smoking_status#99,stress_level#100,hydration_level#101,day_of_week#102,is_rest_day#103,... 14 more fields] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/D:/bigdata/fitpulsee/FitPulse/data/processed/fitpulse_silver], PartitionFilters: [isnotnull(month#117), (month#117 = 2024-03)], PushedFilters: [], ReadSchema: struct<user_id:int,date:date,steps:int,calories_burned:double,distance_km:double,active_minutes:i...
+
+

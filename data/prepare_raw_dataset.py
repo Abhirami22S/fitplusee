@@ -40,10 +40,13 @@ over each user's own history, so that computation is visibly part of the
 big-data pipeline (see the Map/Reduce comments there).
 """
 
+import os
+
 import numpy as np
 import pandas as pd
 
 SRC = "/Users/praj1n/.cache/kagglehub/datasets/jijagallery/fitlife-health-and-fitness-tracking-dataset/versions/1/health_fitness_dataset.csv"
+KAGGLE_DATASET = "jijagallery/fitlife-health-and-fitness-tracking-dataset/versions/1"
 OUT = "data/raw/fitpulse_raw.csv"
 N_PARTICIPANTS = 437  # ~229 rows/participant x 437 ~= 100,000 rows
 SEED = 42
@@ -63,9 +66,20 @@ MET_TABLE = {
 STRIDE_MULT = {"Low": 0.413, "Medium": 0.45, "High": 0.50}  # x height_cm/100 = stride metres
 
 
+def resolve_source() -> str:
+    # The original path above is the author's local kagglehub cache. On any other
+    # machine, download the same Kaggle dataset (same version) via kagglehub.
+    if os.path.exists(SRC):
+        return SRC
+    import kagglehub
+    return os.path.join(kagglehub.dataset_download(KAGGLE_DATASET), "health_fitness_dataset.csv")
+
+
 def main():
     rng = np.random.default_rng(SEED)
-    df = pd.read_csv(SRC)
+    src = resolve_source()
+    print(f"Source: {src}")
+    df = pd.read_csv(src)
 
     ids = pd.Series(df.participant_id.unique())
     sampled_ids = ids.sample(n=N_PARTICIPANTS, random_state=SEED)

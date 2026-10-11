@@ -1,0 +1,3 @@
+Cluster,Count,Share,Main characteristics (vs overall mean),Interpretation
+0,45306,45.25%,active_minutes +36.6% (95.5); calories_burned +50.2% (994.4),High-effort / long-session days
+1,54816,54.75%,active_minutes -30.3% (48.8); calories_burned -41.5% (387.7),Light / short-session days

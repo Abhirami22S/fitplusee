@@ -1,0 +1,23 @@
+Column,Missing,Missing %
+participant_id,0,0.0
+date,0,0.0
+age,0,0.0
+gender,0,0.0
+height_cm,0,0.0
+weight_kg,0,0.0
+activity_type,0,0.0
+duration_minutes,0,0.0
+intensity,0,0.0
+calories_burned,0,0.0
+avg_heart_rate,0,0.0
+hours_sleep,0,0.0
+stress_level,0,0.0
+daily_steps,0,0.0
+hydration_level,0,0.0
+bmi,0,0.0
+resting_heart_rate,0,0.0
+blood_pressure_systolic,0,0.0
+blood_pressure_diastolic,0,0.0
+health_condition,0,0.0
+smoking_status,0,0.0
+fitness_level,0,0.0

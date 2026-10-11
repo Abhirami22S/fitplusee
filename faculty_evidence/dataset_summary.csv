@@ -1,0 +1,4 @@
+Layer,Rows,Columns,Users,First date,Last date
+Kaggle source,687701,22,3000,2024-01-01,2024-12-25
+Bronze (raw CSV),100122,23,437,2024-01-01,2024-12-25
+Silver (Spark output),100122,39,437,2024-01-01,2024-12-25

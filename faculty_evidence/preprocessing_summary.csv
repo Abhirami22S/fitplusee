@@ -1,0 +1,9 @@
+Stage,Step,Rows,Removed by step
+prepare_raw_dataset.py (pandas),Kaggle rows for the 437 sampled participants,100122,0
+prepare_raw_dataset.py (pandas),after drop_duplicates(),100122,0
+prepare_raw_dataset.py (pandas),after dropna(required fields),100122,0
+prepare_raw_dataset.py (pandas),after physiological range filters,100122,0
+spark_etl.py (Spark),Bronze rows read by Spark,100122,0
+spark_etl.py (Spark),after dropDuplicates(),100122,0
+spark_etl.py (Spark),after dropna(required),100122,0
+spark_etl.py (Spark),after range filters,100122,0
