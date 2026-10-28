@@ -1,0 +1,6 @@
+experiment_id,experiment_name,algorithm,target,data_granularity,split_method
+E1,Random Forest - REPORT experiment,Random Forest (Spark MLlib),"same-day goal: steps >= 8,000","user-day (100,122 rows)","Spark randomSplit 70/15/15, seed 42"
+E2,Random Forest - NOTEBOOK experiment,Random Forest (Spark MLlib),next-day achievement of the personalised step goal,"user-day with lag features (62,786 rows)","seeded hash 70/15/15 of (user_id, date)"
+E3,K-Means - REPORT experiment,K-Means (Spark MLlib),none (unsupervised),USER (437 per-user averages),none (all users)
+E4,K-Means - NOTEBOOK experiment,K-Means (Spark MLlib),none (unsupervised),"user-DAY (100,122 points)",none (all days)
+E5,Linear Regression - calories,Linear Regression (Spark MLlib),same-day calories_burned (kcal),"user-day (100,122 rows)","seeded hash 70/15/15 of (user_id, date); chronological check train < 2024-10-15"

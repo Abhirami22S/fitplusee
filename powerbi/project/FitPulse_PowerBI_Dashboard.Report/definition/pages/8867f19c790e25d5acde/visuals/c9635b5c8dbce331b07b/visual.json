@@ -1,0 +1,91 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "c9635b5c8dbce331b07b",
+  "position": {
+    "x": 500,
+    "y": 222,
+    "z": 10000,
+    "height": 290,
+    "width": 380,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "error_bin_kcal"
+                }
+              },
+              "queryRef": "fact_daily.error_bin_kcal",
+              "nativeQueryRef": "error_bin_kcal"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Test Days"
+                }
+              },
+              "queryRef": "fact_daily.Test Days",
+              "nativeQueryRef": "Test Days"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Prediction error distribution (50-kcal bins, test days)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Histogram of prediction errors'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

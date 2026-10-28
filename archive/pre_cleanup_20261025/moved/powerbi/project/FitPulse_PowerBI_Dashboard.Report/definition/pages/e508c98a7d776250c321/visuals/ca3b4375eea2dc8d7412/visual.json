@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "ca3b4375eea2dc8d7412",
+  "position": {
+    "x": 20,
+    "y": 578,
+    "z": 7000,
+    "height": 90,
+    "width": 1240,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "How to read this page",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "E1 Random Forest (report): same-day goal steps >= 8,000, user-days. E2 Random Forest (notebook): next-day achievement of the personalised goal, user-days with lag features. E3 K-Means (report): 437 USERS. E4 K-Means (notebook): 100,122 user-DAYS. E5 Linear Regression: same-day calories. Results of different experiments are never combined.",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Silhouette: Spark's ClusteringEvaluator uses squared Euclidean distance; scikit-learn uses Euclidean. The same E3 grouping scores 0.341 (Spark) and 0.202 (Euclidean).",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The old Streamlit dashboard's Logistic Regression (ROC-AUC 0.755) is documented in models/metrics_report.md and is not in this table (it was not re-run).",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

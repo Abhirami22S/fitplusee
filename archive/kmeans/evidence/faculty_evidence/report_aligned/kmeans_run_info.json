@@ -1,0 +1,6 @@
+{
+  "storage_mode":"hdfs",
+  "silver_source":"hdfs:\/\/localhost:9000\/fitpulse\/silver",
+  "users":437,
+  "selected_K":2
+}

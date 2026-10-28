@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "1f0e031e95bcae0ec74e",
+  "displayName": "Supervised Results E3 and E4",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "annotations": [
+    {
+      "name": "description",
+      "value": "Supervised results of E3 (user-level high_achiever) and E4 (activity level): ROC-AUC, accuracy against the majority baseline, fold spread and leakage runs, read from exports/E3_results.csv and exports/E4_results.csv."
+    }
+  ]
+}

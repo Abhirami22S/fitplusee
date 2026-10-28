@@ -1,0 +1,17 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DataFolder", "fact_daily", "dim_user", "dim_date", "experiments", "supervised_results", "crosscheck"]
+
+ref table fact_daily
+ref table dim_user
+ref table dim_date
+ref table experiments
+ref table supervised_results
+ref table crosscheck

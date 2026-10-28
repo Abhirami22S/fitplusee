@@ -1,0 +1,25 @@
+/// One row per supervised experiment (E1-E5).
+table experiments
+	lineageTag: ea3250f0-2b95-5811-b245-cd1b3df7d949
+
+	column experiment_id
+		dataType: string
+		lineageTag: 438d4786-4361-5c02-94e3-44c155174bc5
+		summarizeBy: none
+		sourceColumn: experiment_id
+
+	column experiment_name
+		dataType: string
+		lineageTag: ad415774-462a-5c3f-a8a4-d290fe8eb24b
+		summarizeBy: none
+		sourceColumn: experiment_name
+
+	partition experiments = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "experiments.csv"), [Delimiter = ",", Columns = 2, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"experiment_id", type text}, {"experiment_name", type text}}, "en-US")
+				in
+					Typed

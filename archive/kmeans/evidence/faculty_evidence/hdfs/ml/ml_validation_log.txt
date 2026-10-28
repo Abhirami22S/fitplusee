@@ -1,0 +1,216 @@
+Project root : D:\bigdata\fitpulsee\FitPulse
+Python       : 3.12.10 - D:\bigdata\fitpulsee\.venv\Scripts\python.exe
+Java         : openjdk version "17.0.20.1" 2026-08-18
+JAVA_HOME    : D:\bigdata\fitpulsee\tools\jdk17
+HADOOP_HOME  : D:\bigdata\fitpulsee\tools\hadoop
+Spark version: 4.0.1 | master: local[*] | default parallelism: 12
+STORAGE MODE: HDFS (hdfs://localhost:9000)
+Silver read from: hdfs://localhost:9000/fitpulse/silver
+rows=100,122 columns=39
+
+            Model                    Column                    Role
+0   Random Forest                steps_lag1                 numeric
+1   Random Forest                steps_lag2                 numeric
+2   Random Forest                steps_lag7                 numeric
+3   Random Forest           steps_roll7_avg                 numeric
+4   Random Forest             calories_lag1                 numeric
+5   Random Forest        calories_roll7_avg                 numeric
+6   Random Forest  active_minutes_roll7_avg                 numeric
+7   Random Forest      resting_hr_roll7_avg                 numeric
+8   Random Forest                       age                 numeric
+9   Random Forest                       bmi                 numeric
+10  Random Forest                 month_sin                 numeric
+11  Random Forest                 month_cos                 numeric
+12  Random Forest               day_of_week             categorical
+13  Random Forest             activity_type             categorical
+14  Random Forest                    gender             categorical
+15  Random Forest                     label                  TARGET
+16        K-Means                     steps  numeric (standardised)
+17        K-Means            active_minutes  numeric (standardised)
+18        K-Means           calories_burned  numeric (standardised)
+19        K-Means            avg_heart_rate  numeric (standardised)
+20        K-Means             sleep_minutes  numeric (standardised)
+                                 Filter  Rows remaining
+0                           Silver rows          100122
+1                     has a next record           99685
+2  next record is the next calendar day           64746
+3      all lag/rolling features present           62786
+          Set  Records Percentage  Goal achieved (1)  Goal missed (0) Positive rate
+0    Training    43996     70.07%              16258            27738        36.95%
+1  Validation     9384     14.95%               3562             5822        37.96%
+2        Test     9406     14.98%               3465             5941        36.84%
+3       Total    62786    100.00%              23285            39501              
+Numeric features    : ['steps_lag1', 'steps_lag2', 'steps_lag7', 'steps_roll7_avg', 'calories_lag1', 'calories_roll7_avg', 'active_minutes_roll7_avg', 'resting_hr_roll7_avg', 'age', 'bmi', 'month_sin', 'month_cos']
+Categorical features: ['day_of_week', 'activity_type', 'gender']
+Target              : label (1 = next-day goal achieved, 0 = missed)
++-----+-----+
+|label|count|
++-----+-----+
+|  0.0|39501|
+|  1.0|23285|
++-----+-----+
+
+Training positive share = 0.3695  ->  weight(1) = 1.3531, weight(0) = 0.7931
+   maxDepth  numTrees  Validation ROC-AUC  Validation accuracy  Validation F1 (class 1)  Train time (s)
+0         6       100              0.8210               0.7157                   0.6856            24.3
+1         8       100              0.8220               0.7207                   0.6879            20.1
+2        10       100              0.8214               0.7241                   0.6883            34.8
+Selected maxDepth = 8 (highest validation ROC-AUC)
+
+Final model configuration:
+  numTrees               = 100
+  maxDepth               = 8
+  maxBins                = 32
+  impurity               = gini
+  featureSubsetStrategy  = auto
+  subsamplingRate        = 1.0
+  minInstancesPerNode    = 1
+  seed                   = 42
+  weightCol              = class_weight
+  feature columns        = ['steps_lag1', 'steps_lag2', 'steps_lag7', 'steps_roll7_avg', 'calories_lag1', 'calories_roll7_avg', 'active_minutes_roll7_avg', 'resting_hr_roll7_avg', 'age', 'bmi', 'month_sin', 'month_cos', 'day_of_week_idx', 'activity_type_idx', 'gender_idx']
+Test predictions generated: 9,406
++-------+----------+----------+------------+---------------+---------------+
+|user_id|date      |next_date |actual_label|predicted_label|p_goal_achieved|
++-------+----------+----------+------------+---------------+---------------+
+|1      |2024-01-18|2024-01-19|0           |0              |0.4155         |
+|1      |2024-01-28|2024-01-29|0           |0              |0.4435         |
+|1      |2024-02-19|2024-02-20|0           |1              |0.5238         |
+|1      |2024-02-23|2024-02-24|1           |1              |0.8793         |
+|1      |2024-02-29|2024-03-01|1           |1              |0.5328         |
+|1      |2024-03-27|2024-03-28|0           |1              |0.6445         |
+|1      |2024-03-28|2024-03-29|1           |1              |0.657          |
+|1      |2024-04-06|2024-04-07|0           |1              |0.8937         |
+|1      |2024-04-07|2024-04-08|1           |1              |0.6216         |
+|1      |2024-04-11|2024-04-12|0           |1              |0.6353         |
+|1      |2024-04-14|2024-04-15|1           |1              |0.6124         |
+|1      |2024-04-16|2024-04-17|1           |1              |0.6236         |
+|1      |2024-04-19|2024-04-20|1           |1              |0.8816         |
+|1      |2024-04-29|2024-04-30|0           |1              |0.6494         |
+|1      |2024-06-05|2024-06-06|0           |0              |0.3614         |
++-------+----------+----------+------------+---------------+---------------+
+only showing top 15 rows
+                      Predicted: Missed (0)  Predicted: Achieved (1)
+Actual: Missed (0)                     3940                     2001
+Actual: Achieved (1)                    645                     2820
+TP (achieved, predicted achieved) = 2,820
+TN (missed,   predicted missed)   = 3,940
+FP (missed,   predicted achieved) = 2,001
+FN (achieved, predicted missed)   = 645
+Total = 9,406  (equals test-set size: True)
+Accuracy = (2820 + 3940) / (2820 + 3940 + 2001 + 645) = 6760 / 9406 = 0.7187
+Spark MulticlassClassificationEvaluator(metricName='accuracy') = 0.7187
+Precision = 2820 / (2820 + 2001) = 0.5849
+Spark evaluator (precisionByLabel, metricLabel=1) = 0.5849
+Recall = 2820 / (2820 + 645) = 0.8139
+Spark evaluator (recallByLabel, metricLabel=1) = 0.8139
+F1 = 2 x 0.5849 x 0.8139 / (0.5849 + 0.8139) = 0.6807
+Spark evaluator (fMeasureByLabel, metricLabel=1) = 0.6807
+                                    Metric Actual Score               Formula / source
+0                                 Accuracy       71.87%                      (TP+TN)/N
+1           Precision (class 1 = achieved)       58.49%                     TP/(TP+FP)
+2              Recall (class 1 = achieved)       81.39%                     TP/(TP+FN)
+3            F1 Score (class 1 = achieved)       68.07%                      2PR/(P+R)
+4                                  ROC-AUC       82.47%  BinaryClassificationEvaluator
+5        Weighted precision (both classes)       75.82%            class-size weighted
+6           Weighted recall (both classes)       71.87%            class-size weighted
+7               Weighted F1 (both classes)       72.36%            class-size weighted
+8  Baseline: always predict majority class       63.16%                 reference only
+                                       Split  Train rows  Test rows Test positive rate  Accuracy  Precision  Recall      F1  ROC-AUC
+0  Random 70/15/15 (this notebook, test set)       43996       9406             36.84%    0.7187     0.5849  0.8139  0.6807   0.8247
+1         Chronological (train < 2024-10-15)       53026       9760             11.80%    0.8608     0.3876  0.3099  0.3444   0.7262
+              Feature  Std across daily records  Std across per-user averages  Avg within-user std
+0               steps                   2057.20                        115.28              2056.64
+1      active_minutes                     29.09                          1.78                29.09
+2   sedentary_minutes                     65.37                          4.09                65.32
+3     calories_burned                    437.75                        112.20               418.25
+4      avg_heart_rate                     17.77                         10.12                14.63
+5  resting_heart_rate                      5.27                          5.27                 0.00
+6       sleep_minutes                     58.38                          3.68                58.32
+Rows where sedentary_minutes != 1440 - sleep_minutes - active_minutes: 0
+           Feature  Mean (original units)  Std (original units)
+0            steps                8624.77               2057.20
+1   active_minutes                  69.93                 29.09
+2  calories_burned                 662.20                437.75
+3   avg_heart_rate                 130.82                 17.77
+4    sleep_minutes                 422.83                 58.38
+After scaling (should be mean ~0, std ~1):
++-------+--------------------+--------------------+--------------------+--------------------+--------------------+
+|summary|               steps|      active_minutes|     calories_burned|      avg_heart_rate|       sleep_minutes|
++-------+--------------------+--------------------+--------------------+--------------------+--------------------+
+|  count|              100122|              100122|              100122|              100122|              100122|
+|   mean|-2.40722414623984...|-5.43974463541953...|-1.57377955975869...|-5.01883524829251...|2.516017619594378...|
+| stddev|  1.0000000000000007|                 1.0|  1.0000000000000009|  0.9999999999999993|  1.0000000000000009|
+|    min| -3.9115088647574647| -1.7160979523361437| -1.4030782253312617|  -2.691364596213823| -3.1316198815268415|
+|    max|  3.7829189175575224|   1.720948581320829|   7.000524805170416|    4.23186039146961|  3.0346906840302004|
++-------+--------------------+--------------------+--------------------+--------------------+--------------------+
+
+   K  Silhouette Score     WSSSE                               Cluster sizes
+0  2            0.3528  385945.7                              [45306, 54816]
+1  3            0.2879  339763.5                       [42853, 32288, 24981]
+2  4            0.2676  305986.0                [26285, 25521, 21665, 26651]
+3  5            0.2664  280162.1         [21604, 19262, 19078, 22787, 17391]
+4  6            0.2777  255665.0  [17354, 16024, 13554, 17805, 17824, 17561]
+Selected K = 2 (highest silhouette score: 0.3528)
+Final model: K = 2, seed = 42, distance = squared Euclidean, iterations = 19
+Cluster centers converted back to original units:
+          steps  active_minutes  calories_burned  avg_heart_rate  sleep_minutes
+cluster                                                                        
+0        8456.6            95.5            994.4           133.8          423.2
+1        8763.8            48.8            387.7           128.4          422.5
+Sample cluster assignments:
++-------+----------+-----+--------------+---------------+--------------+-------------+-------+
+|user_id|      date|steps|active_minutes|calories_burned|avg_heart_rate|sleep_minutes|cluster|
++-------+----------+-----+--------------+---------------+--------------+-------------+-------+
+|     52|2024-03-01| 8410|            92|          746.1|           118|          438|      0|
+|     52|2024-03-02|11429|            61|          314.5|           135|          408|      1|
+|     52|2024-03-03|11262|            73|          377.7|           130|          534|      1|
+|     52|2024-03-04|11391|           101|          523.9|           122|          342|      0|
+|     52|2024-03-05| 9630|            73|          300.0|           107|          294|      1|
+|     52|2024-03-06| 7955|            40|          208.7|           116|          390|      1|
+|     52|2024-03-08|11120|            92|          380.4|           109|          462|      1|
+|     52|2024-03-09|11638|            42|          348.6|           146|          378|      1|
+|     52|2024-03-10|12153|            56|          388.3|           133|          390|      1|
+|     52|2024-03-11|11108|            62|          258.8|           100|          330|      1|
++-------+----------+-----+--------------+---------------+--------------+-------------+-------+
+only showing top 10 rows
+   cluster  Daily records  Distinct users Share of records
+0        0          45306             437           45.25%
+1        1          54816             437           54.75%
+         records   steps  active_minutes  sedentary_minutes  calories_burned  avg_heart_rate  max_heart_rate  resting_heart_rate  sleep_minutes  sleep_quality_score  distance_km
+cluster                                                                                                                                                                          
+0          45306  8456.5            95.5              921.2            994.4           133.8           148.7                70.0          423.2                 67.2          6.5
+1          54816  8763.9            48.8              968.8            387.7           128.4           141.8                69.9          422.5                 67.1          6.6
+Difference from overall mean (%):
+         steps  active_minutes  sedentary_minutes  calories_burned  avg_heart_rate  max_heart_rate  resting_heart_rate  sleep_minutes  sleep_quality_score  distance_km
+cluster                                                                                                                                                                
+0         -2.0            36.6               -2.7             50.2             2.3             2.6                 0.1            0.1                  0.1         -0.4
+1          1.6           -30.3                2.3            -41.5            -1.9            -2.2                -0.1           -0.1                 -0.1          0.3
+Intensity mix per cluster (% of the cluster's days):
+          Low  Medium  High
+cluster                    
+0        23.0    51.7  25.3
+1        36.1    48.4  15.5
+Activity-type mix per cluster (%):
+activity_type  Basketball  Cycling  Dancing  HIIT  Running  Swimming  Tennis  Walking  Weight Training  Yoga
+cluster                                                                                                     
+0                    10.4     11.4      9.3  12.1     12.1      10.9    10.4      7.6              8.7   7.1
+1                     9.5     10.2     11.2   8.7      7.4       8.9     9.0     11.2             11.1  12.8
+   Cluster  Count   Share                        Main characteristics (vs overall mean)                   Interpretation
+0        0  45306  45.25%  active_minutes +36.6% (95.5); calories_burned +50.2% (994.4)  High-effort / long-session days
+1        1  54816  54.75%  active_minutes -30.3% (48.8); calories_burned -41.5% (387.7)       Light / short-session days
+Distribution across all users of the share of their days in each cluster:
+       % days in cluster 0 (High-effort / long-session days)  % days in cluster 1 (Light / short-session days)
+count                                                  437.0                                             437.0
+mean                                                    45.2                                              54.8
+std                                                      5.5                                               5.5
+min                                                     31.7                                              38.4
+25%                                                     41.4                                              51.4
+50%                                                     45.0                                              55.0
+75%                                                     48.6                                              58.6
+max                                                     61.6                                              68.3
+Dashboard demo users (demo1=1503, demo2=2759, demo3=2373):
+         % days in cluster 0 (High-effort / long-session days)  % days in cluster 1 (Light / short-session days)
+user_id                                                                                                         
+1503                                                      55.7                                              44.3
+2759                                                      35.7                                              64.3
+2373                                                      45.9                                              54.1

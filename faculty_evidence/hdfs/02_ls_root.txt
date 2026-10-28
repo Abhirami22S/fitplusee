@@ -1,0 +1,5 @@
+$ hdfs dfs -ls /
+(exit code 0)
+
+Found 1 items
+drwxr-xr-x   - Abhirami S supergroup          0 2026-10-13 09:20 /fitpulse

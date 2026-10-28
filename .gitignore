@@ -20,3 +20,8 @@ data/processed/fitpulse_silver_streamed/
 data/processed/fitpulse_silver/
 data/population_stats/
 *.crc
+
+# Power BI local tooling / caches (regenerate with npm install --prefix powerbi/_tools ...)
+powerbi/_tools/node_modules/
+powerbi/schemas/
+powerbi/__pycache__/

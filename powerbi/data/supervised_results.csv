@@ -1,0 +1,349 @@
+experiment_id,model,metric,value,split_type,status,source_file
+E1,Random Forest,Accuracy,0.7293046911597404,validation,VALID,exports/E1_results.csv
+E1,Random Forest,Precision (positive class),0.7708021390374331,validation,VALID,exports/E1_results.csv
+E1,Random Forest,Recall (positive class),0.7911955209133824,validation,VALID,exports/E1_results.csv
+E1,Random Forest,F1 (positive class),0.7808657023674088,validation,VALID,exports/E1_results.csv
+E1,Random Forest,F1 (weighted),0.728217248812576,validation,VALID,exports/E1_results.csv
+E1,Random Forest,F1 (macro),0.7134397646343038,validation,VALID,exports/E1_results.csv
+E1,Random Forest,ROC AUC,0.7548685024583048,validation,VALID,exports/E1_results.csv
+E1,Random Forest,Baseline accuracy (always majority class),0.6095830823797096,validation,VALID,exports/E1_results.csv
+E1,Random Forest,Accuracy,0.735198702351987,test,VALID,exports/E1_results.csv
+E1,Random Forest,Precision (positive class),0.7801126516464472,test,VALID,exports/E1_results.csv
+E1,Random Forest,Recall (positive class),0.7922992299229923,test,VALID,exports/E1_results.csv
+E1,Random Forest,F1 (positive class),0.7861587162973475,test,VALID,exports/E1_results.csv
+E1,Random Forest,F1 (weighted),0.7345566152197562,test,VALID,exports/E1_results.csv
+E1,Random Forest,F1 (macro),0.7192550458150446,test,VALID,exports/E1_results.csv
+E1,Random Forest,ROC AUC,0.7585319450276605,test,VALID,exports/E1_results.csv
+E1,Random Forest,Baseline accuracy (always majority class),0.6143552311435523,test,VALID,exports/E1_results.csv
+E1,Logistic Regression,Accuracy,0.7333199491400656,validation,VALID,exports/E1_results.csv
+E1,Logistic Regression,Precision (positive class),0.7552809884416102,validation,VALID,exports/E1_results.csv
+E1,Logistic Regression,Recall (positive class),0.8321440333735866,validation,VALID,exports/E1_results.csv
+E1,Logistic Regression,F1 (positive class),0.7918516583964481,validation,VALID,exports/E1_results.csv
+E1,Logistic Regression,F1 (weighted),0.7282683808986852,validation,VALID,exports/E1_results.csv
+E1,Logistic Regression,F1 (macro),0.7104216861947793,validation,VALID,exports/E1_results.csv
+E1,Logistic Regression,ROC AUC,0.7365395211831507,validation,VALID,exports/E1_results.csv
+E1,Logistic Regression,Baseline accuracy (always majority class),0.6095830823797096,validation,VALID,exports/E1_results.csv
+E1,Logistic Regression,Accuracy,0.7356042173560422,test,VALID,exports/E1_results.csv
+E1,Logistic Regression,Precision (positive class),0.7589517903580716,test,VALID,exports/E1_results.csv
+E1,Logistic Regression,Recall (positive class),0.8347634763476348,test,VALID,exports/E1_results.csv
+E1,Logistic Regression,F1 (positive class),0.7950544844928751,test,VALID,exports/E1_results.csv
+E1,Logistic Regression,F1 (weighted),0.7304651424740691,test,VALID,exports/E1_results.csv
+E1,Logistic Regression,F1 (macro),0.7113124669227513,test,VALID,exports/E1_results.csv
+E1,Logistic Regression,ROC AUC,0.739601926368592,test,VALID,exports/E1_results.csv
+E1,Logistic Regression,Baseline accuracy (always majority class),0.6143552311435523,test,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,Accuracy,0.7293046911597404,validation,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,Precision (positive class),0.7750977835723598,validation,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,Recall (positive class),0.7831814688769348,validation,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,F1 (positive class),0.7791186588762081,validation,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,F1 (weighted),0.7288957801657834,validation,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,F1 (macro),0.7147991116898971,validation,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,ROC AUC,0.7700887412656972,validation,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.6095830823797096,validation,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,Accuracy,0.7381724790483915,test,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,Precision (positive class),0.7864674868189807,test,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,Recall (positive class),0.7876787678767877,test,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,F1 (positive class),0.7870726613169178,test,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,F1 (weighted),0.7381124156555368,test,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,F1 (macro),0.7235942355540546,test,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,ROC AUC,0.7734702860401708,test,VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.6143552311435523,test,VALID,exports/E1_results.csv
+E1,Random Forest + steps & distance_km (LEAKAGE),Accuracy,0.9895241957285752,test,INVALID,exports/E1_results.csv
+E1,Random Forest + steps & distance_km (LEAKAGE),F1 (weighted),0.9895034322925208,test,INVALID,exports/E1_results.csv
+E1,Random Forest + steps & distance_km (LEAKAGE),ROC AUC,0.99960173549777,test,INVALID,exports/E1_results.csv
+E1,Logistic Regression + steps & distance_km (LEAKAGE),Accuracy,0.9998648283319816,test,INVALID,exports/E1_results.csv
+E1,Logistic Regression + steps & distance_km (LEAKAGE),F1 (weighted),0.9998648283319816,test,INVALID,exports/E1_results.csv
+E1,Logistic Regression + steps & distance_km (LEAKAGE),ROC AUC,0.9999994119636288,test,INVALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees + steps & distance_km (LEAKAGE),Accuracy,0.9902676399026764,test,INVALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees + steps & distance_km (LEAKAGE),F1 (weighted),0.9902532655037166,test,INVALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees + steps & distance_km (LEAKAGE),ROC AUC,0.9996130335080476,test,INVALID,exports/E1_results.csv
+E1,Random Forest,Accuracy,0.7232011747430249,test (user-held-out),VALID,exports/E1_results.csv
+E1,Random Forest,F1 (weighted),0.7232178968524596,test (user-held-out),VALID,exports/E1_results.csv
+E1,Random Forest,ROC AUC,0.749813460977957,test (user-held-out),VALID,exports/E1_results.csv
+E1,Random Forest,Baseline accuracy (always majority class),0.6168216674824605,test (user-held-out),VALID,exports/E1_results.csv
+E1,Logistic Regression,Accuracy,0.7315222711698482,test (user-held-out),VALID,exports/E1_results.csv
+E1,Logistic Regression,F1 (weighted),0.7275267556480665,test (user-held-out),VALID,exports/E1_results.csv
+E1,Logistic Regression,ROC AUC,0.7340401256213849,test (user-held-out),VALID,exports/E1_results.csv
+E1,Logistic Regression,Baseline accuracy (always majority class),0.6168216674824605,test (user-held-out),VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,Accuracy,0.7223853809756894,test (user-held-out),VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,F1 (weighted),0.7223009350094648,test (user-held-out),VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,ROC AUC,0.7607749216316475,test (user-held-out),VALID,exports/E1_results.csv
+E1,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.6168216674824605,test (user-held-out),VALID,exports/E1_results.csv
+E2,Random Forest,Accuracy,0.745278673422386,validation,VALID,exports/E2_results.csv
+E2,Random Forest,Precision (positive class),0.4120287253141831,validation,VALID,exports/E2_results.csv
+E2,Random Forest,Recall (positive class),0.3137388926862611,validation,VALID,exports/E2_results.csv
+E2,Random Forest,F1 (positive class),0.3562281722933643,validation,VALID,exports/E2_results.csv
+E2,Random Forest,F1 (weighted),0.7322842600915381,validation,VALID,exports/E2_results.csv
+E2,Random Forest,F1 (macro),0.598728499009157,validation,VALID,exports/E2_results.csv
+E2,Random Forest,ROC AUC,0.6502250225022502,validation,VALID,exports/E2_results.csv
+E2,Random Forest,Baseline accuracy (always majority class),0.7753723322585598,validation,VALID,exports/E2_results.csv
+E2,Random Forest,Baseline accuracy (always TRAINING-majority class),0.2246276677414402,validation,BASELINE,exports/E2_results.csv
+E2,Random Forest,Accuracy,0.5823198639989539,chronological test,VALID,exports/E2_results.csv
+E2,Random Forest,Precision (positive class),0.4953792837889872,chronological test,VALID,exports/E2_results.csv
+E2,Random Forest,Recall (positive class),0.8178639542275906,chronological test,VALID,exports/E2_results.csv
+E2,Random Forest,F1 (positive class),0.6170263788968825,chronological test,VALID,exports/E2_results.csv
+E2,Random Forest,F1 (weighted),0.5720985607905906,chronological test,VALID,exports/E2_results.csv
+E2,Random Forest,F1 (macro),0.5788611905988583,chronological test,VALID,exports/E2_results.csv
+E2,Random Forest,ROC AUC,0.6706116589475843,chronological test,VALID,exports/E2_results.csv
+E2,Random Forest,Baseline accuracy (always majority class),0.588596835360272,chronological test,VALID,exports/E2_results.csv
+E2,Random Forest,Baseline accuracy (always TRAINING-majority class),0.411403164639728,chronological test,BASELINE,exports/E2_results.csv
+E2,Gradient-Boosted Trees,Accuracy,0.7546445570397666,validation,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,Precision (positive class),0.4250832408435072,validation,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,Recall (positive class),0.2617908407382092,validation,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,F1 (positive class),0.3240270727580372,validation,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,F1 (weighted),0.7319464679226844,validation,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,F1 (macro),0.5870745005508438,validation,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,ROC AUC,0.6470401250651381,validation,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.7753723322585598,validation,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,Baseline accuracy (always TRAINING-majority class),0.2246276677414402,validation,BASELINE,exports/E2_results.csv
+E2,Gradient-Boosted Trees,Accuracy,0.5990584542958023,chronological test,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,Precision (positive class),0.5080353555644838,chronological test,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,Recall (positive class),0.8038779402415767,chronological test,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,F1 (positive class),0.6225997045790251,chronological test,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,F1 (weighted),0.593043451434036,chronological test,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,F1 (macro),0.5974923209087595,chronological test,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,ROC AUC,0.6969582446395678,chronological test,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.588596835360272,chronological test,VALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees,Baseline accuracy (always TRAINING-majority class),0.411403164639728,chronological test,BASELINE,exports/E2_results.csv
+E2,Logistic Regression,Accuracy,0.7343773990480578,validation,VALID,exports/E2_results.csv
+E2,Logistic Regression,Precision (positive class),0.4195298372513562,validation,VALID,exports/E2_results.csv
+E2,Logistic Regression,Recall (positive class),0.4757347915242652,validation,VALID,exports/E2_results.csv
+E2,Logistic Regression,F1 (positive class),0.4458680333119795,validation,VALID,exports/E2_results.csv
+E2,Logistic Regression,F1 (weighted),0.7400869947350803,validation,VALID,exports/E2_results.csv
+E2,Logistic Regression,F1 (macro),0.6355955675445197,validation,VALID,exports/E2_results.csv
+E2,Logistic Regression,ROC AUC,0.6528697305820806,validation,VALID,exports/E2_results.csv
+E2,Logistic Regression,Baseline accuracy (always majority class),0.7753723322585598,validation,VALID,exports/E2_results.csv
+E2,Logistic Regression,Baseline accuracy (always TRAINING-majority class),0.2246276677414402,validation,BASELINE,exports/E2_results.csv
+E2,Logistic Regression,Accuracy,0.6835360272002092,chronological test,VALID,exports/E2_results.csv
+E2,Logistic Regression,Precision (positive class),0.6648501362397821,chronological test,VALID,exports/E2_results.csv
+E2,Logistic Regression,Recall (positive class),0.4653528289891926,chronological test,VALID,exports/E2_results.csv
+E2,Logistic Regression,F1 (positive class),0.5474943904263276,chronological test,VALID,exports/E2_results.csv
+E2,Logistic Regression,F1 (weighted),0.6706239715884514,chronological test,VALID,exports/E2_results.csv
+E2,Logistic Regression,F1 (macro),0.6520902476965743,chronological test,VALID,exports/E2_results.csv
+E2,Logistic Regression,ROC AUC,0.700393731816042,chronological test,VALID,exports/E2_results.csv
+E2,Logistic Regression,Baseline accuracy (always majority class),0.588596835360272,chronological test,VALID,exports/E2_results.csv
+E2,Logistic Regression,Baseline accuracy (always TRAINING-majority class),0.411403164639728,chronological test,BASELINE,exports/E2_results.csv
+E2,Random Forest + rolling mean INCLUDING the prediction day (LEAKAGE),Accuracy,0.6174970576696743,chronological test,INVALID,exports/E2_results.csv
+E2,Random Forest + rolling mean INCLUDING the prediction day (LEAKAGE),F1 (positive class),0.6368715083798883,chronological test,INVALID,exports/E2_results.csv
+E2,Random Forest + rolling mean INCLUDING the prediction day (LEAKAGE),ROC AUC,0.7517536895452914,chronological test,INVALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees + rolling mean INCLUDING the prediction day (LEAKAGE),Accuracy,0.7550673466718975,chronological test,INVALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees + rolling mean INCLUDING the prediction day (LEAKAGE),F1 (positive class),0.7063803103934785,chronological test,INVALID,exports/E2_results.csv
+E2,Gradient-Boosted Trees + rolling mean INCLUDING the prediction day (LEAKAGE),ROC AUC,0.8256841419572934,chronological test,INVALID,exports/E2_results.csv
+E2,Logistic Regression + rolling mean INCLUDING the prediction day (LEAKAGE),Accuracy,0.798352295017654,chronological test,INVALID,exports/E2_results.csv
+E2,Logistic Regression + rolling mean INCLUDING the prediction day (LEAKAGE),F1 (positive class),0.7515307766677409,chronological test,INVALID,exports/E2_results.csv
+E2,Logistic Regression + rolling mean INCLUDING the prediction day (LEAKAGE),ROC AUC,0.8786649163080663,chronological test,INVALID,exports/E2_results.csv
+E2,Random Forest,Accuracy,0.7732471933912307,random split (NOT headline),REFERENCE,exports/E2_results.csv
+E2,Random Forest,F1 (positive class),0.8295789222319508,random split (NOT headline),REFERENCE,exports/E2_results.csv
+E2,Random Forest,ROC AUC,0.8190625199709822,random split (NOT headline),REFERENCE,exports/E2_results.csv
+E2,Random Forest,Baseline accuracy (always majority class),0.6459436560050836,random split (NOT headline),REFERENCE,exports/E2_results.csv
+E2,Gradient-Boosted Trees,Accuracy,0.7780131328108452,random split (NOT headline),REFERENCE,exports/E2_results.csv
+E2,Gradient-Boosted Trees,F1 (positive class),0.8348305752561073,random split (NOT headline),REFERENCE,exports/E2_results.csv
+E2,Gradient-Boosted Trees,ROC AUC,0.8300518511074401,random split (NOT headline),REFERENCE,exports/E2_results.csv
+E2,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.6459436560050836,random split (NOT headline),REFERENCE,exports/E2_results.csv
+E2,Logistic Regression,Accuracy,0.776954035162042,random split (NOT headline),REFERENCE,exports/E2_results.csv
+E2,Logistic Regression,F1 (positive class),0.8347976153122059,random split (NOT headline),REFERENCE,exports/E2_results.csv
+E2,Logistic Regression,ROC AUC,0.8294674906617342,random split (NOT headline),REFERENCE,exports/E2_results.csv
+E2,Logistic Regression,Baseline accuracy (always majority class),0.6459436560050836,random split (NOT headline),REFERENCE,exports/E2_results.csv
+E3,Random Forest,Accuracy,0.5354691075514875,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Random Forest,Precision (positive class),0.5291828793774319,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Random Forest,Recall (positive class),0.6238532110091743,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Random Forest,F1 (positive class),0.5726315789473684,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Random Forest,F1 (weighted),0.5318366855353487,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Random Forest,F1 (macro),0.5319298245614035,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Random Forest,ROC AUC,0.542478320975242,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Random Forest,Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Random Forest,Accuracy (mean over folds),0.5353988967461302,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Random Forest,Accuracy (sd over folds),0.0406398659583452,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Random Forest,ROC AUC (mean over folds),0.544649106731805,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Random Forest,ROC AUC (sd over folds),0.0377378860999523,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Logistic Regression,Accuracy,0.5377574370709383,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Logistic Regression,Precision (positive class),0.5416666666666666,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Logistic Regression,Recall (positive class),0.4770642201834862,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Logistic Regression,F1 (positive class),0.5073170731707317,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Logistic Regression,F1 (weighted),0.536051727024806,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Logistic Regression,F1 (macro),0.5359861227922624,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Logistic Regression,ROC AUC,0.5485526370910311,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Logistic Regression,Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Logistic Regression,Accuracy (mean over folds),0.5378824329906928,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Logistic Regression,Accuracy (sd over folds),0.0442022610152682,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Logistic Regression,ROC AUC (mean over folds),0.5725016649607338,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Logistic Regression,ROC AUC (sd over folds),0.0332051974773902,stratified 5-fold CV (out-of-fold),VALID,exports/E3_results.csv
+E3,Random Forest + average steps (LEAKAGE),Accuracy,0.7322654462242563,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Random Forest + average steps (LEAKAGE),ROC AUC,0.7977671651795065,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Random Forest + average steps (LEAKAGE),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Random Forest + average steps (LEAKAGE),Accuracy (mean over folds),0.7321960584189935,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Random Forest + average steps (LEAKAGE),Accuracy (sd over folds),0.0575415615429552,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Random Forest + average steps (LEAKAGE),ROC AUC (mean over folds),0.8040506036320728,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Random Forest + average steps (LEAKAGE),ROC AUC (sd over folds),0.0467164986455672,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Logistic Regression + average steps (LEAKAGE),Accuracy,0.7368421052631579,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Logistic Regression + average steps (LEAKAGE),ROC AUC,0.8241590214067278,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Logistic Regression + average steps (LEAKAGE),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Logistic Regression + average steps (LEAKAGE),Accuracy (mean over folds),0.7369778377196179,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Logistic Regression + average steps (LEAKAGE),Accuracy (sd over folds),0.0382294997177102,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Logistic Regression + average steps (LEAKAGE),ROC AUC (mean over folds),0.8267366434391608,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Logistic Regression + average steps (LEAKAGE),ROC AUC (sd over folds),0.0398391335215781,stratified 5-fold CV (out-of-fold),INVALID,exports/E3_results.csv
+E3,Random Forest: logging-window coverage ONLY (mean logged month),Accuracy,0.5675057208237986,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Random Forest: logging-window coverage ONLY (mean logged month),ROC AUC,0.6077353273846927,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Random Forest: logging-window coverage ONLY (mean logged month),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Random Forest: logging-window coverage ONLY (mean logged month),Accuracy (mean over folds),0.5674272800174964,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Random Forest: logging-window coverage ONLY (mean logged month),Accuracy (sd over folds),0.0219000161571213,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Random Forest: logging-window coverage ONLY (mean logged month),ROC AUC (mean over folds),0.6180021923845367,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Random Forest: logging-window coverage ONLY (mean logged month),ROC AUC (sd over folds),0.0270699101894819,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),Accuracy,0.5835240274599542,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),ROC AUC,0.6194545683046374,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),Accuracy (mean over folds),0.5833369784452384,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),Accuracy (sd over folds),0.0429629546093202,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),ROC AUC (mean over folds),0.6224000073749939,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),ROC AUC (sd over folds),0.0280994455935168,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),Accuracy,0.5423340961098398,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),ROC AUC,0.540844539399271,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),Accuracy (mean over folds),0.5421119778377196,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),Accuracy (sd over folds),0.0573338700214644,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),ROC AUC (mean over folds),0.5447146436090091,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),ROC AUC (sd over folds),0.0619657577277851,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),Accuracy,0.5469107551487414,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),ROC AUC,0.5720958485191237,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),Accuracy (mean over folds),0.5469466112609658,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),Accuracy (sd over folds),0.0356514358919035,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),ROC AUC (mean over folds),0.5758608629189779,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),ROC AUC (sd over folds),0.031683451338806,stratified 5-fold CV (out-of-fold),REFERENCE,exports/E3_results.csv
+E4,Random Forest,Accuracy,0.5031699585466959,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,Precision (positive class),0.4944598337950138,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,Recall (positive class),0.1317991631799163,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,F1 (positive class),0.2081228138359891,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,F1 (weighted),0.4250707854042279,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,F1 (macro),0.4230789944113327,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,ROC AUC,0.4974359503440524,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,Baseline accuracy (always majority class),0.5046330163374787,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,Accuracy,0.5056289769946157,test (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,Precision (positive class),0.4931640625,test (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,Recall (positive class),0.1674403183023872,test (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,F1 (positive class),0.25,test (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,F1 (weighted),0.4436658567496323,test (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,F1 (macro),0.4406485762959358,test (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,ROC AUC,0.4964867611522143,test (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,Baseline accuracy (always majority class),0.5079131995431555,test (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,"Confusion: actual Low, predicted Low",5188.0,test (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,"Confusion: actual Low, predicted High",1038.0,test (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,"Confusion: actual High, predicted Low",5022.0,test (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest,"Confusion: actual High, predicted High",1010.0,test (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,Accuracy,0.4991465496220434,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,Precision (positive class),0.4936494496189669,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,Recall (positive class),0.4304700959881861,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,F1 (positive class),0.4599000788850907,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,F1 (weighted),0.4968269127973997,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,F1 (macro),0.4964878889537979,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,ROC AUC,0.4969381507385759,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.5046330163374787,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,Accuracy,0.5035894925762767,test (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,Precision (positive class),0.4949165547669288,test (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,Recall (positive class),0.4277188328912467,test (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,F1 (positive class),0.4588706091596264,test (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,F1 (weighted),0.5008297332877351,test (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,F1 (macro),0.5001760174123051,test (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,ROC AUC,0.4998594470139341,test (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.5079131995431555,test (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,"Confusion: actual Low, predicted Low",3593.0,test (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,"Confusion: actual Low, predicted High",2633.0,test (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,"Confusion: actual High, predicted Low",3452.0,test (user-held-out),VALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees,"Confusion: actual High, predicted High",2580.0,test (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,Accuracy,0.5008534503779566,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,Precision (positive class),0.4886778670562454,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,Recall (positive class),0.1646566576421363,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,F1 (positive class),0.2463181148748159,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,F1 (weighted),0.4383563492254356,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,F1 (macro),0.4365932535730259,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,ROC AUC,0.4968449104069232,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,Baseline accuracy (always majority class),0.5046330163374787,validation (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,Accuracy,0.5039973894599445,test (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,Precision (positive class),0.4891107078039927,test (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,Recall (positive class),0.1787135278514589,test (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,F1 (positive class),0.2617775619232637,test (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,F1 (weighted),0.447042997579698,test (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,F1 (macro),0.4441565942294451,test (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,ROC AUC,0.4999244046741609,test (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,Baseline accuracy (always majority class),0.5079131995431555,test (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,"Confusion: actual Low, predicted Low",5100.0,test (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,"Confusion: actual Low, predicted High",1126.0,test (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,"Confusion: actual High, predicted Low",4954.0,test (user-held-out),VALID,exports/E4_results.csv
+E4,Logistic Regression,"Confusion: actual High, predicted High",1078.0,test (user-held-out),VALID,exports/E4_results.csv
+E4,Random Forest + calories_burned (LEAKAGE),Accuracy,0.7878120411160059,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Random Forest + calories_burned (LEAKAGE),F1 (macro),0.7876046915009223,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Random Forest + calories_burned (LEAKAGE),ROC AUC,0.8905472212233971,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees + calories_burned (LEAKAGE),Accuracy,0.8981889378365149,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees + calories_burned (LEAKAGE),F1 (macro),0.8981841566608437,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees + calories_burned (LEAKAGE),ROC AUC,0.9672644413433524,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Logistic Regression + calories_burned (LEAKAGE),Accuracy,0.8763256648719204,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Logistic Regression + calories_burned (LEAKAGE),F1 (macro),0.8762573578853878,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Logistic Regression + calories_burned (LEAKAGE),ROC AUC,0.9511739802326346,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Random Forest + sedentary_minutes (LEAKAGE),Accuracy,0.8032305433186491,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Random Forest + sedentary_minutes (LEAKAGE),F1 (macro),0.8030352335701878,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Random Forest + sedentary_minutes (LEAKAGE),ROC AUC,0.9026853302357448,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees + sedentary_minutes (LEAKAGE),Accuracy,0.9741393375754608,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees + sedentary_minutes (LEAKAGE),F1 (macro),0.9741350945956512,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Gradient-Boosted Trees + sedentary_minutes (LEAKAGE),ROC AUC,0.9976386246262572,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Logistic Regression + sedentary_minutes (LEAKAGE),Accuracy,0.9693261543481808,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Logistic Regression + sedentary_minutes (LEAKAGE),F1 (macro),0.9693162707684682,test (user-held-out),INVALID,exports/E4_results.csv
+E4,Logistic Regression + sedentary_minutes (LEAKAGE),ROC AUC,0.996627274197108,test (user-held-out),INVALID,exports/E4_results.csv
+E5,Baseline: training mean,MAE (kcal),339.9107342033764,validation,BASELINE,exports/E5_results.csv
+E5,Baseline: training mean,RMSE (kcal),439.1259341567061,validation,BASELINE,exports/E5_results.csv
+E5,Baseline: training mean,R2,-6.309580106167445e-06,validation,BASELINE,exports/E5_results.csv
+E5,Baseline: training mean,MAE (kcal),334.51018668646066,test,BASELINE,exports/E5_results.csv
+E5,Baseline: training mean,RMSE (kcal),433.17058257844974,test,BASELINE,exports/E5_results.csv
+E5,Baseline: training mean,R2,-2.029875471487585e-06,test,BASELINE,exports/E5_results.csv
+E5,Baseline: Linear Regression on active_minutes only,MAE (kcal),248.45405410412215,validation,BASELINE,exports/E5_results.csv
+E5,Baseline: Linear Regression on active_minutes only,RMSE (kcal),339.9100747140316,validation,BASELINE,exports/E5_results.csv
+E5,Baseline: Linear Regression on active_minutes only,R2,0.4008264399981408,validation,BASELINE,exports/E5_results.csv
+E5,Baseline: Linear Regression on active_minutes only,MAE (kcal),247.4010149675612,test,BASELINE,exports/E5_results.csv
+E5,Baseline: Linear Regression on active_minutes only,RMSE (kcal),337.98890319982365,test,BASELINE,exports/E5_results.csv
+E5,Baseline: Linear Regression on active_minutes only,R2,0.3911814803154102,test,BASELINE,exports/E5_results.csv
+E5,Linear Regression,MAE (kcal),199.4953312092055,validation,VALID,exports/E5_results.csv
+E5,Linear Regression,RMSE (kcal),264.8400144790687,validation,VALID,exports/E5_results.csv
+E5,Linear Regression,R2,0.6362594051014518,validation,VALID,exports/E5_results.csv
+E5,Linear Regression,MAE (kcal),199.71263311260105,test,VALID,exports/E5_results.csv
+E5,Linear Regression,RMSE (kcal),263.64418934697864,test,VALID,exports/E5_results.csv
+E5,Linear Regression,R2,0.6295587174061572,test,VALID,exports/E5_results.csv
+E5,Random Forest Regressor,MAE (kcal),189.12813276021424,validation,VALID,exports/E5_results.csv
+E5,Random Forest Regressor,RMSE (kcal),259.61233171787615,validation,VALID,exports/E5_results.csv
+E5,Random Forest Regressor,R2,0.6504774481318796,validation,VALID,exports/E5_results.csv
+E5,Random Forest Regressor,MAE (kcal),188.61411637848147,test,VALID,exports/E5_results.csv
+E5,Random Forest Regressor,RMSE (kcal),258.6774213224942,test,VALID,exports/E5_results.csv
+E5,Random Forest Regressor,R2,0.6433846629655691,test,VALID,exports/E5_results.csv
+E5,GBT Regressor,MAE (kcal),183.87031699288136,validation,VALID,exports/E5_results.csv
+E5,GBT Regressor,RMSE (kcal),252.1767798411876,validation,VALID,exports/E5_results.csv
+E5,GBT Regressor,R2,0.6702120703355703,validation,VALID,exports/E5_results.csv
+E5,GBT Regressor,MAE (kcal),183.28060718759247,test,VALID,exports/E5_results.csv
+E5,GBT Regressor,RMSE (kcal),250.41439715393884,test,VALID,exports/E5_results.csv
+E5,GBT Regressor,R2,0.6658037597473698,test,VALID,exports/E5_results.csv
+E5,Baseline: training mean,MAE (kcal),395.2072184015781,chronological test (>= 2024-10-15),BASELINE,exports/E5_results.csv
+E5,Baseline: training mean,RMSE (kcal),548.2178380973107,chronological test (>= 2024-10-15),BASELINE,exports/E5_results.csv
+E5,Baseline: training mean,R2,-0.162973567910007,chronological test (>= 2024-10-15),BASELINE,exports/E5_results.csv
+E5,Linear Regression,MAE (kcal),247.19925603633064,chronological test (>= 2024-10-15),VALID,exports/E5_results.csv
+E5,Linear Regression,RMSE (kcal),329.28553171660457,chronological test (>= 2024-10-15),VALID,exports/E5_results.csv
+E5,Linear Regression,R2,0.5804257598670424,chronological test (>= 2024-10-15),VALID,exports/E5_results.csv
+E5,Random Forest Regressor,MAE (kcal),238.8483620147016,chronological test (>= 2024-10-15),VALID,exports/E5_results.csv
+E5,Random Forest Regressor,RMSE (kcal),325.1463397893908,chronological test (>= 2024-10-15),VALID,exports/E5_results.csv
+E5,Random Forest Regressor,R2,0.5909077446527287,chronological test (>= 2024-10-15),VALID,exports/E5_results.csv
+E5,GBT Regressor,MAE (kcal),235.86237680053225,chronological test (>= 2024-10-15),VALID,exports/E5_results.csv
+E5,GBT Regressor,RMSE (kcal),317.99125280777736,chronological test (>= 2024-10-15),VALID,exports/E5_results.csv
+E5,GBT Regressor,R2,0.6087143991518313,chronological test (>= 2024-10-15),VALID,exports/E5_results.csv
+E5,Linear Regression + calories_roll7_avg incl. the day itself (LEAKAGE),MAE (kcal),177.36947211239058,test,INVALID,exports/E5_results.csv
+E5,Linear Regression + calories_roll7_avg incl. the day itself (LEAKAGE),RMSE (kcal),236.00190350893888,test,INVALID,exports/E5_results.csv
+E5,Linear Regression + calories_roll7_avg incl. the day itself (LEAKAGE),R2,0.7031657687226134,test,INVALID,exports/E5_results.csv
+E5,Random Forest Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),MAE (kcal),163.705941871207,test,INVALID,exports/E5_results.csv
+E5,Random Forest Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),RMSE (kcal),227.6723955603087,test,INVALID,exports/E5_results.csv
+E5,Random Forest Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),R2,0.7237490847578845,test,INVALID,exports/E5_results.csv
+E5,GBT Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),MAE (kcal),157.76771355372887,test,INVALID,exports/E5_results.csv
+E5,GBT Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),RMSE (kcal),218.76076394972057,test,INVALID,exports/E5_results.csv
+E5,GBT Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),R2,0.7449520519564029,test,INVALID,exports/E5_results.csv
+E5,Linear Regression + activity_type & intensity (formula recovery),MAE (kcal),110.02344734448587,test,REFERENCE,exports/E5_results.csv
+E5,Linear Regression + activity_type & intensity (formula recovery),RMSE (kcal),154.9853548056984,test,REFERENCE,exports/E5_results.csv
+E5,Linear Regression + activity_type & intensity (formula recovery),R2,0.8719839876757611,test,REFERENCE,exports/E5_results.csv
+E5,Random Forest Regressor + activity_type & intensity (formula recovery),MAE (kcal),49.43892951715632,test,REFERENCE,exports/E5_results.csv
+E5,Random Forest Regressor + activity_type & intensity (formula recovery),RMSE (kcal),72.3022327946851,test,REFERENCE,exports/E5_results.csv
+E5,Random Forest Regressor + activity_type & intensity (formula recovery),R2,0.9721396614581822,test,REFERENCE,exports/E5_results.csv
+E5,GBT Regressor + activity_type & intensity (formula recovery),MAE (kcal),21.703280728986,test,REFERENCE,exports/E5_results.csv
+E5,GBT Regressor + activity_type & intensity (formula recovery),RMSE (kcal),31.099480872165422,test,REFERENCE,exports/E5_results.csv
+E5,GBT Regressor + activity_type & intensity (formula recovery),R2,0.9948454678779416,test,REFERENCE,exports/E5_results.csv

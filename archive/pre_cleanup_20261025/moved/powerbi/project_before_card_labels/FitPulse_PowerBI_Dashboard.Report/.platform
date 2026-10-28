@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "FitPulse_PowerBI_Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c895afdd-65c8-475a-b991-a554b3c78408"
+  }
+}

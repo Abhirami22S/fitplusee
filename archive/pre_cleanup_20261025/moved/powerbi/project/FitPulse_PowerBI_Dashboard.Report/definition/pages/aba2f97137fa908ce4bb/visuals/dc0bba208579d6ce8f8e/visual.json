@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "dc0bba208579d6ce8f8e",
+  "position": {
+    "x": 20,
+    "y": 668,
+    "z": 13000,
+    "height": 48,
+    "width": 1240,
+    "tabOrder": 13000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Interpretation (measured): the two segments differ by only about 2.4 active minutes, 5.5 sedentary minutes and 28 kcal per day; average steps are the same (8,631 vs 8,621). Euclidean silhouette 0.20 = weak separation. Labels come from the measured average active minutes, not from an assumed Sedentary/Moderate/Active scheme.",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,15 @@
+relationship edeffc59-60b0-563e-973b-0d66f10848a6
+	fromColumn: fact_daily.date
+	toColumn: dim_date.Date
+
+relationship 73e83929-30b7-5ab6-86d8-7ec8a84f5ee9
+	fromColumn: fact_daily.user_id
+	toColumn: dim_user.user_id
+
+relationship 9568eb82-56c1-5791-a38b-df2e369ba045
+	fromColumn: supervised_results.experiment_id
+	toColumn: experiments.experiment_id
+
+relationship 6669e175-cc89-565a-a40c-e3bdbdcf90db
+	fromColumn: crosscheck.experiment_id
+	toColumn: experiments.experiment_id

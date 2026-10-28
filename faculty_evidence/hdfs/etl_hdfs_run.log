@@ -1,0 +1,32 @@
+======================================================================
+STORAGE MODE : HDFS (hdfs://localhost:9000)
+Bronze input : hdfs://localhost:9000/fitpulse/bronze/fitpulse_raw.csv
+Silver output: hdfs://localhost:9000/fitpulse/silver
+======================================================================
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+      FileSystem implementation: org.apache.hadoop.hdfs.DistributedFileSystem
+[1/7] Reading Bronze layer (raw CSV) into a Spark DataFrame
+[2/7] Cleaning & validation
+[Stage 5:>                                                          (0 + 3) / 3]                                                                                [3/7] Feature engineering — day-of-week, rest-day flag, month partition key
+[4/7] Rolling averages & lag features (Spark Window functions)
+[5/7] Personalized goals — per-user MapReduce aggregation
+[6/7] Deriving goal_achieved / calorie_goal_achieved labels
+[7/7] Writing Silver layer as partitioned Parquet (HDFS (hdfs://localhost:9000))
+26/10/11 13:36:02 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 12:===================>                                      (1 + 2) / 3]                                                                                [Stage 22:>                                                         (0 + 8) / 8][Stage 22:=====================>                                    (3 + 5) / 8][Stage 22:===========================================>              (6 + 2) / 8][Stage 22:==================================================>       (7 + 1) / 8]                                                                                
+--- Summary ---
+Bronze rows read      : 100,122
+Rows after cleaning   : 100,122 (0 dropped)
+Silver rows written   : 100,122
+Silver columns        : 39
+Users                 : 437
+Read back from storage: 100,122 rows (matches)
+Written to            : hdfs://localhost:9000/fitpulse/silver/ (partitioned by month)
+Storage mode used     : HDFS  [HDFS (hdfs://localhost:9000)]
+Run report            : D:\bigdata\fitpulsee\FitPulse\faculty_evidence\hdfs\etl_hdfs_run_report.json
+SUCCESS: The process with PID 25044 (child process of PID 25152) has been terminated.
+SUCCESS: The process with PID 25152 (child process of PID 23036) has been terminated.
+SUCCESS: The process with PID 23036 (child process of PID 23988) has been terminated.

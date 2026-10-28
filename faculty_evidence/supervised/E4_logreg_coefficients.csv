@@ -1,0 +1,27 @@
+experiment_id,model,feature,importance,kind
+E4,Logistic Regression,avg_heart_rate,0.02257803968536552,abs standardised coefficient
+E4,Logistic Regression,max_heart_rate,0.0055611068510350815,abs standardised coefficient
+E4,Logistic Regression,resting_heart_rate,0.010859747281112473,abs standardised coefficient
+E4,Logistic Regression,sleep_minutes,0.0015721508844588933,abs standardised coefficient
+E4,Logistic Regression,sleep_quality_score,0.007537093295878159,abs standardised coefficient
+E4,Logistic Regression,stress_level,0.009411441250808795,abs standardised coefficient
+E4,Logistic Regression,hydration_level,0.002823463515642689,abs standardised coefficient
+E4,Logistic Regression,steps,0.006827955251947986,abs standardised coefficient
+E4,Logistic Regression,distance_km,0.013380514006894832,abs standardised coefficient
+E4,Logistic Regression,age,0.009921180277015178,abs standardised coefficient
+E4,Logistic Regression,bmi,0.010826941066141852,abs standardised coefficient
+E4,Logistic Regression,height_cm,0.002634270919420608,abs standardised coefficient
+E4,Logistic Regression,weight_baseline_kg,0.000608340721937365,abs standardised coefficient
+E4,Logistic Regression,intensity=Medium,0.011158362642817552,abs standardised coefficient
+E4,Logistic Regression,intensity=Low,0.009795491133966891,abs standardised coefficient
+E4,Logistic Regression,activity_type=Cycling,0.006639372972459833,abs standardised coefficient
+E4,Logistic Regression,activity_type=Dancing,0.007562289033583224,abs standardised coefficient
+E4,Logistic Regression,activity_type=Yoga,0.011130125141066345,abs standardised coefficient
+E4,Logistic Regression,activity_type=HIIT,0.016369973185175427,abs standardised coefficient
+E4,Logistic Regression,activity_type=Weight Training,0.0050102152594093926,abs standardised coefficient
+E4,Logistic Regression,activity_type=Swimming,0.0031062976932444697,abs standardised coefficient
+E4,Logistic Regression,activity_type=Basketball,0.004776591559007263,abs standardised coefficient
+E4,Logistic Regression,activity_type=Walking,0.004253940675179993,abs standardised coefficient
+E4,Logistic Regression,activity_type=Running,0.015284613914685575,abs standardised coefficient
+E4,Logistic Regression,gender=M,0.013413207705874097,abs standardised coefficient
+E4,Logistic Regression,gender=F,0.018205057037519155,abs standardised coefficient

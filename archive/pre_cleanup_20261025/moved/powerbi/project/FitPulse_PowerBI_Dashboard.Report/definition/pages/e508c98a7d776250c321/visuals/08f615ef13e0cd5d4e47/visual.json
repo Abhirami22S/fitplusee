@@ -1,0 +1,130 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "08f615ef13e0cd5d4e47",
+  "position": {
+    "x": 530,
+    "y": 194,
+    "z": 5000,
+    "height": 190,
+    "width": 730,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "confusion_matrices"
+                    }
+                  },
+                  "Property": "actual"
+                }
+              },
+              "queryRef": "confusion_matrices.actual",
+              "nativeQueryRef": "actual"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "confusion_matrices"
+                    }
+                  },
+                  "Property": "predicted"
+                }
+              },
+              "queryRef": "confusion_matrices.predicted",
+              "nativeQueryRef": "predicted"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "confusion_matrices"
+                    }
+                  },
+                  "Property": "Confusion Count"
+                }
+              },
+              "queryRef": "confusion_matrices.Confusion Count",
+              "nativeQueryRef": "Confusion Count"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "confusion_matrices"
+                    }
+                  },
+                  "Property": "Confusion Share of Actual"
+                }
+              },
+              "queryRef": "confusion_matrices.Confusion Share of Actual",
+              "nativeQueryRef": "Confusion Share of Actual"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Confusion matrix on the test set (Random Forest experiments only)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Confusion matrix counts and row percentages of the selected Random Forest experiment'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "experiment": "E2",
+  "storage_mode": "local",
+  "silver_source": "file:///D:/bigdata/fitpulsee/FitPulse/data/processed/fitpulse_silver",
+  "seed": 42,
+  "pyspark": "4.0.1",
+  "finished_utc": "2026-10-18T11:12:56+00:00",
+  "usable_rows": 64174,
+  "split_cuts": [
+    "2024-09-08",
+    "2024-11-02"
+  ],
+  "split_sizes": {
+    "train": 50014,
+    "validation": 6513,
+    "test": 7647
+  },
+  "positive_share": {
+    "train": 0.7378134122445715,
+    "validation": 0.2246276677414402,
+    "test": 0.411403164639728
+  },
+  "settings": {
+    "rf": {
+      "depth": 5
+    },
+    "gbt": {
+      "depth": 3,
+      "iters": 50
+    },
+    "logreg": {
+      "reg": 0.0
+    }
+  },
+  "goal_steps": 8000
+}

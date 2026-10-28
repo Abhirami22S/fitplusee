@@ -1,0 +1,12 @@
+ K  sklearn_WCSS  sklearn_silhouette_euclidean  sklearn_silhouette_squared_euclidean
+ 2     2335.1849                        0.2018                                0.3413
+ 3     2052.6693                        0.1609                                0.2745
+ 4     1845.8082                        0.1554                                0.2662
+ 5     1706.6066                        0.1515                                0.2559
+ 6     1613.2629                        0.1429                                0.2408
+ 7     1524.4707                        0.1485                                0.2504
+ 8     1437.9954                        0.1456                                0.2454
+ 9     1371.3634                        0.1498                                0.2516
+10     1305.7740                        0.1546                                0.2614
+
+Spark's selected K=2 assignment scored with scikit-learn: euclidean silhouette 0.2018, squared-euclidean silhouette 0.3413

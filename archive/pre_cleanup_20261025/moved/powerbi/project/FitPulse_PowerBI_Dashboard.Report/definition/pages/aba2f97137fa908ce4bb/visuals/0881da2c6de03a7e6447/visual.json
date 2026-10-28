@@ -1,0 +1,91 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "0881da2c6de03a7e6447",
+  "position": {
+    "x": 950,
+    "y": 420,
+    "z": 12000,
+    "height": 244,
+    "width": 310,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_user"
+                    }
+                  },
+                  "Property": "segment_label"
+                }
+              },
+              "queryRef": "dim_user.segment_label",
+              "nativeQueryRef": "segment_label"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Step-Goal Achievement %"
+                }
+              },
+              "queryRef": "fact_daily.Step-Goal Achievement %",
+              "nativeQueryRef": "Step-Goal Achievement %"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Step-goal achievement %'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Goal achievement by segment'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

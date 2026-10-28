@@ -1,0 +1,61 @@
+experiment_id,model,metric,value,split_type,status
+E5,Baseline: training mean,MAE (kcal),339.91073420337636,validation,BASELINE
+E5,Baseline: training mean,RMSE (kcal),439.12593415670614,validation,BASELINE
+E5,Baseline: training mean,R2,-6.3095801059454e-06,validation,BASELINE
+E5,Baseline: training mean,MAE (kcal),334.51018668646066,test,BASELINE
+E5,Baseline: training mean,RMSE (kcal),433.17058257844974,test,BASELINE
+E5,Baseline: training mean,R2,-2.029875471265541e-06,test,BASELINE
+E5,Baseline: Linear Regression on active_minutes only,MAE (kcal),248.45405410412218,validation,BASELINE
+E5,Baseline: Linear Regression on active_minutes only,RMSE (kcal),339.9100747140316,validation,BASELINE
+E5,Baseline: Linear Regression on active_minutes only,R2,0.4008264399981408,validation,BASELINE
+E5,Baseline: Linear Regression on active_minutes only,MAE (kcal),247.40101496756122,test,BASELINE
+E5,Baseline: Linear Regression on active_minutes only,RMSE (kcal),337.9889031998236,test,BASELINE
+E5,Baseline: Linear Regression on active_minutes only,R2,0.39118148031541033,test,BASELINE
+E5,Linear Regression,MAE (kcal),199.4953312092055,validation,VALID
+E5,Linear Regression,RMSE (kcal),264.8400144790687,validation,VALID
+E5,Linear Regression,R2,0.6362594051014517,validation,VALID
+E5,Linear Regression,MAE (kcal),199.7126331126011,test,VALID
+E5,Linear Regression,RMSE (kcal),263.64418934697864,test,VALID
+E5,Linear Regression,R2,0.6295587174061572,test,VALID
+E5,Random Forest Regressor,MAE (kcal),189.1281327602142,validation,VALID
+E5,Random Forest Regressor,RMSE (kcal),259.6123317178762,validation,VALID
+E5,Random Forest Regressor,R2,0.6504774481318796,validation,VALID
+E5,Random Forest Regressor,MAE (kcal),188.61411637848147,test,VALID
+E5,Random Forest Regressor,RMSE (kcal),258.6774213224942,test,VALID
+E5,Random Forest Regressor,R2,0.6433846629655691,test,VALID
+E5,GBT Regressor,MAE (kcal),183.87031699288138,validation,VALID
+E5,GBT Regressor,RMSE (kcal),252.17677984118762,validation,VALID
+E5,GBT Regressor,R2,0.6702120703355703,validation,VALID
+E5,GBT Regressor,MAE (kcal),183.28060718759247,test,VALID
+E5,GBT Regressor,RMSE (kcal),250.41439715393884,test,VALID
+E5,GBT Regressor,R2,0.6658037597473698,test,VALID
+E5,Baseline: training mean,MAE (kcal),395.2072184015781,chronological test (>= 2024-10-15),BASELINE
+E5,Baseline: training mean,RMSE (kcal),548.2178380973107,chronological test (>= 2024-10-15),BASELINE
+E5,Baseline: training mean,R2,-0.16297356791000706,chronological test (>= 2024-10-15),BASELINE
+E5,Linear Regression,MAE (kcal),247.19925603633064,chronological test (>= 2024-10-15),VALID
+E5,Linear Regression,RMSE (kcal),329.2855317166045,chronological test (>= 2024-10-15),VALID
+E5,Linear Regression,R2,0.5804257598670426,chronological test (>= 2024-10-15),VALID
+E5,Random Forest Regressor,MAE (kcal),238.84836201470156,chronological test (>= 2024-10-15),VALID
+E5,Random Forest Regressor,RMSE (kcal),325.1463397893908,chronological test (>= 2024-10-15),VALID
+E5,Random Forest Regressor,R2,0.5909077446527289,chronological test (>= 2024-10-15),VALID
+E5,GBT Regressor,MAE (kcal),235.86237680053222,chronological test (>= 2024-10-15),VALID
+E5,GBT Regressor,RMSE (kcal),317.99125280777736,chronological test (>= 2024-10-15),VALID
+E5,GBT Regressor,R2,0.6087143991518313,chronological test (>= 2024-10-15),VALID
+E5,Linear Regression + calories_roll7_avg incl. the day itself (LEAKAGE),MAE (kcal),177.36947211239058,test,INVALID
+E5,Linear Regression + calories_roll7_avg incl. the day itself (LEAKAGE),RMSE (kcal),236.00190350893888,test,INVALID
+E5,Linear Regression + calories_roll7_avg incl. the day itself (LEAKAGE),R2,0.7031657687226134,test,INVALID
+E5,Random Forest Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),MAE (kcal),163.705941871207,test,INVALID
+E5,Random Forest Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),RMSE (kcal),227.6723955603087,test,INVALID
+E5,Random Forest Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),R2,0.7237490847578845,test,INVALID
+E5,GBT Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),MAE (kcal),157.76771355372887,test,INVALID
+E5,GBT Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),RMSE (kcal),218.76076394972057,test,INVALID
+E5,GBT Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),R2,0.7449520519564029,test,INVALID
+E5,Linear Regression + activity_type & intensity (formula recovery),MAE (kcal),110.02344734448589,test,REFERENCE
+E5,Linear Regression + activity_type & intensity (formula recovery),RMSE (kcal),154.9853548056984,test,REFERENCE
+E5,Linear Regression + activity_type & intensity (formula recovery),R2,0.8719839876757611,test,REFERENCE
+E5,Random Forest Regressor + activity_type & intensity (formula recovery),MAE (kcal),49.43892951715632,test,REFERENCE
+E5,Random Forest Regressor + activity_type & intensity (formula recovery),RMSE (kcal),72.3022327946851,test,REFERENCE
+E5,Random Forest Regressor + activity_type & intensity (formula recovery),R2,0.9721396614581822,test,REFERENCE
+E5,GBT Regressor + activity_type & intensity (formula recovery),MAE (kcal),21.703280728986,test,REFERENCE
+E5,GBT Regressor + activity_type & intensity (formula recovery),RMSE (kcal),31.099480872165426,test,REFERENCE
+E5,GBT Regressor + activity_type & intensity (formula recovery),R2,0.9948454678779415,test,REFERENCE

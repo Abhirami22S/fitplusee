@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "18eef4aa91fcbf3ae3b4",
+  "position": {
+    "x": 20,
+    "y": 672,
+    "z": 17000,
+    "height": 44,
+    "width": 1240,
+    "tabOrder": 17000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Source: Silver dataset (local Parquet) exported to CSV; fact_daily = one row per user-day (100,122), 437 users. Step goal = 1.10 x the user's own average daily steps (set by etl/spark_etl.py), not a fixed 8,000. Power BI imports CSV; it does not read HDFS.",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

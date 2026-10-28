@@ -1,0 +1,19 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DataFolder", "fact_daily", "dim_user", "dim_date", "segment_profile", "experiments", "model_evaluation", "confusion_matrices", "kmeans_k_selection"]
+
+ref table fact_daily
+ref table dim_user
+ref table dim_date
+ref table segment_profile
+ref table experiments
+ref table model_evaluation
+ref table confusion_matrices
+ref table kmeans_k_selection

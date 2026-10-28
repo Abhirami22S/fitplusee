@@ -1,0 +1,486 @@
+what,experiment_id,model,metric,value_local,split_type,value_hdfs,abs_diff,rel_diff,flag,status_local,status_hdfs,feature,importance_local,importance_hdfs
+metric,E1,Gradient-Boosted Trees,Accuracy,0.7381724790483915,test,0.7381724790483915,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,Accuracy,0.7223853809756894,test (user-held-out),0.7223853809756894,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,Accuracy,0.7293046911597404,validation,0.7293046911597404,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.6143552311435523,test,0.6143552311435523,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.6168216674824605,test (user-held-out),0.6168216674824605,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.6095830823797096,validation,0.6095830823797096,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,F1 (macro),0.7235942355540546,test,0.7235942355540546,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,F1 (macro),0.7147991116898971,validation,0.7147991116898971,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,F1 (positive class),0.7870726613169178,test,0.7870726613169178,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,F1 (positive class),0.7791186588762081,validation,0.7791186588762081,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,F1 (weighted),0.7381124156555368,test,0.7381124156555368,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,F1 (weighted),0.7223009350094648,test (user-held-out),0.7223009350094648,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,F1 (weighted),0.7288957801657834,validation,0.7288957801657834,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,Precision (positive class),0.7864674868189807,test,0.7864674868189807,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,Precision (positive class),0.7750977835723598,validation,0.7750977835723598,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,ROC AUC,0.7734702860401708,test,0.7734647527143181,5.533325852624671e-06,7.153895828310195e-06,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,ROC AUC,0.7607749216316475,test (user-held-out),0.7607763436053997,1.421973752191441e-06,1.8691122850654812e-06,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,ROC AUC,0.7700887412656972,validation,0.7700870006431458,1.7406225513161289e-06,2.260288273342743e-06,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,Recall (positive class),0.7876787678767877,test,0.7876787678767877,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees,Recall (positive class),0.7831814688769348,validation,0.7831814688769348,0.0,0.0,,VALID,VALID,,,
+metric,E1,Gradient-Boosted Trees + steps & distance_km (LEAKAGE),Accuracy,0.9902676399026764,test,0.9902676399026764,0.0,0.0,,INVALID,INVALID,,,
+metric,E1,Gradient-Boosted Trees + steps & distance_km (LEAKAGE),F1 (weighted),0.9902532655037166,test,0.9902532655037166,0.0,0.0,,INVALID,INVALID,,,
+metric,E1,Gradient-Boosted Trees + steps & distance_km (LEAKAGE),ROC AUC,0.9996130335080476,test,0.9996130335080476,0.0,0.0,,INVALID,INVALID,,,
+metric,E1,Logistic Regression,Accuracy,0.7356042173560422,test,0.7356042173560422,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,Accuracy,0.7315222711698482,test (user-held-out),0.7315222711698482,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,Accuracy,0.7333199491400656,validation,0.7333199491400656,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,Baseline accuracy (always majority class),0.6143552311435523,test,0.6143552311435523,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,Baseline accuracy (always majority class),0.6168216674824605,test (user-held-out),0.6168216674824605,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,Baseline accuracy (always majority class),0.6095830823797096,validation,0.6095830823797096,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,F1 (macro),0.7113124669227513,test,0.7113124669227513,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,F1 (macro),0.7104216861947793,validation,0.7104216861947793,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,F1 (positive class),0.7950544844928751,test,0.7950544844928751,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,F1 (positive class),0.7918516583964481,validation,0.7918516583964481,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,F1 (weighted),0.7304651424740691,test,0.7304651424740691,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,F1 (weighted),0.7275267556480665,test (user-held-out),0.7275267556480665,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,F1 (weighted),0.7282683808986852,validation,0.7282683808986852,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,Precision (positive class),0.7589517903580716,test,0.7589517903580716,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,Precision (positive class),0.7552809884416102,validation,0.7552809884416102,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,ROC AUC,0.739601926368592,test,0.7395994585438216,2.4678247704246203e-06,3.3366932703130114e-06,,VALID,VALID,,,
+metric,E1,Logistic Regression,ROC AUC,0.7340401256213849,test (user-held-out),0.7340361272001421,3.998421242767947e-06,5.447142605975626e-06,,VALID,VALID,,,
+metric,E1,Logistic Regression,ROC AUC,0.7365395211831507,validation,0.7365301594564561,9.36172669463442e-06,1.2710420045887121e-05,,VALID,VALID,,,
+metric,E1,Logistic Regression,Recall (positive class),0.8347634763476348,test,0.8347634763476348,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression,Recall (positive class),0.8321440333735866,validation,0.8321440333735866,0.0,0.0,,VALID,VALID,,,
+metric,E1,Logistic Regression + steps & distance_km (LEAKAGE),Accuracy,0.9998648283319816,test,0.9997972424979724,6.758583400923168e-05,6.759497093420251e-05,,INVALID,INVALID,,,
+metric,E1,Logistic Regression + steps & distance_km (LEAKAGE),F1 (weighted),0.9998648283319816,test,0.999797232566806,6.759576517567645e-05,6.760490344324109e-05,,INVALID,INVALID,,,
+metric,E1,Logistic Regression + steps & distance_km (LEAKAGE),ROC AUC,0.9999994119636288,test,0.9999994987230936,8.675946472358476e-08,8.675951574133556e-08,,INVALID,INVALID,,,
+metric,E1,Random Forest,Accuracy,0.735198702351987,test,0.735198702351987,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,Accuracy,0.7232011747430249,test (user-held-out),0.7232011747430249,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,Accuracy,0.7293046911597404,validation,0.7293046911597404,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,Baseline accuracy (always majority class),0.6143552311435523,test,0.6143552311435523,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,Baseline accuracy (always majority class),0.6168216674824605,test (user-held-out),0.6168216674824605,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,Baseline accuracy (always majority class),0.6095830823797096,validation,0.6095830823797096,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,F1 (macro),0.7192550458150446,test,0.7192550458150446,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,F1 (macro),0.7134397646343038,validation,0.7134397646343038,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,F1 (positive class),0.7861587162973475,test,0.7861587162973475,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,F1 (positive class),0.7808657023674088,validation,0.7808657023674088,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,F1 (weighted),0.7345566152197562,test,0.7345566152197562,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,F1 (weighted),0.7232178968524596,test (user-held-out),0.7232178968524596,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,F1 (weighted),0.728217248812576,validation,0.728217248812576,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,Precision (positive class),0.7801126516464472,test,0.7801126516464472,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,Precision (positive class),0.7708021390374331,validation,0.7708021390374331,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,ROC AUC,0.7585319450276605,test,0.7585353864864229,3.441458762409866e-06,4.5369991138400504e-06,,VALID,VALID,,,
+metric,E1,Random Forest,ROC AUC,0.749813460977957,test (user-held-out),0.7498210213730541,7.5603950970837275e-06,1.0083034635338439e-05,,VALID,VALID,,,
+metric,E1,Random Forest,ROC AUC,0.7548685024583048,validation,0.7548685024583048,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,Recall (positive class),0.7922992299229923,test,0.7922992299229923,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest,Recall (positive class),0.7911955209133824,validation,0.7911955209133824,0.0,0.0,,VALID,VALID,,,
+metric,E1,Random Forest + steps & distance_km (LEAKAGE),Accuracy,0.9895241957285752,test,0.9895241957285752,0.0,0.0,,INVALID,INVALID,,,
+metric,E1,Random Forest + steps & distance_km (LEAKAGE),F1 (weighted),0.9895034322925208,test,0.9895034322925208,0.0,0.0,,INVALID,INVALID,,,
+metric,E1,Random Forest + steps & distance_km (LEAKAGE),ROC AUC,0.99960173549777,test,0.99960173549777,0.0,0.0,,INVALID,INVALID,,,
+metric,E2,Gradient-Boosted Trees,Accuracy,0.5990584542958023,chronological test,0.5990584542958023,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,Accuracy,0.7780131328108452,random split (NOT headline),0.7780131328108452,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E2,Gradient-Boosted Trees,Accuracy,0.7546445570397666,validation,0.7546445570397666,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,Baseline accuracy (always TRAINING-majority class),0.411403164639728,chronological test,0.411403164639728,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E2,Gradient-Boosted Trees,Baseline accuracy (always TRAINING-majority class),0.2246276677414402,validation,0.2246276677414402,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E2,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.588596835360272,chronological test,0.588596835360272,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.6459436560050836,random split (NOT headline),0.6459436560050836,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E2,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.7753723322585598,validation,0.7753723322585598,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,F1 (macro),0.5974923209087595,chronological test,0.5974923209087595,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,F1 (macro),0.5870745005508438,validation,0.5870745005508438,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,F1 (positive class),0.6225997045790251,chronological test,0.6225997045790251,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,F1 (positive class),0.8348305752561073,random split (NOT headline),0.8348305752561073,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E2,Gradient-Boosted Trees,F1 (positive class),0.3240270727580372,validation,0.3240270727580372,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,F1 (weighted),0.593043451434036,chronological test,0.593043451434036,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,F1 (weighted),0.7319464679226844,validation,0.7319464679226844,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,Precision (positive class),0.5080353555644838,chronological test,0.5080353555644838,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,Precision (positive class),0.4250832408435072,validation,0.4250832408435072,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,ROC AUC,0.6969582446395678,chronological test,0.6969582446395678,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,ROC AUC,0.8300518511074401,random split (NOT headline),0.8300518511074401,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E2,Gradient-Boosted Trees,ROC AUC,0.6470401250651381,validation,0.6470401250651381,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,Recall (positive class),0.8038779402415767,chronological test,0.8038779402415767,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees,Recall (positive class),0.2617908407382092,validation,0.2617908407382092,0.0,0.0,,VALID,VALID,,,
+metric,E2,Gradient-Boosted Trees + rolling mean INCLUDING the prediction day (LEAKAGE),Accuracy,0.7550673466718975,chronological test,0.7550673466718975,0.0,0.0,,INVALID,INVALID,,,
+metric,E2,Gradient-Boosted Trees + rolling mean INCLUDING the prediction day (LEAKAGE),F1 (positive class),0.7063803103934785,chronological test,0.7063803103934785,0.0,0.0,,INVALID,INVALID,,,
+metric,E2,Gradient-Boosted Trees + rolling mean INCLUDING the prediction day (LEAKAGE),ROC AUC,0.8256841419572934,chronological test,0.8256841419572934,0.0,0.0,,INVALID,INVALID,,,
+metric,E2,Logistic Regression,Accuracy,0.6835360272002092,chronological test,0.6835360272002092,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,Accuracy,0.776954035162042,random split (NOT headline),0.776954035162042,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E2,Logistic Regression,Accuracy,0.7343773990480578,validation,0.7343773990480578,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,Baseline accuracy (always TRAINING-majority class),0.411403164639728,chronological test,0.411403164639728,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E2,Logistic Regression,Baseline accuracy (always TRAINING-majority class),0.2246276677414402,validation,0.2246276677414402,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E2,Logistic Regression,Baseline accuracy (always majority class),0.588596835360272,chronological test,0.588596835360272,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,Baseline accuracy (always majority class),0.6459436560050836,random split (NOT headline),0.6459436560050836,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E2,Logistic Regression,Baseline accuracy (always majority class),0.7753723322585598,validation,0.7753723322585598,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,F1 (macro),0.6520902476965743,chronological test,0.6520902476965743,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,F1 (macro),0.6355955675445197,validation,0.6355955675445197,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,F1 (positive class),0.5474943904263276,chronological test,0.5474943904263276,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,F1 (positive class),0.8347976153122059,random split (NOT headline),0.8347976153122059,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E2,Logistic Regression,F1 (positive class),0.4458680333119795,validation,0.4458680333119795,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,F1 (weighted),0.6706239715884514,chronological test,0.6706239715884514,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,F1 (weighted),0.7400869947350803,validation,0.7400869947350803,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,Precision (positive class),0.6648501362397821,chronological test,0.6648501362397821,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,Precision (positive class),0.4195298372513562,validation,0.4195298372513562,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,ROC AUC,0.700393731816042,chronological test,0.700393731816042,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,ROC AUC,0.8294674906617342,random split (NOT headline),0.8294674906617342,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E2,Logistic Regression,ROC AUC,0.6528697305820806,validation,0.6528697305820806,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,Recall (positive class),0.4653528289891926,chronological test,0.4653528289891926,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression,Recall (positive class),0.4757347915242652,validation,0.4757347915242652,0.0,0.0,,VALID,VALID,,,
+metric,E2,Logistic Regression + rolling mean INCLUDING the prediction day (LEAKAGE),Accuracy,0.798352295017654,chronological test,0.798352295017654,0.0,0.0,,INVALID,INVALID,,,
+metric,E2,Logistic Regression + rolling mean INCLUDING the prediction day (LEAKAGE),F1 (positive class),0.7515307766677409,chronological test,0.7515307766677409,0.0,0.0,,INVALID,INVALID,,,
+metric,E2,Logistic Regression + rolling mean INCLUDING the prediction day (LEAKAGE),ROC AUC,0.8786649163080663,chronological test,0.8786728611414034,7.944833337103496e-06,9.041937591506135e-06,,INVALID,INVALID,,,
+metric,E2,Random Forest,Accuracy,0.5823198639989539,chronological test,0.5823198639989539,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,Accuracy,0.7732471933912307,random split (NOT headline),0.7732471933912307,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E2,Random Forest,Accuracy,0.745278673422386,validation,0.745278673422386,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,Baseline accuracy (always TRAINING-majority class),0.411403164639728,chronological test,0.411403164639728,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E2,Random Forest,Baseline accuracy (always TRAINING-majority class),0.2246276677414402,validation,0.2246276677414402,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E2,Random Forest,Baseline accuracy (always majority class),0.588596835360272,chronological test,0.588596835360272,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,Baseline accuracy (always majority class),0.6459436560050836,random split (NOT headline),0.6459436560050836,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E2,Random Forest,Baseline accuracy (always majority class),0.7753723322585598,validation,0.7753723322585598,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,F1 (macro),0.5788611905988583,chronological test,0.5788611905988583,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,F1 (macro),0.598728499009157,validation,0.598728499009157,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,F1 (positive class),0.6170263788968825,chronological test,0.6170263788968825,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,F1 (positive class),0.8295789222319508,random split (NOT headline),0.8295789222319508,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E2,Random Forest,F1 (positive class),0.3562281722933643,validation,0.3562281722933643,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,F1 (weighted),0.5720985607905906,chronological test,0.5720985607905906,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,F1 (weighted),0.7322842600915381,validation,0.7322842600915381,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,Precision (positive class),0.4953792837889872,chronological test,0.4953792837889872,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,Precision (positive class),0.4120287253141831,validation,0.4120287253141831,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,ROC AUC,0.6706116589475843,chronological test,0.6706116589475843,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,ROC AUC,0.8190625199709822,random split (NOT headline),0.8190625199709822,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E2,Random Forest,ROC AUC,0.6502250225022502,validation,0.6502250225022502,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,Recall (positive class),0.8178639542275906,chronological test,0.8178639542275906,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest,Recall (positive class),0.3137388926862611,validation,0.3137388926862611,0.0,0.0,,VALID,VALID,,,
+metric,E2,Random Forest + rolling mean INCLUDING the prediction day (LEAKAGE),Accuracy,0.6174970576696743,chronological test,0.6174970576696743,0.0,0.0,,INVALID,INVALID,,,
+metric,E2,Random Forest + rolling mean INCLUDING the prediction day (LEAKAGE),F1 (positive class),0.6368715083798883,chronological test,0.6368715083798883,0.0,0.0,,INVALID,INVALID,,,
+metric,E2,Random Forest + rolling mean INCLUDING the prediction day (LEAKAGE),ROC AUC,0.7517536895452914,chronological test,0.7517536895452914,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Logistic Regression,Accuracy,0.5377574370709383,stratified 5-fold CV (out-of-fold),0.5377574370709383,0.0,0.0,,VALID,VALID,,,
+metric,E3,Logistic Regression,Accuracy (mean over folds),0.5378824329906928,stratified 5-fold CV (out-of-fold),0.5378824329906928,0.0,0.0,,VALID,VALID,,,
+metric,E3,Logistic Regression,Accuracy (sd over folds),0.0442022610152682,stratified 5-fold CV (out-of-fold),0.0442022610152682,0.0,0.0,,VALID,VALID,,,
+metric,E3,Logistic Regression,Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),0.5011441647597255,0.0,0.0,,VALID,VALID,,,
+metric,E3,Logistic Regression,F1 (macro),0.5359861227922624,stratified 5-fold CV (out-of-fold),0.5359861227922624,0.0,0.0,,VALID,VALID,,,
+metric,E3,Logistic Regression,F1 (positive class),0.5073170731707317,stratified 5-fold CV (out-of-fold),0.5073170731707317,0.0,0.0,,VALID,VALID,,,
+metric,E3,Logistic Regression,F1 (weighted),0.536051727024806,stratified 5-fold CV (out-of-fold),0.536051727024806,0.0,0.0,,VALID,VALID,,,
+metric,E3,Logistic Regression,Precision (positive class),0.5416666666666666,stratified 5-fold CV (out-of-fold),0.5416666666666666,0.0,0.0,,VALID,VALID,,,
+metric,E3,Logistic Regression,ROC AUC,0.5485526370910311,stratified 5-fold CV (out-of-fold),0.5485526370910311,0.0,0.0,,VALID,VALID,,,
+metric,E3,Logistic Regression,ROC AUC (mean over folds),0.5725016649607338,stratified 5-fold CV (out-of-fold),0.5725016649607338,0.0,0.0,,VALID,VALID,,,
+metric,E3,Logistic Regression,ROC AUC (sd over folds),0.0332051974773902,stratified 5-fold CV (out-of-fold),0.0332051974773902,0.0,0.0,,VALID,VALID,,,
+metric,E3,Logistic Regression,Recall (positive class),0.4770642201834862,stratified 5-fold CV (out-of-fold),0.4770642201834862,0.0,0.0,,VALID,VALID,,,
+metric,E3,Logistic Regression + average steps (LEAKAGE),Accuracy,0.7368421052631579,stratified 5-fold CV (out-of-fold),0.7368421052631579,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Logistic Regression + average steps (LEAKAGE),Accuracy (mean over folds),0.7369778377196179,stratified 5-fold CV (out-of-fold),0.7369778377196179,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Logistic Regression + average steps (LEAKAGE),Accuracy (sd over folds),0.0382294997177102,stratified 5-fold CV (out-of-fold),0.0382294997177102,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Logistic Regression + average steps (LEAKAGE),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),0.5011441647597255,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Logistic Regression + average steps (LEAKAGE),ROC AUC,0.8241590214067278,stratified 5-fold CV (out-of-fold),0.8241590214067278,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Logistic Regression + average steps (LEAKAGE),ROC AUC (mean over folds),0.8267366434391608,stratified 5-fold CV (out-of-fold),0.8267366434391608,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Logistic Regression + average steps (LEAKAGE),ROC AUC (sd over folds),0.0398391335215781,stratified 5-fold CV (out-of-fold),0.0398391335215781,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Logistic Regression: logging-window coverage ONLY (mean logged month),Accuracy,0.5835240274599542,stratified 5-fold CV (out-of-fold),0.5835240274599542,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Logistic Regression: logging-window coverage ONLY (mean logged month),Accuracy (mean over folds),0.5833369784452384,stratified 5-fold CV (out-of-fold),0.5833369784452384,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Logistic Regression: logging-window coverage ONLY (mean logged month),Accuracy (sd over folds),0.0429629546093202,stratified 5-fold CV (out-of-fold),0.0429629546093202,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Logistic Regression: logging-window coverage ONLY (mean logged month),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),0.5011441647597255,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Logistic Regression: logging-window coverage ONLY (mean logged month),ROC AUC,0.6194545683046374,stratified 5-fold CV (out-of-fold),0.6194545683046374,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Logistic Regression: logging-window coverage ONLY (mean logged month),ROC AUC (mean over folds),0.6224000073749939,stratified 5-fold CV (out-of-fold),0.6224000073749939,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Logistic Regression: logging-window coverage ONLY (mean logged month),ROC AUC (sd over folds),0.0280994455935168,stratified 5-fold CV (out-of-fold),0.0280994455935168,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),Accuracy,0.5469107551487414,stratified 5-fold CV (out-of-fold),0.5469107551487414,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),Accuracy (mean over folds),0.5469466112609658,stratified 5-fold CV (out-of-fold),0.5469466112609658,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),Accuracy (sd over folds),0.0356514358919035,stratified 5-fold CV (out-of-fold),0.0356514358919035,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),0.5011441647597255,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),ROC AUC,0.5720958485191237,stratified 5-fold CV (out-of-fold),0.5720958485191237,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),ROC AUC (mean over folds),0.5758608629189779,stratified 5-fold CV (out-of-fold),0.5758608629189779,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),ROC AUC (sd over folds),0.031683451338806,stratified 5-fold CV (out-of-fold),0.031683451338806,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest,Accuracy,0.5354691075514875,stratified 5-fold CV (out-of-fold),0.5354691075514875,0.0,0.0,,VALID,VALID,,,
+metric,E3,Random Forest,Accuracy (mean over folds),0.5353988967461302,stratified 5-fold CV (out-of-fold),0.5353988967461302,0.0,0.0,,VALID,VALID,,,
+metric,E3,Random Forest,Accuracy (sd over folds),0.0406398659583452,stratified 5-fold CV (out-of-fold),0.0406398659583452,0.0,0.0,,VALID,VALID,,,
+metric,E3,Random Forest,Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),0.5011441647597255,0.0,0.0,,VALID,VALID,,,
+metric,E3,Random Forest,F1 (macro),0.5319298245614035,stratified 5-fold CV (out-of-fold),0.5319298245614035,0.0,0.0,,VALID,VALID,,,
+metric,E3,Random Forest,F1 (positive class),0.5726315789473684,stratified 5-fold CV (out-of-fold),0.5726315789473684,0.0,0.0,,VALID,VALID,,,
+metric,E3,Random Forest,F1 (weighted),0.5318366855353487,stratified 5-fold CV (out-of-fold),0.5318366855353487,0.0,0.0,,VALID,VALID,,,
+metric,E3,Random Forest,Precision (positive class),0.5291828793774319,stratified 5-fold CV (out-of-fold),0.5291828793774319,0.0,0.0,,VALID,VALID,,,
+metric,E3,Random Forest,ROC AUC,0.542478320975242,stratified 5-fold CV (out-of-fold),0.542478320975242,0.0,0.0,,VALID,VALID,,,
+metric,E3,Random Forest,ROC AUC (mean over folds),0.544649106731805,stratified 5-fold CV (out-of-fold),0.544649106731805,0.0,0.0,,VALID,VALID,,,
+metric,E3,Random Forest,ROC AUC (sd over folds),0.0377378860999523,stratified 5-fold CV (out-of-fold),0.0377378860999523,0.0,0.0,,VALID,VALID,,,
+metric,E3,Random Forest,Recall (positive class),0.6238532110091743,stratified 5-fold CV (out-of-fold),0.6238532110091743,0.0,0.0,,VALID,VALID,,,
+metric,E3,Random Forest + average steps (LEAKAGE),Accuracy,0.7322654462242563,stratified 5-fold CV (out-of-fold),0.7322654462242563,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Random Forest + average steps (LEAKAGE),Accuracy (mean over folds),0.7321960584189935,stratified 5-fold CV (out-of-fold),0.7321960584189935,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Random Forest + average steps (LEAKAGE),Accuracy (sd over folds),0.0575415615429552,stratified 5-fold CV (out-of-fold),0.0575415615429552,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Random Forest + average steps (LEAKAGE),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),0.5011441647597255,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Random Forest + average steps (LEAKAGE),ROC AUC,0.7977671651795065,stratified 5-fold CV (out-of-fold),0.7977671651795065,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Random Forest + average steps (LEAKAGE),ROC AUC (mean over folds),0.8040506036320728,stratified 5-fold CV (out-of-fold),0.8040506036320728,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Random Forest + average steps (LEAKAGE),ROC AUC (sd over folds),0.0467164986455672,stratified 5-fold CV (out-of-fold),0.0467164986455672,0.0,0.0,,INVALID,INVALID,,,
+metric,E3,Random Forest: logging-window coverage ONLY (mean logged month),Accuracy,0.5675057208237986,stratified 5-fold CV (out-of-fold),0.5675057208237986,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest: logging-window coverage ONLY (mean logged month),Accuracy (mean over folds),0.5674272800174964,stratified 5-fold CV (out-of-fold),0.5674272800174964,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest: logging-window coverage ONLY (mean logged month),Accuracy (sd over folds),0.0219000161571213,stratified 5-fold CV (out-of-fold),0.0219000161571213,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest: logging-window coverage ONLY (mean logged month),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),0.5011441647597255,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest: logging-window coverage ONLY (mean logged month),ROC AUC,0.6077353273846927,stratified 5-fold CV (out-of-fold),0.6077353273846927,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest: logging-window coverage ONLY (mean logged month),ROC AUC (mean over folds),0.6180021923845367,stratified 5-fold CV (out-of-fold),0.6180021923845367,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest: logging-window coverage ONLY (mean logged month),ROC AUC (sd over folds),0.0270699101894819,stratified 5-fold CV (out-of-fold),0.0270699101894819,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),Accuracy,0.5423340961098398,stratified 5-fold CV (out-of-fold),0.5423340961098398,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),Accuracy (mean over folds),0.5421119778377196,stratified 5-fold CV (out-of-fold),0.5421119778377196,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),Accuracy (sd over folds),0.0573338700214644,stratified 5-fold CV (out-of-fold),0.0573338700214644,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),0.5011441647597255,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),ROC AUC,0.540844539399271,stratified 5-fold CV (out-of-fold),0.540844539399271,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),ROC AUC (mean over folds),0.5447146436090091,stratified 5-fold CV (out-of-fold),0.5447146436090091,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),ROC AUC (sd over folds),0.0619657577277851,stratified 5-fold CV (out-of-fold),0.0619657577277851,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E4,Gradient-Boosted Trees,Accuracy,0.5035894925762767,test (user-held-out),0.5035894925762767,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,Accuracy,0.4991465496220434,validation (user-held-out),0.4991465496220434,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.5079131995431555,test (user-held-out),0.5079131995431555,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.5046330163374787,validation (user-held-out),0.5046330163374787,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,"Confusion: actual High, predicted High",2580.0,test (user-held-out),2580.0,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,"Confusion: actual High, predicted Low",3452.0,test (user-held-out),3452.0,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,"Confusion: actual Low, predicted High",2633.0,test (user-held-out),2633.0,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,"Confusion: actual Low, predicted Low",3593.0,test (user-held-out),3593.0,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,F1 (macro),0.5001760174123051,test (user-held-out),0.5001760174123051,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,F1 (macro),0.4964878889537979,validation (user-held-out),0.4964878889537979,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,F1 (positive class),0.4588706091596264,test (user-held-out),0.4588706091596264,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,F1 (positive class),0.4599000788850907,validation (user-held-out),0.4599000788850907,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,F1 (weighted),0.5008297332877351,test (user-held-out),0.5008297332877351,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,F1 (weighted),0.4968269127973997,validation (user-held-out),0.4968269127973997,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,Precision (positive class),0.4949165547669288,test (user-held-out),0.4949165547669288,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,Precision (positive class),0.4936494496189669,validation (user-held-out),0.4936494496189669,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,ROC AUC,0.4998594470139341,test (user-held-out),0.4998594470139341,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,ROC AUC,0.4969381507385759,validation (user-held-out),0.4969381507385759,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,Recall (positive class),0.4277188328912467,test (user-held-out),0.4277188328912467,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees,Recall (positive class),0.4304700959881861,validation (user-held-out),0.4304700959881861,0.0,0.0,,VALID,VALID,,,
+metric,E4,Gradient-Boosted Trees + calories_burned (LEAKAGE),Accuracy,0.8981889378365149,test (user-held-out),0.8981889378365149,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Gradient-Boosted Trees + calories_burned (LEAKAGE),F1 (macro),0.8981841566608437,test (user-held-out),0.8981841566608437,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Gradient-Boosted Trees + calories_burned (LEAKAGE),ROC AUC,0.9672644413433524,test (user-held-out),0.9672644413433524,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Gradient-Boosted Trees + sedentary_minutes (LEAKAGE),Accuracy,0.9741393375754608,test (user-held-out),0.9741393375754608,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Gradient-Boosted Trees + sedentary_minutes (LEAKAGE),F1 (macro),0.9741350945956512,test (user-held-out),0.9741350945956512,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Gradient-Boosted Trees + sedentary_minutes (LEAKAGE),ROC AUC,0.9976386246262572,test (user-held-out),0.9976386246262572,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Logistic Regression,Accuracy,0.5039973894599445,test (user-held-out),0.5039973894599445,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,Accuracy,0.5008534503779566,validation (user-held-out),0.5008534503779566,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,Baseline accuracy (always majority class),0.5079131995431555,test (user-held-out),0.5079131995431555,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,Baseline accuracy (always majority class),0.5046330163374787,validation (user-held-out),0.5046330163374787,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,"Confusion: actual High, predicted High",1078.0,test (user-held-out),1078.0,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,"Confusion: actual High, predicted Low",4954.0,test (user-held-out),4954.0,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,"Confusion: actual Low, predicted High",1126.0,test (user-held-out),1126.0,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,"Confusion: actual Low, predicted Low",5100.0,test (user-held-out),5100.0,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,F1 (macro),0.4441565942294451,test (user-held-out),0.4441565942294451,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,F1 (macro),0.4365932535730259,validation (user-held-out),0.4365932535730259,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,F1 (positive class),0.2617775619232637,test (user-held-out),0.2617775619232637,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,F1 (positive class),0.2463181148748159,validation (user-held-out),0.2463181148748159,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,F1 (weighted),0.447042997579698,test (user-held-out),0.447042997579698,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,F1 (weighted),0.4383563492254356,validation (user-held-out),0.4383563492254356,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,Precision (positive class),0.4891107078039927,test (user-held-out),0.4891107078039927,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,Precision (positive class),0.4886778670562454,validation (user-held-out),0.4886778670562454,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,ROC AUC,0.4999244046741609,test (user-held-out),0.4999244046741609,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,ROC AUC,0.4968449104069232,validation (user-held-out),0.4968449104069232,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,Recall (positive class),0.1787135278514589,test (user-held-out),0.1787135278514589,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression,Recall (positive class),0.1646566576421363,validation (user-held-out),0.1646566576421363,0.0,0.0,,VALID,VALID,,,
+metric,E4,Logistic Regression + calories_burned (LEAKAGE),Accuracy,0.8763256648719204,test (user-held-out),0.8763256648719204,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Logistic Regression + calories_burned (LEAKAGE),F1 (macro),0.8762573578853878,test (user-held-out),0.8762573578853878,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Logistic Regression + calories_burned (LEAKAGE),ROC AUC,0.9511739802326346,test (user-held-out),0.9511739802326346,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Logistic Regression + sedentary_minutes (LEAKAGE),Accuracy,0.9693261543481808,test (user-held-out),0.9693261543481808,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Logistic Regression + sedentary_minutes (LEAKAGE),F1 (macro),0.9693162707684682,test (user-held-out),0.9693162707684682,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Logistic Regression + sedentary_minutes (LEAKAGE),ROC AUC,0.996627274197108,test (user-held-out),0.996627274197108,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Random Forest,Accuracy,0.5056289769946157,test (user-held-out),0.5056289769946157,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,Accuracy,0.5031699585466959,validation (user-held-out),0.5031699585466959,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,Baseline accuracy (always majority class),0.5079131995431555,test (user-held-out),0.5079131995431555,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,Baseline accuracy (always majority class),0.5046330163374787,validation (user-held-out),0.5046330163374787,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,"Confusion: actual High, predicted High",1010.0,test (user-held-out),1010.0,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,"Confusion: actual High, predicted Low",5022.0,test (user-held-out),5022.0,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,"Confusion: actual Low, predicted High",1038.0,test (user-held-out),1038.0,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,"Confusion: actual Low, predicted Low",5188.0,test (user-held-out),5188.0,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,F1 (macro),0.4406485762959358,test (user-held-out),0.4406485762959358,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,F1 (macro),0.4230789944113327,validation (user-held-out),0.4230789944113327,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,F1 (positive class),0.25,test (user-held-out),0.25,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,F1 (positive class),0.2081228138359891,validation (user-held-out),0.2081228138359891,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,F1 (weighted),0.4436658567496323,test (user-held-out),0.4436658567496323,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,F1 (weighted),0.4250707854042279,validation (user-held-out),0.4250707854042279,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,Precision (positive class),0.4931640625,test (user-held-out),0.4931640625,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,Precision (positive class),0.4944598337950138,validation (user-held-out),0.4944598337950138,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,ROC AUC,0.4964867611522143,test (user-held-out),0.4964867611522143,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,ROC AUC,0.4974359503440524,validation (user-held-out),0.4974359503440524,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,Recall (positive class),0.1674403183023872,test (user-held-out),0.1674403183023872,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest,Recall (positive class),0.1317991631799163,validation (user-held-out),0.1317991631799163,0.0,0.0,,VALID,VALID,,,
+metric,E4,Random Forest + calories_burned (LEAKAGE),Accuracy,0.7878120411160059,test (user-held-out),0.7878120411160059,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Random Forest + calories_burned (LEAKAGE),F1 (macro),0.7876046915009223,test (user-held-out),0.7876046915009223,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Random Forest + calories_burned (LEAKAGE),ROC AUC,0.8905472212233971,test (user-held-out),0.8905472212233971,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Random Forest + sedentary_minutes (LEAKAGE),Accuracy,0.8032305433186491,test (user-held-out),0.8032305433186491,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Random Forest + sedentary_minutes (LEAKAGE),F1 (macro),0.8030352335701878,test (user-held-out),0.8030352335701878,0.0,0.0,,INVALID,INVALID,,,
+metric,E4,Random Forest + sedentary_minutes (LEAKAGE),ROC AUC,0.9026853302357448,test (user-held-out),0.9026853302357448,0.0,0.0,,INVALID,INVALID,,,
+metric,E5,Baseline: Linear Regression on active_minutes only,MAE (kcal),247.4010149675612,test,247.4010149675612,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E5,Baseline: Linear Regression on active_minutes only,MAE (kcal),248.45405410412215,validation,248.45405410412215,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E5,Baseline: Linear Regression on active_minutes only,R2,0.3911814803154102,test,0.3911814803154103,5.551115123125783e-17,1.4190638878532567e-16,,BASELINE,BASELINE,,,
+metric,E5,Baseline: Linear Regression on active_minutes only,R2,0.4008264399981408,validation,0.4008264399981408,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E5,Baseline: Linear Regression on active_minutes only,RMSE (kcal),337.98890319982365,test,337.9889031998236,5.684341886080802e-14,1.6818131696827162e-16,,BASELINE,BASELINE,,,
+metric,E5,Baseline: Linear Regression on active_minutes only,RMSE (kcal),339.9100747140316,validation,339.9100747140316,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E5,Baseline: training mean,MAE (kcal),395.2072184015781,chronological test (>= 2024-10-15),395.2072184015781,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E5,Baseline: training mean,MAE (kcal),334.51018668646066,test,334.51018668646066,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E5,Baseline: training mean,MAE (kcal),339.9107342033764,validation,339.9107342033764,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E5,Baseline: training mean,R2,-0.162973567910007,chronological test (>= 2024-10-15),-0.162973567910007,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E5,Baseline: training mean,R2,-2.029875471487585e-06,test,-2.029875471265541e-06,2.2204418140855768e-16,1.0938808046477531e-10,,BASELINE,BASELINE,,,
+metric,E5,Baseline: training mean,R2,-6.309580106167445e-06,validation,-6.3095801059454e-06,2.220446049250313e-16,3.5191661123057727e-11,,BASELINE,BASELINE,,,
+metric,E5,Baseline: training mean,RMSE (kcal),548.2178380973107,chronological test (>= 2024-10-15),548.2178380973107,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E5,Baseline: training mean,RMSE (kcal),433.17058257844974,test,433.17058257844974,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E5,Baseline: training mean,RMSE (kcal),439.1259341567061,validation,439.1259341567061,0.0,0.0,,BASELINE,BASELINE,,,
+metric,E5,GBT Regressor,MAE (kcal),235.86237680053225,chronological test (>= 2024-10-15),235.86237680053225,0.0,0.0,,VALID,VALID,,,
+metric,E5,GBT Regressor,MAE (kcal),183.28060718759247,test,183.28060718759247,0.0,0.0,,VALID,VALID,,,
+metric,E5,GBT Regressor,MAE (kcal),183.87031699288136,validation,183.87031699288136,0.0,0.0,,VALID,VALID,,,
+metric,E5,GBT Regressor,R2,0.6087143991518313,chronological test (>= 2024-10-15),0.6087143991518313,0.0,0.0,,VALID,VALID,,,
+metric,E5,GBT Regressor,R2,0.6658037597473698,test,0.6658037597473698,0.0,0.0,,VALID,VALID,,,
+metric,E5,GBT Regressor,R2,0.6702120703355703,validation,0.6702120703355703,0.0,0.0,,VALID,VALID,,,
+metric,E5,GBT Regressor,RMSE (kcal),317.99125280777736,chronological test (>= 2024-10-15),317.99125280777736,0.0,0.0,,VALID,VALID,,,
+metric,E5,GBT Regressor,RMSE (kcal),250.41439715393884,test,250.41439715393884,0.0,0.0,,VALID,VALID,,,
+metric,E5,GBT Regressor,RMSE (kcal),252.1767798411876,validation,252.1767798411876,0.0,0.0,,VALID,VALID,,,
+metric,E5,GBT Regressor + activity_type & intensity (formula recovery),MAE (kcal),21.703280728986,test,21.703280728986,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E5,GBT Regressor + activity_type & intensity (formula recovery),R2,0.9948454678779416,test,0.9948454678779416,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E5,GBT Regressor + activity_type & intensity (formula recovery),RMSE (kcal),31.099480872165422,test,31.099480872165422,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E5,GBT Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),MAE (kcal),157.76771355372887,test,157.76771355372887,0.0,0.0,,INVALID,INVALID,,,
+metric,E5,GBT Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),R2,0.7449520519564029,test,0.7449520519564029,0.0,0.0,,INVALID,INVALID,,,
+metric,E5,GBT Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),RMSE (kcal),218.76076394972057,test,218.76076394972057,0.0,0.0,,INVALID,INVALID,,,
+metric,E5,Linear Regression,MAE (kcal),247.19925603633064,chronological test (>= 2024-10-15),247.19925603633064,0.0,0.0,,VALID,VALID,,,
+metric,E5,Linear Regression,MAE (kcal),199.71263311260105,test,199.7126331126011,5.684341886080802e-14,2.8462605482127323e-16,,VALID,VALID,,,
+metric,E5,Linear Regression,MAE (kcal),199.4953312092055,validation,199.4953312092055,0.0,0.0,,VALID,VALID,,,
+metric,E5,Linear Regression,R2,0.5804257598670424,chronological test (>= 2024-10-15),0.5804257598670426,2.220446049250313e-16,3.8255470428448054e-16,,VALID,VALID,,,
+metric,E5,Linear Regression,R2,0.6295587174061572,test,0.6295587174061572,0.0,0.0,,VALID,VALID,,,
+metric,E5,Linear Regression,R2,0.6362594051014518,validation,0.6362594051014517,1.1102230246251565e-16,1.744921985786805e-16,,VALID,VALID,,,
+metric,E5,Linear Regression,RMSE (kcal),329.28553171660457,chronological test (>= 2024-10-15),329.2855317166045,5.684341886080802e-14,1.7262653042931017e-16,,VALID,VALID,,,
+metric,E5,Linear Regression,RMSE (kcal),263.64418934697864,test,263.64418934697864,0.0,0.0,,VALID,VALID,,,
+metric,E5,Linear Regression,RMSE (kcal),264.8400144790687,validation,264.8400144790687,0.0,0.0,,VALID,VALID,,,
+metric,E5,Linear Regression + activity_type & intensity (formula recovery),MAE (kcal),110.02344734448587,test,110.02344734448587,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E5,Linear Regression + activity_type & intensity (formula recovery),R2,0.8719839876757611,test,0.8719839876757611,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E5,Linear Regression + activity_type & intensity (formula recovery),RMSE (kcal),154.9853548056984,test,154.9853548056984,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E5,Linear Regression + calories_roll7_avg incl. the day itself (LEAKAGE),MAE (kcal),177.36947211239058,test,177.36947211239058,0.0,0.0,,INVALID,INVALID,,,
+metric,E5,Linear Regression + calories_roll7_avg incl. the day itself (LEAKAGE),R2,0.7031657687226134,test,0.7031657687226134,0.0,0.0,,INVALID,INVALID,,,
+metric,E5,Linear Regression + calories_roll7_avg incl. the day itself (LEAKAGE),RMSE (kcal),236.00190350893888,test,236.00190350893888,0.0,0.0,,INVALID,INVALID,,,
+metric,E5,Random Forest Regressor,MAE (kcal),238.8483620147016,chronological test (>= 2024-10-15),238.8483620147016,0.0,0.0,,VALID,VALID,,,
+metric,E5,Random Forest Regressor,MAE (kcal),188.61411637848147,test,188.61411637848147,0.0,0.0,,VALID,VALID,,,
+metric,E5,Random Forest Regressor,MAE (kcal),189.12813276021424,validation,189.1281327602142,2.842170943040401e-14,1.5027753415425732e-16,,VALID,VALID,,,
+metric,E5,Random Forest Regressor,R2,0.5909077446527287,chronological test (>= 2024-10-15),0.5909077446527289,2.220446049250313e-16,3.757686490562499e-16,,VALID,VALID,,,
+metric,E5,Random Forest Regressor,R2,0.6433846629655691,test,0.6433846629655691,0.0,0.0,,VALID,VALID,,,
+metric,E5,Random Forest Regressor,R2,0.6504774481318796,validation,0.6504774481318796,0.0,0.0,,VALID,VALID,,,
+metric,E5,Random Forest Regressor,RMSE (kcal),325.1463397893908,chronological test (>= 2024-10-15),325.1463397893908,0.0,0.0,,VALID,VALID,,,
+metric,E5,Random Forest Regressor,RMSE (kcal),258.6774213224942,test,258.6774213224942,0.0,0.0,,VALID,VALID,,,
+metric,E5,Random Forest Regressor,RMSE (kcal),259.61233171787615,validation,259.6123317178762,5.684341886080802e-14,2.189550029641136e-16,,VALID,VALID,,,
+metric,E5,Random Forest Regressor + activity_type & intensity (formula recovery),MAE (kcal),49.43892951715632,test,49.43892951715632,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E5,Random Forest Regressor + activity_type & intensity (formula recovery),R2,0.9721396614581822,test,0.9721396614581822,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E5,Random Forest Regressor + activity_type & intensity (formula recovery),RMSE (kcal),72.3022327946851,test,72.3022327946851,0.0,0.0,,REFERENCE,REFERENCE,,,
+metric,E5,Random Forest Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),MAE (kcal),163.705941871207,test,163.705941871207,0.0,0.0,,INVALID,INVALID,,,
+metric,E5,Random Forest Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),R2,0.7237490847578845,test,0.7237490847578845,0.0,0.0,,INVALID,INVALID,,,
+metric,E5,Random Forest Regressor + calories_roll7_avg incl. the day itself (LEAKAGE),RMSE (kcal),227.6723955603087,test,227.6723955603087,0.0,0.0,,INVALID,INVALID,,,
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,active_minutes,0.0232666830195843,0.0232666830195843
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,active_ratio,0.0182290438921402,0.0182290438921402
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,activity_type_idx,0.0932892371034007,0.0932892371034007
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,age,0.0275912780477793,0.0275912780477793
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,avg_heart_rate,0.0237785595267867,0.0237785595267867
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,bmi,0.1658271482555354,0.1658271482555354
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,calories_burned,0.0303343405818696,0.0303343405818696
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,gender_idx,0.0123621316668215,0.0123621316668215
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,height_cm,0.1277300624401186,0.1277300624401186
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,hydration_level,0.0260968654345838,0.0260968654345838
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,intensity_idx,0.0032042142352975,0.0032042142352975
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,max_heart_rate,0.0264736775769217,0.0264736775769217
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,resting_heart_rate,0.0292359199099362,0.0292359199099362
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,sedentary_minutes,0.025513961050431,0.025513961050431
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,sleep_minutes,0.0280365124039356,0.0280365124039356
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,sleep_quality_score,0.0259147130302063,0.0259147130302063
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,stress_level,0.014211140542559,0.014211140542559
+feature importance,E1,Gradient-Boosted Trees,,,,,0.0,0.0,,,,weight_kg,0.2989045112820919,0.2989045112820919
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,active_minutes,0.0479586166245104,0.0479586166245104
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,active_ratio,0.0356735900807808,0.0356735900807808
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,activity_type_idx,0.0586031210778245,0.0586031210778245
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,age,0.0373753892087588,0.0373753892087588
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,avg_heart_rate,0.0372687249527272,0.0372687249527272
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,bmi,0.0928882375415718,0.0928882375415718
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,calories_burned,0.0470246495899506,0.0470246495899506
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,gender_idx,0.0176006282418792,0.0176006282418792
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,height_cm,0.0600852188681841,0.0600852188681841
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,hydration_level,0.0431643919919805,0.0431643919919805
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,intensity_idx,0.0097679788846021,0.0097679788846021
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,max_heart_rate,0.03471719683585,0.03471719683585
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,resting_heart_rate,0.0377134660046359,0.0377134660046359
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,sedentary_minutes,0.0424792319688134,0.0424792319688134
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,sleep_minutes,0.0409014611589253,0.0409014611589253
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,sleep_quality_score,0.0442711274577613,0.0442711274577613
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,stress_level,0.0302633947272656,0.0302633947272656
+feature importance,E1,Random Forest,,,,,0.0,0.0,,,,weight_kg,0.2822435747839777,0.2822435747839777
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,active_minutes_mean7,0.0041976971220128,0.0041976971220128
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,age,0.0047954789016713,0.0047954789016713
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,bmi,0.0009379933359729,0.0009379933359729
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,calories_mean7,0.005693107129717,0.005693107129717
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,day_of_week_idx,0.3284146666533737,0.3284146666533737
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,gender_idx,0.0022215822112392,0.0022215822112392
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,goal_rate7,0.0185359263793571,0.0185359263793571
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,height_cm,0.0042206045762844,0.0042206045762844
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,month_cos,0.1315881437887059,0.1315881437887059
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,month_sin,0.3903149127516627,0.3903149127516627
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,resting_hr_mean7,0.0068943237668994,0.0068943237668994
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,sleep_minutes_mean7,0.0045111740517637,0.0045111740517637
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,sleep_quality_mean7,0.0026857453440237,0.0026857453440237
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,steps_lag1,0.0068692813662247,0.0068692813662247
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,steps_lag2,0.004337385798407,0.004337385798407
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,steps_mean3,0.0092583572267551,0.0092583572267551
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,steps_mean7,0.0664305755440232,0.0664305755440232
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,steps_std7,0.0037884540547735,0.0037884540547735
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,stress_mean7,0.0009875237620722,0.0009875237620722
+feature importance,E2,Gradient-Boosted Trees,,,,,0.0,0.0,,,,weight_baseline_kg,0.0033170662350598,0.0033170662350598
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,active_minutes_mean7,0.0007770579742161,0.0007770579742161
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,age,0.000441781965274,0.000441781965274
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,bmi,0.0004180283098875,0.0004180283098875
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,calories_mean7,0.0062824846849189,0.0062824846849189
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,day_of_week_idx,0.1584460787263497,0.1584460787263497
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,gender_idx,0.0003280260129184,0.0003280260129184
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,goal_rate7,0.1298060710953159,0.1298060710953159
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,height_cm,0.0002883108598057,0.0002883108598057
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,month_cos,0.0992637914692397,0.0992637914692397
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,month_sin,0.3741882588715552,0.3741882588715552
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,resting_hr_mean7,0.0005098115461246,0.0005098115461246
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,sleep_minutes_mean7,0.0007734779443695,0.0007734779443695
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,sleep_quality_mean7,0.0004397320790707,0.0004397320790707
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,steps_lag1,0.0217986603043909,0.0217986603043909
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,steps_lag2,0.0112336396742017,0.0112336396742017
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,steps_mean3,0.0574351730994647,0.0574351730994647
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,steps_mean7,0.1359157686799204,0.1359157686799204
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,steps_std7,0.000922646596216,0.000922646596216
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,stress_mean7,0.0004678152754405,0.0004678152754405
+feature importance,E2,Random Forest,,,,,0.0,0.0,,,,weight_baseline_kg,0.0002633848313188,0.0002633848313188
+feature importance,E3,Random Forest,,,,,0.0,0.0,,,,age,0.054679483735073,0.054679483735073
+feature importance,E3,Random Forest,,,,,0.0,0.0,,,,avg_active_minutes,0.0620191937640574,0.0620191937640574
+feature importance,E3,Random Forest,,,,,0.0,0.0,,,,avg_heart_rate,0.0579651975552949,0.0579651975552949
+feature importance,E3,Random Forest,,,,,0.0,0.0,,,,avg_hydration,0.0998679551502243,0.0998679551502243
+feature importance,E3,Random Forest,,,,,0.0,0.0,,,,avg_sleep_minutes,0.1527363674358148,0.1527363674358148
+feature importance,E3,Random Forest,,,,,0.0,0.0,,,,avg_stress,0.087106337957695,0.087106337957695
+feature importance,E3,Random Forest,,,,,0.0,0.0,,,,bmi,0.1143714489232465,0.1143714489232465
+feature importance,E3,Random Forest,,,,,0.0,0.0,,,,height_cm,0.2001837872709141,0.2001837872709141
+feature importance,E3,Random Forest,,,,,0.0,0.0,,,,weight_baseline_kg,0.1710702282076795,0.1710702282076795
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,activity_type_idx,0.1959229566847667,0.1959229566847667
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,age,0.0717980927444906,0.0717980927444906
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,avg_heart_rate,0.0545096978286394,0.0545096978286394
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,bmi,0.0516167694844381,0.0516167694844381
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,distance_km,0.0529256426038716,0.0529256426038716
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,gender_idx,0.0073421001388536,0.0073421001388536
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,height_cm,0.058809729527263,0.058809729527263
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,hydration_level,0.0601437184126813,0.0601437184126813
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,intensity_idx,0.0112769437760627,0.0112769437760627
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,max_heart_rate,0.0720369735096753,0.0720369735096753
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,resting_heart_rate,0.0722958315533218,0.0722958315533218
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,sleep_minutes,0.0738724770817352,0.0738724770817352
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,sleep_quality_score,0.0718975066384031,0.0718975066384031
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,steps,0.0621743591440329,0.0621743591440329
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,stress_level,0.0390603396015724,0.0390603396015724
+feature importance,E4,Gradient-Boosted Trees,,,,,0.0,0.0,,,,weight_baseline_kg,0.0443168612701915,0.0443168612701915
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,activity_type_idx,0.1090720103616952,0.1090720103616952
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,age,0.0535453185373485,0.0535453185373485
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,avg_heart_rate,0.0770062989348077,0.0770062989348077
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,bmi,0.0552309246981017,0.0552309246981017
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,distance_km,0.0743494627197936,0.0743494627197936
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,gender_idx,0.0145484512403214,0.0145484512403214
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,height_cm,0.0941949792929382,0.0941949792929382
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,hydration_level,0.065585698989336,0.065585698989336
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,intensity_idx,0.0156297247252738,0.0156297247252738
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,max_heart_rate,0.0733123279942816,0.0733123279942816
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,resting_heart_rate,0.0714736943164101,0.0714736943164101
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,sleep_minutes,0.0609430701859474,0.0609430701859474
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,sleep_quality_score,0.093137233911671,0.093137233911671
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,steps,0.061229943288129,0.061229943288129
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,stress_level,0.0364489488360687,0.0364489488360687
+feature importance,E4,Random Forest,,,,,0.0,0.0,,,,weight_baseline_kg,0.0442919119678756,0.0442919119678756
+feature importance,E5,GBT Regressor,,,,,0.0,0.0,,,,active_minutes,0.3350425243342241,0.3350425243342241
+feature importance,E5,GBT Regressor,,,,,0.0,0.0,,,,age,0.0978405134230933,0.0978405134230933
+feature importance,E5,GBT Regressor,,,,,0.0,0.0,,,,avg_heart_rate,0.2226545384081765,0.2226545384081765
+feature importance,E5,GBT Regressor,,,,,0.0,0.0,,,,bmi,0.0172886144087245,0.0172886144087245
+feature importance,E5,GBT Regressor,,,,,0.0,0.0,,,,distance_km,0.0487262299772964,0.0487262299772964
+feature importance,E5,GBT Regressor,,,,,0.0,0.0,,,,gender_idx,0.0036874697819923,0.0036874697819923
+feature importance,E5,GBT Regressor,,,,,0.0,0.0,,,,height_cm,0.029194105266008,0.029194105266008
+feature importance,E5,GBT Regressor,,,,,0.0,0.0,,,,resting_heart_rate,0.0186696130949346,0.0186696130949346
+feature importance,E5,GBT Regressor,,,,,0.0,0.0,,,,steps,0.0595530510424854,0.0595530510424854
+feature importance,E5,GBT Regressor,,,,,0.0,0.0,,,,weight_kg,0.1673433402630646,0.1673433402630646
+feature importance,E5,Random Forest Regressor,,,,,0.0,0.0,,,,active_minutes,0.5996090615129176,0.5996090615129176
+feature importance,E5,Random Forest Regressor,,,,,0.0,0.0,,,,age,0.0336213160406465,0.0336213160406465
+feature importance,E5,Random Forest Regressor,,,,,0.0,0.0,,,,avg_heart_rate,0.1122663933254663,0.1122663933254663
+feature importance,E5,Random Forest Regressor,,,,,0.0,0.0,,,,bmi,0.0206071152798382,0.0206071152798382
+feature importance,E5,Random Forest Regressor,,,,,0.0,0.0,,,,distance_km,0.0129072780098446,0.0129072780098446
+feature importance,E5,Random Forest Regressor,,,,,0.0,0.0,,,,gender_idx,0.0038872105833901,0.0038872105833901
+feature importance,E5,Random Forest Regressor,,,,,0.0,0.0,,,,height_cm,0.013571770091925,0.013571770091925
+feature importance,E5,Random Forest Regressor,,,,,0.0,0.0,,,,resting_heart_rate,0.0073701244265074,0.0073701244265074
+feature importance,E5,Random Forest Regressor,,,,,0.0,0.0,,,,steps,0.0124499150720585,0.0124499150720585
+feature importance,E5,Random Forest Regressor,,,,,0.0,0.0,,,,weight_kg,0.1837098156574055,0.1837098156574055

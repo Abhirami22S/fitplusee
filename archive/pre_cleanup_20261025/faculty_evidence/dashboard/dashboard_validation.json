@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-10-11 14:21:37",
+  "passed": 15,
+  "total": 15,
+  "checks": [
+    {
+      "check": "SQLite connectivity + tables",
+      "passed": true,
+      "detail": "{'user_daily_metrics': 100122, 'population_percentiles': 437, 'users': 4, 'user_daily_raw': 46}"
+    },
+    {
+      "check": "model loads: goal_achievement_model",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "model loads: forecast_model",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "model loads: sleep_quality_model",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "App starts (login screen, no exception)",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "Wrong password gives an error message, no crash",
+      "passed": true,
+      "detail": "['Incorrect password.']"
+    },
+    {
+      "check": "demo1: dashboard renders without exception",
+      "passed": true,
+      "detail": "8 tabs, 2 metrics, 2.8s, []"
+    },
+    {
+      "check": "demo1: key sections present",
+      "passed": true,
+      "detail": "[':material/today: Today', ':material/show_chart: Trends & Forecast', ':material/bedtime: Sleep', ':material/monitor_heart: Health Alerts', ':material/checklist: Recommendations', ':material/insights: Calories & Segments', ':material/leaderboard: Benchmarks', ':material/picture_as_pdf: Reports']"
+    },
+    {
+      "check": "demo1: Calories & Segments tab present",
+      "passed": true,
+      "detail": "[':material/today: Today', ':material/show_chart: Trends & Forecast', ':material/bedtime: Sleep', ':material/monitor_heart: Health Alerts', ':material/checklist: Recommendations', ':material/insights: Calories & Segments', ':material/leaderboard: Benchmarks', ':material/picture_as_pdf: Reports']"
+    },
+    {
+      "check": "demo1: fitness score, segment and monthly sections rendered",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "demo1: calorie model section rendered or reports a clear message",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "demo1: authenticated as the demo user id",
+      "passed": true,
+      "detail": "{'user_id': 1503, 'username': 'demo1', 'is_demo': True}"
+    },
+    {
+      "check": "demo2: dashboard renders without exception",
+      "passed": true,
+      "detail": "8 tabs, 2 metrics, 0.6s, []"
+    },
+    {
+      "check": "demo3: dashboard renders without exception",
+      "passed": true,
+      "detail": "8 tabs, 2 metrics, 0.5s, []"
+    },
+    {
+      "check": "Missing database: friendly st.error and no uncaught exception",
+      "passed": true,
+      "detail": "[\"FitPulse cannot start because required files are missing:\\n\\n- `C:\\\\Users\\\\Abhirami S\\\\AppData\\\\Local\\\\Temp\\\\fp_nodb_43fyw4ts\\\\dashboard\\\\fitpulse.db`\\n- `C:\\\\Users\\\\Abhirami S\\\\AppData\\\\Local\\\\Temp\\\\fp_nodb_43fyw4ts\\\\models\\\\artifacts/goal_achievement_model.joblib`\\n- `C:\\\\Users\\\\Abhirami S\\\\AppData\\\\Local\\\\Temp\\\\fp_nodb_43fyw4ts\\\\models\\\\artifacts/forecast_model.joblib`\\n- `C:\\\\Users\\\\Abhirami"
+    }
+  ],
+  "data_source": "local SQLite dashboard/fitpulse.db + local joblib models (not HDFS)"
+}

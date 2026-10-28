@@ -1,0 +1,3 @@
+cluster,Users,AvgSteps,AvgActiveMin,AvgSedentaryMin,AvgCalories,AvgHeartRate,AvgSleep,AvgIntensity,Segment label (from measured AvgActiveMin rank)
+0,228,8620.72,71.09,944.61,674.96,131.26,424.3,0.07,Highest active-time
+1,209,8630.54,68.68,950.1,647.32,130.38,421.23,0.07,Lowest active-time

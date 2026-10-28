@@ -73,19 +73,9 @@ personalized insight the dashboard surfaces to users.
 
 ---
 
-## Model 4 — Abnormal Heart Rate / Health Risk Flagging (`train_anomaly_detection.py`)
+## Model 4 — removed
 
-**Task:** unsupervised anomaly detection, fit per-user on that user's own heart-rate history.
-**Framing:** flags a day as "worth a look," never a diagnosis.
-
-| Method | Days flagged |
-|---|---|
-| Isolation Forest (per-user, primary) | 3,139 / 100,122 (3.1%) |
-| Z-score fallback (\|z\| > 2.5, simpler/explainable) | 905 / 100,122 (0.9%) |
-| **Agreement between methods** | **97.6%** |
-
-The high agreement rate validates that Isolation Forest isn't flagging arbitrary noise — it's
-finding largely the same days a simple, easy-to-explain threshold rule would also flag.
+Heart-rate anomaly flagging was removed from the live project (it is not one of the supervised experiments E1-E5). The script is kept in `archive/anomaly/`; its numbers are not repeated here.
 
 ---
 
@@ -116,6 +106,6 @@ the correct answer is "there isn't one; it's not a model."
 | 1 | Next-day goal achievement | Classification | Logistic Regression | ROC-AUC 0.755 |
 | 2 | 7-day forecast | Regression (time series) | HistGradientBoosting | MAE 16.6% of avg |
 | 3 | Sleep quality | Regression | Random Forest | R² 0.876 |
-| 4 | Anomaly flagging | Unsupervised | Isolation Forest | 97.6% agreement w/ fallback |
+| 4 | (removed) | - | archived in `archive/anomaly/` | - |
 | 5 | Recommendations | Rule-based | — | N/A by design |
 | 6 | Percentile benchmarking | Statistics | Spark SQL PERCENT_RANK | N/A — not ML |

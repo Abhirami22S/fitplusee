@@ -1,0 +1,2 @@
+expression DataFolder = "D:\bigdata\fitpulsee\FitPulse\powerbi\data\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 935a5451-c5b7-502f-bf94-ee4ab3310ebc

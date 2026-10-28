@@ -1,0 +1,4 @@
+$ hdfs getconf -confKey fs.defaultFS
+(exit code 0)
+
+hdfs://localhost:9000

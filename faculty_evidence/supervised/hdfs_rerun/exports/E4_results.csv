@@ -1,0 +1,79 @@
+experiment_id,model,metric,value,split_type,status
+E4,Random Forest,Accuracy,0.5031699585466959,validation (user-held-out),VALID
+E4,Random Forest,Precision (positive class),0.49445983379501385,validation (user-held-out),VALID
+E4,Random Forest,Recall (positive class),0.13179916317991633,validation (user-held-out),VALID
+E4,Random Forest,F1 (positive class),0.20812281383598913,validation (user-held-out),VALID
+E4,Random Forest,F1 (weighted),0.42507078540422794,validation (user-held-out),VALID
+E4,Random Forest,F1 (macro),0.4230789944113327,validation (user-held-out),VALID
+E4,Random Forest,ROC AUC,0.49743595034405247,validation (user-held-out),VALID
+E4,Random Forest,Baseline accuracy (always majority class),0.5046330163374787,validation (user-held-out),VALID
+E4,Random Forest,Accuracy,0.5056289769946157,test (user-held-out),VALID
+E4,Random Forest,Precision (positive class),0.4931640625,test (user-held-out),VALID
+E4,Random Forest,Recall (positive class),0.16744031830238726,test (user-held-out),VALID
+E4,Random Forest,F1 (positive class),0.25,test (user-held-out),VALID
+E4,Random Forest,F1 (weighted),0.4436658567496323,test (user-held-out),VALID
+E4,Random Forest,F1 (macro),0.4406485762959358,test (user-held-out),VALID
+E4,Random Forest,ROC AUC,0.49648676115221435,test (user-held-out),VALID
+E4,Random Forest,Baseline accuracy (always majority class),0.5079131995431555,test (user-held-out),VALID
+E4,Random Forest,"Confusion: actual Low, predicted Low",5188.0,test (user-held-out),VALID
+E4,Random Forest,"Confusion: actual Low, predicted High",1038.0,test (user-held-out),VALID
+E4,Random Forest,"Confusion: actual High, predicted Low",5022.0,test (user-held-out),VALID
+E4,Random Forest,"Confusion: actual High, predicted High",1010.0,test (user-held-out),VALID
+E4,Gradient-Boosted Trees,Accuracy,0.4991465496220434,validation (user-held-out),VALID
+E4,Gradient-Boosted Trees,Precision (positive class),0.49364944961896695,validation (user-held-out),VALID
+E4,Gradient-Boosted Trees,Recall (positive class),0.4304700959881861,validation (user-held-out),VALID
+E4,Gradient-Boosted Trees,F1 (positive class),0.4599000788850907,validation (user-held-out),VALID
+E4,Gradient-Boosted Trees,F1 (weighted),0.4968269127973997,validation (user-held-out),VALID
+E4,Gradient-Boosted Trees,F1 (macro),0.4964878889537979,validation (user-held-out),VALID
+E4,Gradient-Boosted Trees,ROC AUC,0.4969381507385759,validation (user-held-out),VALID
+E4,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.5046330163374787,validation (user-held-out),VALID
+E4,Gradient-Boosted Trees,Accuracy,0.5035894925762767,test (user-held-out),VALID
+E4,Gradient-Boosted Trees,Precision (positive class),0.4949165547669288,test (user-held-out),VALID
+E4,Gradient-Boosted Trees,Recall (positive class),0.4277188328912467,test (user-held-out),VALID
+E4,Gradient-Boosted Trees,F1 (positive class),0.45887060915962646,test (user-held-out),VALID
+E4,Gradient-Boosted Trees,F1 (weighted),0.5008297332877351,test (user-held-out),VALID
+E4,Gradient-Boosted Trees,F1 (macro),0.5001760174123051,test (user-held-out),VALID
+E4,Gradient-Boosted Trees,ROC AUC,0.49985944701393414,test (user-held-out),VALID
+E4,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.5079131995431555,test (user-held-out),VALID
+E4,Gradient-Boosted Trees,"Confusion: actual Low, predicted Low",3593.0,test (user-held-out),VALID
+E4,Gradient-Boosted Trees,"Confusion: actual Low, predicted High",2633.0,test (user-held-out),VALID
+E4,Gradient-Boosted Trees,"Confusion: actual High, predicted Low",3452.0,test (user-held-out),VALID
+E4,Gradient-Boosted Trees,"Confusion: actual High, predicted High",2580.0,test (user-held-out),VALID
+E4,Logistic Regression,Accuracy,0.5008534503779566,validation (user-held-out),VALID
+E4,Logistic Regression,Precision (positive class),0.48867786705624544,validation (user-held-out),VALID
+E4,Logistic Regression,Recall (positive class),0.16465665764213636,validation (user-held-out),VALID
+E4,Logistic Regression,F1 (positive class),0.2463181148748159,validation (user-held-out),VALID
+E4,Logistic Regression,F1 (weighted),0.4383563492254356,validation (user-held-out),VALID
+E4,Logistic Regression,F1 (macro),0.4365932535730259,validation (user-held-out),VALID
+E4,Logistic Regression,ROC AUC,0.4968449104069232,validation (user-held-out),VALID
+E4,Logistic Regression,Baseline accuracy (always majority class),0.5046330163374787,validation (user-held-out),VALID
+E4,Logistic Regression,Accuracy,0.5039973894599445,test (user-held-out),VALID
+E4,Logistic Regression,Precision (positive class),0.48911070780399274,test (user-held-out),VALID
+E4,Logistic Regression,Recall (positive class),0.1787135278514589,test (user-held-out),VALID
+E4,Logistic Regression,F1 (positive class),0.26177756192326374,test (user-held-out),VALID
+E4,Logistic Regression,F1 (weighted),0.447042997579698,test (user-held-out),VALID
+E4,Logistic Regression,F1 (macro),0.44415659422944515,test (user-held-out),VALID
+E4,Logistic Regression,ROC AUC,0.49992440467416094,test (user-held-out),VALID
+E4,Logistic Regression,Baseline accuracy (always majority class),0.5079131995431555,test (user-held-out),VALID
+E4,Logistic Regression,"Confusion: actual Low, predicted Low",5100.0,test (user-held-out),VALID
+E4,Logistic Regression,"Confusion: actual Low, predicted High",1126.0,test (user-held-out),VALID
+E4,Logistic Regression,"Confusion: actual High, predicted Low",4954.0,test (user-held-out),VALID
+E4,Logistic Regression,"Confusion: actual High, predicted High",1078.0,test (user-held-out),VALID
+E4,Random Forest + calories_burned (LEAKAGE),Accuracy,0.7878120411160059,test (user-held-out),INVALID
+E4,Random Forest + calories_burned (LEAKAGE),F1 (macro),0.7876046915009223,test (user-held-out),INVALID
+E4,Random Forest + calories_burned (LEAKAGE),ROC AUC,0.8905472212233971,test (user-held-out),INVALID
+E4,Gradient-Boosted Trees + calories_burned (LEAKAGE),Accuracy,0.8981889378365149,test (user-held-out),INVALID
+E4,Gradient-Boosted Trees + calories_burned (LEAKAGE),F1 (macro),0.8981841566608437,test (user-held-out),INVALID
+E4,Gradient-Boosted Trees + calories_burned (LEAKAGE),ROC AUC,0.9672644413433525,test (user-held-out),INVALID
+E4,Logistic Regression + calories_burned (LEAKAGE),Accuracy,0.8763256648719204,test (user-held-out),INVALID
+E4,Logistic Regression + calories_burned (LEAKAGE),F1 (macro),0.8762573578853878,test (user-held-out),INVALID
+E4,Logistic Regression + calories_burned (LEAKAGE),ROC AUC,0.9511739802326346,test (user-held-out),INVALID
+E4,Random Forest + sedentary_minutes (LEAKAGE),Accuracy,0.8032305433186491,test (user-held-out),INVALID
+E4,Random Forest + sedentary_minutes (LEAKAGE),F1 (macro),0.8030352335701878,test (user-held-out),INVALID
+E4,Random Forest + sedentary_minutes (LEAKAGE),ROC AUC,0.9026853302357447,test (user-held-out),INVALID
+E4,Gradient-Boosted Trees + sedentary_minutes (LEAKAGE),Accuracy,0.9741393375754609,test (user-held-out),INVALID
+E4,Gradient-Boosted Trees + sedentary_minutes (LEAKAGE),F1 (macro),0.9741350945956511,test (user-held-out),INVALID
+E4,Gradient-Boosted Trees + sedentary_minutes (LEAKAGE),ROC AUC,0.9976386246262572,test (user-held-out),INVALID
+E4,Logistic Regression + sedentary_minutes (LEAKAGE),Accuracy,0.9693261543481808,test (user-held-out),INVALID
+E4,Logistic Regression + sedentary_minutes (LEAKAGE),F1 (macro),0.9693162707684682,test (user-held-out),INVALID
+E4,Logistic Regression + sedentary_minutes (LEAKAGE),ROC AUC,0.996627274197108,test (user-held-out),INVALID

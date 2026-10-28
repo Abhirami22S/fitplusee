@@ -1,0 +1,10 @@
+experiment_id,model,feature,importance,kind
+E3,Logistic Regression,age,0.0017296118741376865,abs standardised coefficient
+E3,Logistic Regression,bmi,0.004120080022246961,abs standardised coefficient
+E3,Logistic Regression,height_cm,0.005557611269866098,abs standardised coefficient
+E3,Logistic Regression,weight_baseline_kg,0.006030884452749439,abs standardised coefficient
+E3,Logistic Regression,avg_heart_rate,0.002214392713562374,abs standardised coefficient
+E3,Logistic Regression,avg_sleep_minutes,0.00259312386604245,abs standardised coefficient
+E3,Logistic Regression,avg_active_minutes,0.0006172580596045747,abs standardised coefficient
+E3,Logistic Regression,avg_stress,0.0010599433852129605,abs standardised coefficient
+E3,Logistic Regression,avg_hydration,0.0022644073566642246,abs standardised coefficient

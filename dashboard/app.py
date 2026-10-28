@@ -18,14 +18,29 @@ import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from models.recommendation_engine import recommend
+from models import analytics
 from auth import register_user, authenticate
 from theme import SERIES, STATUS, ordinal
 import reports as report_builder
 
-DB_PATH = "dashboard/fitpulse.db"
-ARTIFACTS = "models/artifacts"
+# Paths are anchored to the project folder (not the current directory), so the app starts from anywhere.
+# Data source: LOCAL SQLite (built from the LOCAL Silver Parquet by etl/load_to_sqlite.py). The dashboard does not read HDFS.
+_PROJECT = Path(__file__).resolve().parent.parent
+DB_PATH = str(_PROJECT / "dashboard" / "fitpulse.db")
+ARTIFACTS = str(_PROJECT / "models" / "artifacts")
 
 st.set_page_config(page_title="FitPulse", page_icon=":material/directions_run:", layout="wide")
+
+_missing = [p for p in (DB_PATH, f"{ARTIFACTS}/goal_achievement_model.joblib", f"{ARTIFACTS}/forecast_model.joblib",
+                        f"{ARTIFACTS}/sleep_quality_model.joblib") if not Path(p).exists()]
+if _missing:
+    _nl = chr(10)
+    st.error(_nl.join(["FitPulse cannot start because required files are missing:", ""]
+                      + [f"- `{m}`" for m in _missing]
+                      + ["", "Rebuild them with `python etl/spark_etl.py`, `python etl/spark_benchmarks.py`, the "
+                             "`models/train_*.py` scripts and `python etl/load_to_sqlite.py` "
+                             "(see README.md, 'Running the full pipeline')."]))
+    st.stop()
 
 st.markdown(
     """
@@ -136,15 +151,6 @@ def load_population_percentiles_for_cohort(age_group: str, gender: str) -> pd.Da
 
 @st.cache_resource(show_spinner=False)
 def load_models():
-    # Note: anomaly_models_per_user.joblib (one Isolation Forest per training
-    # user, ~900MB combined) is intentionally NOT loaded here. Fitting a
-    # fresh Isolation Forest on one user's ~230 rows takes milliseconds, so
-    # for the deployed app every user gets one fit on the fly (see the
-    # Health Alerts tab) instead of shipping a near-gigabyte artifact that
-    # would blow past GitHub's 100MB file limit and free-hosting resource
-    # limits for no real benefit. The offline training/evaluation of that
-    # artifact (models/train_anomaly_detection.py, metrics_report.md) is
-    # still the source of truth for Model 4's reported accuracy.
     return {
         "goal_model": joblib.load(f"{ARTIFACTS}/goal_achievement_model.joblib"),
         "goal_features": joblib.load(f"{ARTIFACTS}/goal_achievement_features.joblib"),
@@ -400,11 +406,12 @@ if len(user_df) < 8:
 today = user_df.iloc[-1]
 history = user_df.iloc[:-1]
 
-st.caption(f"{today['date'].strftime('%B %-d, %Y') if hasattr(today['date'],'strftime') else today['date']} · {len(user_df)} days on file")
+st.caption(f"{(today['date'].strftime('%B') + f" {today['date'].day}, {today['date'].year}") if hasattr(today['date'],'strftime') else today['date']} · {len(user_df)} days on file")
 
-tab_today, tab_trends, tab_sleep, tab_alerts, tab_reco, tab_bench, tab_reports = st.tabs([
+tab_today, tab_trends, tab_sleep, tab_heart, tab_reco, tab_insights, tab_bench, tab_reports = st.tabs([
     ":material/today: Today", ":material/show_chart: Trends & Forecast", ":material/bedtime: Sleep",
-    ":material/monitor_heart: Health Alerts", ":material/checklist: Recommendations", ":material/leaderboard: Benchmarks",
+    ":material/monitor_heart: Heart Rate", ":material/checklist: Recommendations",
+    ":material/insights: Calories & Trends", ":material/leaderboard: Benchmarks",
     ":material/picture_as_pdf: Reports",
 ])
 
@@ -446,6 +453,8 @@ with tab_today:
                 unsafe_allow_html=True,
             )
         insight("Based on your activity and recovery pattern through today — not on today's step count itself.")
+        _g = analytics.goal_guidance(float(proba))      # transparent probability-band rule (REPORT Table 11)
+        insight(f"{_g['band']}: {_g['action']}")
 
     gap = today["daily_step_goal"] - today["steps"]
     if gap > 0:
@@ -526,34 +535,10 @@ with tab_sleep:
             f"data (correlation {corr2:.2f}) — across all users, stress and sitting time are the two strongest drivers.")
 
 # ---------------------------------------------------------------------------
-# HEALTH ALERTS
+# HEART RATE
 # ---------------------------------------------------------------------------
-with tab_alerts:
+with tab_heart:
     hr_cols = ["resting_heart_rate", "avg_heart_rate", "max_heart_rate"]
-
-    # Fit an Isolation Forest on this user's own heart-rate history — same
-    # algorithm/hyperparameters used offline in models/train_anomaly_detection.py,
-    # just fit on demand (a few hundred rows fits in milliseconds).
-    from sklearn.ensemble import IsolationForest
-    iso_model = IsolationForest(contamination=0.03, random_state=42, n_estimators=150)
-    iso_model.fit(user_df[hr_cols])
-
-    today_flag = iso_model.predict(pd.DataFrame([today[hr_cols]]))[0]
-
-    if today_flag == -1:
-        st.markdown(
-            f'<div class="fp-alert" style="background:{STATUS["warning"]}14; border-color:{STATUS["warning"]}55; color:#7A5010">'
-            f'Worth a look: today\'s heart rate pattern (resting {today["resting_heart_rate"]:.0f}, '
-            f'average {today["avg_heart_rate"]:.0f}, peak {today["max_heart_rate"]:.0f} bpm) is unusual for you. '
-            f'This is not a medical diagnosis, just a statistical flag.</div>',
-            unsafe_allow_html=True,
-        )
-    else:
-        st.markdown(
-            f'<div class="fp-alert" style="background:{STATUS["good"]}14; border-color:{STATUS["good"]}55; color:#155C36">'
-            f'Today\'s heart rate pattern is consistent with your normal baseline.</div>',
-            unsafe_allow_html=True,
-        )
 
     st.markdown("#### Heart rate — last 30 days")
     plot_df = user_df.tail(30)
@@ -568,8 +553,8 @@ with tab_alerts:
     fig = base_layout(fig, "Heart rate (bpm)")
     fig.update_layout(legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0))
     st.plotly_chart(fig, width="stretch")
-    insight("Flags are based on how far a day's heart rate sits from your own recent baseline, "
-            "not a fixed medical threshold.")
+    insight("Resting, average and peak heart rate for your last 30 days. This is a trend view of your own data, "
+            "not a medical diagnosis.")
 
 # ---------------------------------------------------------------------------
 # RECOMMENDATIONS
@@ -593,6 +578,49 @@ with tab_reco:
                 </div>""",
             unsafe_allow_html=True,
         )
+
+# ---------------------------------------------------------------------------
+# CALORIES & TRENDS  (Linear Regression, fitness score, monthly trends)
+# ---------------------------------------------------------------------------
+with tab_insights:
+    fs = analytics.fitness_score(user_df)
+    st.markdown(f"**FitPulse fitness score (last {fs['days']} days): {fs['score']:.0f} / 100**")
+    st.caption("A transparent heuristic for motivation, not a clinical measure. Weights: "
+               + ", ".join(f"{k} {w:.0%}" for k, w in fs["weights"].items()) + ".")
+    st.dataframe(pd.DataFrame({"component": list(fs["components"]), "attainment": [f"{v:.0%}" for v in fs["components"].values()]}),
+                 hide_index=True, width="stretch")
+
+    st.markdown("#### Actual vs predicted calories")
+    try:
+        _cal_cfg = analytics.load_calorie_config()
+        _need = [k for k in _cal_cfg["coefficients_original_units"] if not k.startswith("gender=")] + ["gender"]
+        _calc = user_df.dropna(subset=_need).copy()
+        _calc["predicted"] = analytics.predict_calories(_calc, _cal_cfg)
+        _recent = _calc.tail(60)
+        figc = go.Figure()
+        figc.add_trace(go.Scatter(x=_recent["date"], y=_recent["calories_burned"], mode="lines", name="Actual",
+                                  line=dict(color=SERIES["primary"], width=2)))
+        figc.add_trace(go.Scatter(x=_recent["date"], y=_recent["predicted"], mode="lines", name="Predicted (Linear Regression)",
+                                  line=dict(color=SERIES["amber"], width=2, dash="dash")))
+        figc = base_layout(figc, "Calories (kcal)")
+        figc.update_layout(legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0))
+        st.plotly_chart(figc, width="stretch")
+        _mae = float((_calc["calories_burned"] - _calc["predicted"]).abs().mean())
+        _tm = _cal_cfg["test_metrics"]
+        insight(f"Your average error is {_mae:.0f} kcal/day. On held-out test days the model's MAE is {_tm['MAE']:.0f} kcal and "
+                f"R² {_tm['R2']:.2f}: it explains roughly {_tm['R2']*100:.0f}% of day-to-day variation, so treat it as an estimate.")
+    except FileNotFoundError:
+        st.info("Calorie model not found. Run `python models/train_calorie_regression.py` to create it.")
+    except KeyError as _e:
+        st.info(f"Not enough profile data to estimate calories (missing {_e}).")
+
+    st.markdown("#### Monthly trends")
+    _ms = analytics.monthly_summary(user_df)
+    figm = go.Figure(go.Bar(x=_ms["month"], y=_ms["avg_steps"], marker_color=SERIES["teal"],
+                            hovertemplate="%{x}<br>%{y:,.0f} avg steps<extra></extra>"))
+    figm = base_layout(figm, "Average daily steps")
+    st.plotly_chart(figm, width="stretch")
+    st.dataframe(_ms.round(1), hide_index=True, width="stretch")
 
 # ---------------------------------------------------------------------------
 # BENCHMARKS

@@ -1,0 +1,12 @@
+{
+  "storage_mode": "hdfs",
+  "hdfs_uri": "hdfs://localhost:9000",
+  "input_path": "hdfs://localhost:9000/fitpulse/bronze/fitpulse_raw.csv",
+  "output_path": "hdfs://localhost:9000/fitpulse/silver",
+  "bronze_rows": 100122,
+  "clean_rows": 100122,
+  "silver_rows_written": 100122,
+  "silver_rows_read_back": 100122,
+  "silver_columns": 39,
+  "elapsed_seconds": 13.2
+}

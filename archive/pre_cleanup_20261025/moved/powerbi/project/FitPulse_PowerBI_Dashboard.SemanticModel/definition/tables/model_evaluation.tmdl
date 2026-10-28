@@ -1,0 +1,109 @@
+/// Metrics per experiment/set; every row names its source file.
+table model_evaluation
+	lineageTag: 2761bd32-3138-502d-9766-f55390e211b7
+
+	column experiment_id
+		dataType: string
+		lineageTag: 42ee76cd-7b5e-5d5a-b925-59c6266e44e0
+		summarizeBy: none
+		sourceColumn: experiment_id
+
+	column experiment_name
+		dataType: string
+		isHidden
+		lineageTag: c0a6022c-db04-55e7-9283-a6de3aca8ee8
+		summarizeBy: none
+		sourceColumn: experiment_name
+
+	column algorithm
+		dataType: string
+		lineageTag: 9c494b82-a796-5de7-8b2c-c6b2f37c3386
+		summarizeBy: none
+		sourceColumn: algorithm
+
+	column target
+		dataType: string
+		isHidden
+		lineageTag: 29ae6498-ec60-5026-9d48-d81ca3b61e52
+		summarizeBy: none
+		sourceColumn: target
+
+	column data_granularity
+		dataType: string
+		isHidden
+		lineageTag: c78823fb-5cc7-56d3-9d51-d41873fe36b4
+		summarizeBy: none
+		sourceColumn: data_granularity
+
+	column evaluation_set
+		dataType: string
+		lineageTag: 38ec30e9-42e4-565b-bbe5-5739796d70e2
+		summarizeBy: none
+		sourceColumn: evaluation_set
+
+	column metric
+		dataType: string
+		lineageTag: f0e1a216-adcc-5bc8-9be8-c7a91a0b0ab9
+		summarizeBy: none
+		sourceColumn: metric
+
+	column value
+		dataType: double
+		lineageTag: 91e7e255-1d67-5b3b-b32f-f1154c072263
+		summarizeBy: none
+		sourceColumn: value
+
+	column is_baseline
+		dataType: int64
+		isHidden
+		lineageTag: b7d7141b-3e1a-5f55-8718-2cc95b2d1f50
+		summarizeBy: none
+		sourceColumn: is_baseline
+
+	column source_file
+		dataType: string
+		isHidden
+		lineageTag: 9fbffdde-8394-50ad-88b5-edcebe664c0a
+		summarizeBy: none
+		sourceColumn: source_file
+
+	column metric_label
+		dataType: string
+		lineageTag: 3ce46d01-26ed-567a-927d-dda5b593bc12
+		summarizeBy: none
+		sourceColumn: metric_label
+
+	measure 'Verified Test MAE (kcal)' = CALCULATE ( MAX ( model_evaluation[value] ), model_evaluation[experiment_id] = "E5", model_evaluation[algorithm] = "Linear Regression (Spark MLlib)", model_evaluation[evaluation_set] = "test", model_evaluation[metric] = "MAE (kcal)" )
+		formatString: #,0.0
+		displayFolder: 3 Calorie Prediction
+		lineageTag: eb7b85d3-9b54-5088-845c-e50a0440972f
+
+	measure 'Verified Test RMSE (kcal)' = CALCULATE ( MAX ( model_evaluation[value] ), model_evaluation[experiment_id] = "E5", model_evaluation[algorithm] = "Linear Regression (Spark MLlib)", model_evaluation[evaluation_set] = "test", model_evaluation[metric] = "RMSE (kcal)" )
+		formatString: #,0.0
+		displayFolder: 3 Calorie Prediction
+		lineageTag: b7d15495-03c7-5bdd-9668-53e492c22d7c
+
+	measure 'Verified Test R2' = CALCULATE ( MAX ( model_evaluation[value] ), model_evaluation[experiment_id] = "E5", model_evaluation[algorithm] = "Linear Regression (Spark MLlib)", model_evaluation[evaluation_set] = "test", model_evaluation[metric] = "R2" )
+		formatString: 0.0000
+		displayFolder: 3 Calorie Prediction
+		lineageTag: d10c8040-f8b8-58f0-91b0-aa25b87ced8d
+
+	measure 'Baseline Test MAE (kcal)' = CALCULATE ( MAX ( model_evaluation[value] ), model_evaluation[experiment_id] = "E5", model_evaluation[algorithm] = "Training-mean baseline", model_evaluation[evaluation_set] = "test", model_evaluation[metric] = "MAE (kcal)" )
+		formatString: #,0.0
+		displayFolder: 3 Calorie Prediction
+		lineageTag: 66e4d7d9-8b81-5f15-b742-801724f72995
+
+	measure 'Metric Value' = MAX ( model_evaluation[value] )
+		formatString: 0.0000
+		displayFolder: 5 Model Evaluation
+		lineageTag: 56089c73-d82b-5381-a7ab-a7f06898e077
+
+	partition model_evaluation = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "model_evaluation.csv"), [Delimiter = ",", Columns = 11, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"experiment_id", type text}, {"experiment_name", type text}, {"algorithm", type text}, {"target", type text}, {"data_granularity", type text}, {"evaluation_set", type text}, {"metric", type text}, {"value", type number}, {"is_baseline", Int64.Type}, {"source_file", type text}, {"metric_label", type text}}, "en-US")
+				in
+					Typed

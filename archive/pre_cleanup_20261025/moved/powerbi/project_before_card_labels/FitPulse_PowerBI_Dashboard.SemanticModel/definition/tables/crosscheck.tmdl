@@ -1,0 +1,66 @@
+/// The independent scikit-learn cross-check of the HDFS rerun: one row per check (passed = 1 or 0).
+table crosscheck
+	lineageTag: b0f63a5c-8f7f-5d0c-8561-2580a2f66fb8
+
+	column experiment_id
+		dataType: string
+		lineageTag: ade4e33f-006d-5379-9357-20468905caea
+		summarizeBy: none
+		sourceColumn: experiment_id
+
+	column kind
+		dataType: string
+		lineageTag: 4a61af99-1bd5-5c3c-9b33-b25579f40799
+		summarizeBy: none
+		sourceColumn: kind
+
+	column check
+		dataType: string
+		lineageTag: a75fd38f-794a-5d83-a4c0-a40fd6fd68ac
+		summarizeBy: none
+		sourceColumn: check
+
+	column abs_diff
+		dataType: double
+		lineageTag: eec7a7a9-c8d2-5e6b-8d50-85bba73ce707
+		summarizeBy: none
+		sourceColumn: abs_diff
+
+	column tolerance
+		dataType: double
+		lineageTag: 1a243cb5-2257-52a9-9b8c-e2626b75df6b
+		summarizeBy: none
+		sourceColumn: tolerance
+
+	column passed
+		dataType: int64
+		lineageTag: 22d6c0a1-3078-5955-ba9d-b54640f074ad
+		summarizeBy: none
+		sourceColumn: passed
+
+	column source_file
+		dataType: string
+		isHidden
+		lineageTag: 084b31fe-8e14-5fc3-b566-575070b45fe5
+		summarizeBy: none
+		sourceColumn: source_file
+
+	measure 'Cross-check Checks' = COUNTROWS ( crosscheck )
+		formatString: #,0
+		displayFolder: 5 Model Evaluation
+		lineageTag: 3efcf712-b900-5785-abb0-ca69efb48f40
+
+	measure 'Cross-check Passed' = SUM ( crosscheck[passed] )
+		formatString: #,0
+		displayFolder: 5 Model Evaluation
+		lineageTag: 6ef23050-e9fd-506c-aec9-1be77b4b6cfe
+
+	partition crosscheck = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "crosscheck.csv"), [Delimiter = ",", Columns = 7, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"experiment_id", type text}, {"kind", type text}, {"check", type text}, {"abs_diff", type number}, {"tolerance", type number}, {"passed", Int64.Type}, {"source_file", type text}}, "en-US")
+				in
+					Typed

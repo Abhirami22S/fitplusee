@@ -1,0 +1,42 @@
+/// Silhouette / WCSS by K for the two K-Means experiments (E3, E4).
+table kmeans_k_selection
+	lineageTag: 998eed70-c205-52ea-aff2-562a1dff535c
+
+	column experiment_id
+		dataType: string
+		lineageTag: adb45114-a345-5639-a738-09cb789ed592
+		summarizeBy: none
+		sourceColumn: experiment_id
+
+	column K
+		dataType: int64
+		lineageTag: 186c60a3-3b28-57a9-ba2e-ea4bd377cddc
+		summarizeBy: none
+		sourceColumn: K
+
+	column metric
+		dataType: string
+		lineageTag: 0df18851-3e20-5c66-89e5-689d0fa25310
+		summarizeBy: none
+		sourceColumn: metric
+
+	column value
+		dataType: double
+		lineageTag: 0084d716-29b6-54b5-b27d-6527aa65d1df
+		summarizeBy: none
+		sourceColumn: value
+
+	measure 'K Metric Value' = MAX ( kmeans_k_selection[value] )
+		formatString: 0.0000
+		displayFolder: 5 Model Evaluation
+		lineageTag: 52c15daa-28ae-5a7d-9311-8b0b5823f3de
+
+	partition kmeans_k_selection = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "kmeans_k_selection.csv"), [Delimiter = ",", Columns = 4, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"experiment_id", type text}, {"K", Int64.Type}, {"metric", type text}, {"value", type number}}, "en-US")
+				in
+					Typed

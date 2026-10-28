@@ -1,0 +1,91 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "ebdc310c704ed159d40b",
+  "position": {
+    "x": 330,
+    "y": 420,
+    "z": 10000,
+    "height": 244,
+    "width": 300,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_user"
+                    }
+                  },
+                  "Property": "segment_label"
+                }
+              },
+              "queryRef": "dim_user.segment_label",
+              "nativeQueryRef": "segment_label"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Avg Sedentary Minutes"
+                }
+              },
+              "queryRef": "fact_daily.Avg Sedentary Minutes",
+              "nativeQueryRef": "Avg Sedentary Minutes"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Avg sedentary minutes per day'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sedentary minutes by segment'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

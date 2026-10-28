@@ -1,0 +1,79 @@
+Experiment,Column,Role
+E1 same-day goal,active_minutes,numeric
+E1 same-day goal,sedentary_minutes,numeric
+E1 same-day goal,calories_burned,numeric
+E1 same-day goal,avg_heart_rate,numeric
+E1 same-day goal,max_heart_rate,numeric
+E1 same-day goal,resting_heart_rate,numeric
+E1 same-day goal,sleep_minutes,numeric
+E1 same-day goal,sleep_quality_score,numeric
+E1 same-day goal,active_ratio,numeric
+E1 same-day goal,age,numeric
+E1 same-day goal,bmi,numeric
+E1 same-day goal,height_cm,numeric
+E1 same-day goal,weight_kg,numeric
+E1 same-day goal,stress_level,numeric
+E1 same-day goal,hydration_level,numeric
+E1 same-day goal,intensity,categorical
+E1 same-day goal,activity_type,categorical
+E1 same-day goal,gender,categorical
+E1 same-day goal,label (steps >= 8000),TARGET
+E2 next-day goal,steps_lag1,numeric (history before day t / calendar / profile)
+E2 next-day goal,steps_lag2,numeric (history before day t / calendar / profile)
+E2 next-day goal,steps_mean3,numeric (history before day t / calendar / profile)
+E2 next-day goal,steps_mean7,numeric (history before day t / calendar / profile)
+E2 next-day goal,steps_std7,numeric (history before day t / calendar / profile)
+E2 next-day goal,goal_rate7,numeric (history before day t / calendar / profile)
+E2 next-day goal,calories_mean7,numeric (history before day t / calendar / profile)
+E2 next-day goal,active_minutes_mean7,numeric (history before day t / calendar / profile)
+E2 next-day goal,sleep_quality_mean7,numeric (history before day t / calendar / profile)
+E2 next-day goal,sleep_minutes_mean7,numeric (history before day t / calendar / profile)
+E2 next-day goal,resting_hr_mean7,numeric (history before day t / calendar / profile)
+E2 next-day goal,stress_mean7,numeric (history before day t / calendar / profile)
+E2 next-day goal,month_sin,numeric (history before day t / calendar / profile)
+E2 next-day goal,month_cos,numeric (history before day t / calendar / profile)
+E2 next-day goal,age,numeric (history before day t / calendar / profile)
+E2 next-day goal,bmi,numeric (history before day t / calendar / profile)
+E2 next-day goal,height_cm,numeric (history before day t / calendar / profile)
+E2 next-day goal,weight_baseline_kg,numeric (history before day t / calendar / profile)
+E2 next-day goal,day_of_week,categorical
+E2 next-day goal,gender,categorical
+E2 next-day goal,label (steps(t) >= 8000),TARGET
+E3 high_achiever,age,numeric (per-user average)
+E3 high_achiever,bmi,numeric (per-user average)
+E3 high_achiever,height_cm,numeric (per-user average)
+E3 high_achiever,weight_baseline_kg,numeric (per-user average)
+E3 high_achiever,avg_heart_rate,numeric (per-user average)
+E3 high_achiever,avg_sleep_minutes,numeric (per-user average)
+E3 high_achiever,avg_active_minutes,numeric (per-user average)
+E3 high_achiever,avg_stress,numeric (per-user average)
+E3 high_achiever,avg_hydration,numeric (per-user average)
+E3 high_achiever,high_achiever (goal rate > median user),TARGET
+E4 activity level,avg_heart_rate,numeric
+E4 activity level,max_heart_rate,numeric
+E4 activity level,resting_heart_rate,numeric
+E4 activity level,sleep_minutes,numeric
+E4 activity level,sleep_quality_score,numeric
+E4 activity level,stress_level,numeric
+E4 activity level,hydration_level,numeric
+E4 activity level,steps,numeric
+E4 activity level,distance_km,numeric
+E4 activity level,age,numeric
+E4 activity level,bmi,numeric
+E4 activity level,height_cm,numeric
+E4 activity level,weight_baseline_kg,numeric
+E4 activity level,intensity,categorical
+E4 activity level,activity_type,categorical
+E4 activity level,gender,categorical
+E4 activity level,label (active_minutes > median),TARGET
+E5 calories,steps,numeric
+E5 calories,distance_km,numeric
+E5 calories,active_minutes,numeric
+E5 calories,avg_heart_rate,numeric
+E5 calories,resting_heart_rate,numeric
+E5 calories,age,numeric
+E5 calories,height_cm,numeric
+E5 calories,weight_kg,numeric
+E5 calories,bmi,numeric
+E5 calories,gender,categorical
+E5 calories,calories_burned,TARGET

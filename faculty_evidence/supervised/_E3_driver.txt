@@ -1,0 +1,47 @@
+﻿=== E3 (local) -> D:\bigdata\fitpulsee\FitPulse\faculty_evidence\supervised\E3_run.log
+
+[Stage 4:========================>                                 (5 + 7) / 12]
+[Stage 6:============================================>              (3 + 1) / 4]
+users 437; median goal rate 0.6136; high achievers 218 / 437 (majority baseline 0.501); rate range 0.522-0.710
+users per fold: {1: 88, 3: 87, 2: 88, 4: 86, 0: 88}
+[Stage 3194:==================>                                  (14 + 12) / 40]
+[Stage 3194:==========================>                          (20 + 12) / 40]
+[Stage 3194:======================================>              (29 + 11) / 40]
+Random Forest        OOF acc 0.5355  F1w 0.5318  AUC 0.5425 | majority baseline 0.5011  CM(tn,fp,fn,tp)=(98, 121, 82, 
+136)  chosen per fold: [{'trees': 100, 'depth': 4}, {'trees': 100, 'depth': 2}, {'trees': 100, 'depth': 2}, {'trees': 
+100, 'depth': 2}, {'trees': 100, 'depth': 2}]
+[Stage 3394:=======================>                             (18 + 12) / 40]
+[Stage 3394:===================================>                 (27 + 12) / 40]
+[Stage 3394:=================================================>    (37 + 3) / 40]
+Logistic Regression  OOF acc 0.5378  F1w 0.5361  AUC 0.5486 | majority baseline 0.5011  CM(tn,fp,fn,tp)=(131, 88, 114, 
+104)  chosen per fold: [{'reg': 10.0}, {'reg': 10.0}, {'reg': 0.01}, {'reg': 10.0}, {'reg': 10.0}]
+[Stage 4669:==============================>                      (23 + 12) / 40]
+[Stage 4669:======================================>              (29 + 11) / 40]
+[Stage 4669:===================================================>  (38 + 2) / 40]
+LEAKAGE Random Forest        OOF acc 0.7323  AUC 0.7978   -> INVALID (label = threshold on steps)
+[Stage 4865:=======================>                             (18 + 12) / 40]
+[Stage 4865:=====================================>               (28 + 12) / 40]
+[Stage 4865:===================================================>  (38 + 2) / 40]
+LEAKAGE Logistic Regression  OOF acc 0.7368  AUC 0.8242   -> INVALID (label = threshold on steps)
+REFERENCE coverage-only Random Forest        acc 0.5675  AUC 0.6077
+[Stage 6237:=========================>                           (19 + 12) / 40]
+[Stage 6237:===================================>                 (27 + 12) / 40]
+[Stage 6237:=================================================>    (37 + 3) / 40]
+REFERENCE coverage-only Logistic Regression  acc 0.5835  AUC 0.6195
+[Stage 7468:=========================>                           (19 + 12) / 40]
+[Stage 7468:===================================>                 (27 + 12) / 40]
+[Stage 7468:====================================================> (39 + 1) / 40]
+REFERENCE raw weight Random Forest        acc 0.5423  AUC 0.5408
+[Stage 7664:=======================>                             (18 + 12) / 40]
+[Stage 7664:==================================>                  (26 + 12) / 40]
+[Stage 7664:=================================================>    (37 + 3) / 40]
+REFERENCE raw weight Logistic Regression  acc 0.5469  AUC 0.5721
+wrote D:\bigdata\fitpulsee\FitPulse\exports\E3_results.csv (66 rows)
+E3 comparison table (pooled out-of-fold, stratified 5-fold):
+metric               Accuracy  F1 (weighted)  ROC AUC  Baseline accuracy (always majority class)
+model                                                                                           
+Logistic Regression    0.5378         0.5361   0.5486                                     0.5011
+Random Forest          0.5355         0.5318   0.5425                                     0.5011
+Storage mode used: LOCAL
+
+

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FitPulse - Your Insights</title>
+<style>
+  :root { --ink:#1c1c1a; --muted:#6b6a66; --line:#e4e2dc; --bg:#f6f5f1; --card:#fff; --green:#20493a; --amber:#c97a2b; --rose:#b5495b; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"Segoe UI",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  header { background:var(--green); color:#fff; padding:18px 24px; display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; }
+  header h1 { margin:0; font-size:1.4rem; }
+  header small { opacity:.85; display:block; font-weight:400; font-size:.8rem; margin-top:2px; }
+  select { font-size:1rem; padding:8px 10px; border-radius:8px; border:1px solid var(--line); min-width:240px; }
+  main { max-width:1100px; margin:0 auto; padding:20px 16px 40px; }
+  .grid { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .card h3 { margin:0 0 6px; font-size:.78rem; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.03em; }
+  .big { font-size:1.9rem; font-weight:650; margin:0; }
+  .sub { color:var(--muted); font-size:.82rem; margin-top:4px; }
+  h2 { font-size:1.05rem; margin:26px 0 10px; }
+  .charts { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); }
+  .chartbox { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 14px; }
+  .chartbox h3 { margin:0 0 8px; font-size:.95rem; }
+  .rec { background:var(--card); border:1px solid var(--line); border-left:5px solid var(--amber); border-radius:10px; padding:12px 16px; margin-bottom:10px; }
+  .rec.on_track { border-left-color:var(--green); }
+  .rec b { font-size:1rem; } .rec p { margin:6px 0 0; font-size:.9rem; }
+  .lbl { color:var(--muted); font-size:.75rem; text-transform:uppercase; }
+  .good { color:var(--green); } .warn { color:var(--rose); }
+  footer { color:var(--muted); font-size:.8rem; margin-top:28px; line-height:1.5; }
+  table { border-collapse:collapse; width:100%; font-size:.9rem; } td,th { padding:6px 8px; border-bottom:1px solid var(--line); text-align:left; }
+</style>
+</head>
+<body>
+<header>
+  <div><h1>FitPulse &mdash; your personal insights<small>Computed by models trained on all 437 users' data</small></h1></div>
+  <label>Choose a user: <select id="user"></select></label>
+</header>
+<main id="main"><p>Loading insights&hellip;</p></main>
+<script src="chart.umd.min.js"></script>
+<script>
+let DATA, charts = [];
+const $ = (s) => document.querySelector(s);
+const fmt = (n) => Number(n).toLocaleString("en-US", { maximumFractionDigits: 0 });
+
+fetch("data/insights.json").then(r => r.json()).then(d => {
+  DATA = d;
+  const sel = $("#user");
+  Object.keys(d.users).sort((a, b) => a - b).forEach(id => {
+    const p = d.users[id].profile;
+    sel.add(new Option(`User ${id} (${p.age}, ${p.gender})`, id));
+  });
+  sel.onchange = () => render(sel.value);
+  const first = new URLSearchParams(location.search).get("user");
+  sel.value = d.users[first] ? first : "1503" in d.users ? "1503" : sel.options[0].value;
+  render(sel.value);
+}).catch(e => { $("#main").innerHTML = "<p class='warn'>Could not load data/insights.json: " + e + "</p>"; });
+
+function render(id) {
+  const u = DATA.users[id], s = u.summary, t = u.tomorrow, pop = DATA.population;
+  const prob = t.goal_probability;
+  const cls = prob === null ? "" : prob >= 0.5 ? "good" : "warn";
+  $("#main").innerHTML = `
+  <div class="grid">
+    <div class="card"><h3>Tomorrow: reach your step goal?</h3>
+      <p class="big ${cls}">${prob === null ? "n/a" : Math.round(prob * 100) + "%"}</p>
+      <div class="sub">${t.band || "Not enough history"}</div></div>
+    <div class="card"><h3>Your step goal</h3><p class="big">${fmt(s.daily_step_goal)}</p>
+      <div class="sub">10% above your own average (${fmt(s.avg_steps)}/day). Goal reached on ${s.goal_rate_pct}% of days.</div></div>
+    <div class="card"><h3>Steps vs other users</h3><p class="big">${fmt(s.steps_percentile)}<span style="font-size:1rem">th percentile</span></p>
+      <div class="sub">Everyone's average: ${fmt(pop.avg_steps)} steps/day</div></div>
+    <div class="card"><h3>Your activity group</h3><p class="big" style="font-size:1.25rem">${u.segment.label}</p>
+      <div class="sub">K-Means grouping of all users (groups are close together)</div></div>
+    <div class="card"><h3>Fitness score (7 days)</h3><p class="big">${fmt(s.fitness_score)}<span style="font-size:1rem">/100</span></p>
+      <div class="sub">Heuristic: steps 40%, calories 20%, sleep 25%, activity 15%</div></div>
+  </div>
+
+  <h2>What to do next</h2>
+  <div class="rec ${t.band ? "" : "on_track"}"><span class="lbl">Tomorrow's outlook</span><p><b>${t.band || ""}</b></p><p>${t.action || ""}</p></div>
+  ${u.recommendations.map(r => `<div class="rec ${r.status}"><span class="lbl">${r.topic} &middot; ${r.metric}</span><p><b>${r.what}</b></p><p>${r.why}</p><p>${r.how}</p></div>`).join("")}
+  <div class="rec on_track"><span class="lbl">Activity group</span><p>${u.segment.guidance}</p></div>
+
+  <h2>Your last ${u.series.date.length} days</h2>
+  <div class="charts">
+    <div class="chartbox"><h3>Steps vs your goal</h3><canvas id="c1" height="200"></canvas></div>
+    <div class="chartbox"><h3>Calories: actual vs model estimate</h3><canvas id="c2" height="200"></canvas></div>
+    <div class="chartbox"><h3>Sleep quality (0-100)</h3><canvas id="c3" height="200"></canvas></div>
+  </div>
+
+  <h2>You compared with all users</h2>
+  <div class="card"><table>
+    <tr><th></th><th>You</th><th>All users</th><th>Your percentile</th></tr>
+    <tr><td>Average steps / day</td><td>${fmt(s.avg_steps)}</td><td>${fmt(pop.avg_steps)}</td><td>${fmt(s.steps_percentile)}</td></tr>
+    <tr><td>Average calories / day</td><td>${fmt(s.avg_calories)}</td><td>${fmt(pop.avg_calories)}</td><td>${fmt(s.calories_percentile)}</td></tr>
+    <tr><td>Average sleep quality</td><td>${s.avg_sleep_quality}</td><td>${pop.avg_sleep_quality}</td><td>${fmt(s.sleep_percentile)}</td></tr>
+  </table></div>
+
+  <footer><b>How these insights are produced.</b> The raw data of all ${pop.users} users goes through Spark (stored in HDFS or locally) into the Silver dataset. Models trained on all users
+  then score each person: ${DATA.model_info.goal_model}; ${DATA.model_info.calorie_model}; ${DATA.model_info.segment_model}. Recommendations are simple transparent rules.
+  The data is a public Kaggle dataset with several derived columns, so this is a demonstration, not medical advice.</footer>`;
+  charts.forEach(c => c.destroy()); charts = [];
+  const x = u.series.date, line = (label, data, color, dash) => ({ label, data, borderColor: color, backgroundColor: color, borderDash: dash || [], pointRadius: 0, borderWidth: 2, tension: .25 });
+  const opt = { responsive: true, plugins: { legend: { position: "bottom" } }, scales: { x: { ticks: { maxTicksLimit: 6 } } } };
+  charts.push(new Chart($("#c1"), { type: "line", data: { labels: x, datasets: [line("Steps", u.series.steps, "#20493a"), line("Your goal", u.series.goal, "#c97a2b", [6, 4])] }, options: opt }));
+  charts.push(new Chart($("#c2"), { type: "line", data: { labels: x, datasets: [line("Actual", u.series.calories, "#20493a"), line("Model estimate", u.series.predicted_calories, "#c97a2b", [6, 4])] }, options: opt }));
+  charts.push(new Chart($("#c3"), { type: "line", data: { labels: x, datasets: [line("Sleep quality", u.series.sleep_quality, "#2b7a78")] }, options: opt }));
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+$ hdfs fsck /fitpulse/silver -files -blocks
+(exit code 0)
+
+FSCK started by fitpulse (auth:SIMPLE) from /127.0.0.1 for path /fitpulse/silver at Sun Oct 18 19:40:52 IST 2026
+
+/fitpulse/silver <dir>
+/fitpulse/silver/_SUCCESS 0 bytes, replicated: replication=1, 0 block(s):  OK
+
+/fitpulse/silver/month=2024-01 <dir>
+/fitpulse/silver/month=2024-01/part-00000-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 71726 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741933_1109 len=71726 Live_repl=1
+
+/fitpulse/silver/month=2024-01/part-00001-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 83271 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741927_1103 len=83271 Live_repl=1
+
+/fitpulse/silver/month=2024-01/part-00002-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 84715 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741928_1104 len=84715 Live_repl=1
+
+/fitpulse/silver/month=2024-01/part-00003-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 77448 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741931_1107 len=77448 Live_repl=1
+
+/fitpulse/silver/month=2024-01/part-00004-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 84282 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741926_1102 len=84282 Live_repl=1
+
+/fitpulse/silver/month=2024-01/part-00005-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 77941 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741930_1106 len=77941 Live_repl=1
+
+/fitpulse/silver/month=2024-01/part-00006-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 83812 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741929_1105 len=83812 Live_repl=1
+
+/fitpulse/silver/month=2024-01/part-00007-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 78364 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741932_1108 len=78364 Live_repl=1
+
+/fitpulse/silver/month=2024-02 <dir>
+/fitpulse/silver/month=2024-02/part-00000-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 73541 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741940_1116 len=73541 Live_repl=1
+
+/fitpulse/silver/month=2024-02/part-00001-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 84849 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741939_1115 len=84849 Live_repl=1
+
+/fitpulse/silver/month=2024-02/part-00002-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 85685 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741936_1112 len=85685 Live_repl=1
+
+/fitpulse/silver/month=2024-02/part-00003-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 78944 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741935_1111 len=78944 Live_repl=1
+
+/fitpulse/silver/month=2024-02/part-00004-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 84159 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741975_1151 len=84159 Live_repl=1
+
+/fitpulse/silver/month=2024-02/part-00005-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 79346 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741934_1110 len=79346 Live_repl=1
+
+/fitpulse/silver/month=2024-02/part-00006-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 82975 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741938_1114 len=82975 Live_repl=1
+
+/fitpulse/silver/month=2024-02/part-00007-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 81471 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741937_1113 len=81471 Live_repl=1
+
+/fitpulse/silver/month=2024-03 <dir>
+/fitpulse/silver/month=2024-03/part-00000-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 78643 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741944_1120 len=78643 Live_repl=1
+
+/fitpulse/silver/month=2024-03/part-00001-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 92091 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741983_1159 len=92091 Live_repl=1
+
+/fitpulse/silver/month=2024-03/part-00002-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 92132 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741941_1117 len=92132 Live_repl=1
+
+/fitpulse/silver/month=2024-03/part-00003-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 86390 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741943_1119 len=86390 Live_repl=1
+
+/fitpulse/silver/month=2024-03/part-00004-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 93746 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741979_1155 len=93746 Live_repl=1
+
+/fitpulse/silver/month=2024-03/part-00005-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 85858 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741942_1118 len=85858 Live_repl=1
+
+/fitpulse/silver/month=2024-03/part-00006-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 90593 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741946_1122 len=90593 Live_repl=1
+
+/fitpulse/silver/month=2024-03/part-00007-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 88466 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741945_1121 len=88466 Live_repl=1
+
+/fitpulse/silver/month=2024-04 <dir>
+/fitpulse/silver/month=2024-04/part-00000-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 77702 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741949_1125 len=77702 Live_repl=1
+
+/fitpulse/silver/month=2024-04/part-00001-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 91362 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741985_1161 len=91362 Live_repl=1
+
+/fitpulse/silver/month=2024-04/part-00002-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 90912 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741947_1123 len=90912 Live_repl=1
+
+/fitpulse/silver/month=2024-04/part-00003-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 82780 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741948_1124 len=82780 Live_repl=1
+
+/fitpulse/silver/month=2024-04/part-00004-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 90137 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742006_1182 len=90137 Live_repl=1
+
+/fitpulse/silver/month=2024-04/part-00005-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 83867 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741984_1160 len=83867 Live_repl=1
+
+/fitpulse/silver/month=2024-04/part-00006-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 90017 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741951_1127 len=90017 Live_repl=1
+
+/fitpulse/silver/month=2024-04/part-00007-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 86823 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741950_1126 len=86823 Live_repl=1
+
+/fitpulse/silver/month=2024-05 <dir>
+/fitpulse/silver/month=2024-05/part-00000-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 76298 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741954_1130 len=76298 Live_repl=1
+
+/fitpulse/silver/month=2024-05/part-00001-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 89476 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741986_1162 len=89476 Live_repl=1
+
+/fitpulse/silver/month=2024-05/part-00002-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 89740 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741952_1128 len=89740 Live_repl=1
+
+/fitpulse/silver/month=2024-05/part-00003-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 80923 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741953_1129 len=80923 Live_repl=1
+
+/fitpulse/silver/month=2024-05/part-00004-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 90937 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742007_1183 len=90937 Live_repl=1
+
+/fitpulse/silver/month=2024-05/part-00005-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 83730 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741987_1163 len=83730 Live_repl=1
+
+/fitpulse/silver/month=2024-05/part-00006-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 88781 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741956_1132 len=88781 Live_repl=1
+
+/fitpulse/silver/month=2024-05/part-00007-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 86333 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741955_1131 len=86333 Live_repl=1
+
+/fitpulse/silver/month=2024-06 <dir>
+/fitpulse/silver/month=2024-06/part-00000-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 71609 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741958_1134 len=71609 Live_repl=1
+
+/fitpulse/silver/month=2024-06/part-00001-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 80878 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741988_1164 len=80878 Live_repl=1
+
+/fitpulse/silver/month=2024-06/part-00002-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 84146 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741957_1133 len=84146 Live_repl=1
+
+/fitpulse/silver/month=2024-06/part-00003-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 74140 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741989_1165 len=74140 Live_repl=1
+
+/fitpulse/silver/month=2024-06/part-00004-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 83988 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742008_1184 len=83988 Live_repl=1
+
+/fitpulse/silver/month=2024-06/part-00005-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 75955 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742013_1189 len=75955 Live_repl=1
+
+/fitpulse/silver/month=2024-06/part-00006-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 83534 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741960_1136 len=83534 Live_repl=1
+
+/fitpulse/silver/month=2024-06/part-00007-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 78354 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741959_1135 len=78354 Live_repl=1
+
+/fitpulse/silver/month=2024-07 <dir>
+/fitpulse/silver/month=2024-07/part-00000-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 67144 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741962_1138 len=67144 Live_repl=1
+
+/fitpulse/silver/month=2024-07/part-00001-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 77978 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741990_1166 len=77978 Live_repl=1
+
+/fitpulse/silver/month=2024-07/part-00002-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 79005 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741961_1137 len=79005 Live_repl=1
+
+/fitpulse/silver/month=2024-07/part-00003-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 73189 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741991_1167 len=73189 Live_repl=1
+
+/fitpulse/silver/month=2024-07/part-00004-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 78681 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742009_1185 len=78681 Live_repl=1
+
+/fitpulse/silver/month=2024-07/part-00005-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 73307 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742015_1191 len=73307 Live_repl=1
+
+/fitpulse/silver/month=2024-07/part-00006-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 77305 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741964_1140 len=77305 Live_repl=1
+
+/fitpulse/silver/month=2024-07/part-00007-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 75556 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741963_1139 len=75556 Live_repl=1
+
+/fitpulse/silver/month=2024-08 <dir>
+/fitpulse/silver/month=2024-08/part-00000-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 63840 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741966_1142 len=63840 Live_repl=1
+
+/fitpulse/silver/month=2024-08/part-00001-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 71903 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741992_1168 len=71903 Live_repl=1
+
+/fitpulse/silver/month=2024-08/part-00002-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 75177 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741965_1141 len=75177 Live_repl=1
+
+/fitpulse/silver/month=2024-08/part-00003-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 68230 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741993_1169 len=68230 Live_repl=1
+
+/fitpulse/silver/month=2024-08/part-00004-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 72420 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742010_1186 len=72420 Live_repl=1
+
+/fitpulse/silver/month=2024-08/part-00005-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 69258 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742017_1193 len=69258 Live_repl=1
+
+/fitpulse/silver/month=2024-08/part-00006-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 72045 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741968_1144 len=72045 Live_repl=1
+
+/fitpulse/silver/month=2024-08/part-00007-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 69268 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741967_1143 len=69268 Live_repl=1
+
+/fitpulse/silver/month=2024-09 <dir>
+/fitpulse/silver/month=2024-09/part-00000-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 59627 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741969_1145 len=59627 Live_repl=1
+
+/fitpulse/silver/month=2024-09/part-00001-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 68113 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741994_1170 len=68113 Live_repl=1
+
+/fitpulse/silver/month=2024-09/part-00002-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 69364 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741997_1173 len=69364 Live_repl=1
+
+/fitpulse/silver/month=2024-09/part-00003-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 62526 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741995_1171 len=62526 Live_repl=1
+
+/fitpulse/silver/month=2024-09/part-00004-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 68845 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742011_1187 len=68845 Live_repl=1
+
+/fitpulse/silver/month=2024-09/part-00005-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 64648 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742018_1194 len=64648 Live_repl=1
+
+/fitpulse/silver/month=2024-09/part-00006-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 68521 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741971_1147 len=68521 Live_repl=1
+
+/fitpulse/silver/month=2024-09/part-00007-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 66196 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741970_1146 len=66196 Live_repl=1
+
+/fitpulse/silver/month=2024-10 <dir>
+/fitpulse/silver/month=2024-10/part-00000-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 60467 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741972_1148 len=60467 Live_repl=1
+
+/fitpulse/silver/month=2024-10/part-00001-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 71661 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741996_1172 len=71661 Live_repl=1
+
+/fitpulse/silver/month=2024-10/part-00002-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 69983 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742001_1177 len=69983 Live_repl=1
+
+/fitpulse/silver/month=2024-10/part-00003-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 64539 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741998_1174 len=64539 Live_repl=1
+
+/fitpulse/silver/month=2024-10/part-00004-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 71586 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742012_1188 len=71586 Live_repl=1
+
+/fitpulse/silver/month=2024-10/part-00005-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 67107 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742019_1195 len=67107 Live_repl=1
+
+/fitpulse/silver/month=2024-10/part-00006-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 68607 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741974_1150 len=68607 Live_repl=1
+
+/fitpulse/silver/month=2024-10/part-00007-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 68956 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741973_1149 len=68956 Live_repl=1
+
+/fitpulse/silver/month=2024-11 <dir>
+/fitpulse/silver/month=2024-11/part-00000-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 63116 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741976_1152 len=63116 Live_repl=1
+
+/fitpulse/silver/month=2024-11/part-00001-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 71061 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741999_1175 len=71061 Live_repl=1
+
+/fitpulse/silver/month=2024-11/part-00002-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 69435 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742004_1180 len=69435 Live_repl=1
+
+/fitpulse/silver/month=2024-11/part-00003-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 65848 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742000_1176 len=65848 Live_repl=1
+
+/fitpulse/silver/month=2024-11/part-00004-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 71261 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742014_1190 len=71261 Live_repl=1
+
+/fitpulse/silver/month=2024-11/part-00005-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 69062 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742020_1196 len=69062 Live_repl=1
+
+/fitpulse/silver/month=2024-11/part-00006-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 70418 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741978_1154 len=70418 Live_repl=1
+
+/fitpulse/silver/month=2024-11/part-00007-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 68253 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741977_1153 len=68253 Live_repl=1
+
+/fitpulse/silver/month=2024-12 <dir>
+/fitpulse/silver/month=2024-12/part-00000-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 57961 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741980_1156 len=57961 Live_repl=1
+
+/fitpulse/silver/month=2024-12/part-00001-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 67556 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742002_1178 len=67556 Live_repl=1
+
+/fitpulse/silver/month=2024-12/part-00002-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 67255 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742005_1181 len=67255 Live_repl=1
+
+/fitpulse/silver/month=2024-12/part-00003-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 61573 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742003_1179 len=61573 Live_repl=1
+
+/fitpulse/silver/month=2024-12/part-00004-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 66902 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742016_1192 len=66902 Live_repl=1
+
+/fitpulse/silver/month=2024-12/part-00005-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 64210 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073742021_1197 len=64210 Live_repl=1
+
+/fitpulse/silver/month=2024-12/part-00006-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 64835 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741982_1158 len=64835 Live_repl=1
+
+/fitpulse/silver/month=2024-12/part-00007-0e7d3e93-3851-4dc3-98ee-e544d3192fa2.c000.snappy.parquet 64344 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-1642103972-192.168.1.47-1791704545026:blk_1073741981_1157 len=64344 Live_repl=1
+
+
+Status: HEALTHY
+ Number of data-nodes:	1
+ Number of racks:		1
+ Total dirs:			13
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	7311012 B
+ Total files:	97
+ Total blocks (validated):	96 (avg. block size 76156 B)
+ Minimally replicated blocks:	96 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	1
+ Average block replication:	1.0
+ Missing blocks:		0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Blocks queued for replication:	0
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Sun Oct 18 19:40:52 IST 2026 in 77 milliseconds
+
+
+The filesystem under path '/fitpulse/silver' is HEALTHY
+Connecting to namenode via http://127.0.0.1:9870/fsck?ugi=fitpulse&files=1&blocks=1&path=%2Ffitpulse%2Fsilver

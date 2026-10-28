@@ -1,0 +1,88 @@
+{
+  "hdfs_uri": "hdfs://localhost:9000",
+  "passed": 16,
+  "total": 16,
+  "checks": [
+    {
+      "check": "fs.defaultFS is an hdfs:// URI",
+      "passed": true,
+      "detail": "hdfs://localhost:9000"
+    },
+    {
+      "check": "hdfs dfs -ls /",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hdfs dfs -ls -R /fitpulse",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Silver has month= partition directories",
+      "passed": true,
+      "detail": "12 partitions, 96 parquet files"
+    },
+    {
+      "check": "hdfs dfs -du -h /fitpulse",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DataNode live (dfsadmin -report)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fsck reports Silver HEALTHY",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NameNode + DataNode JVMs running",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Self-test: write small Parquet to HDFS and read it back",
+      "passed": true,
+      "detail": "hdfs://localhost:9000/fitpulse/_selftest_1792332662, schema=struct<id:int,name:string,value:double>"
+    },
+    {
+      "check": "Spark reads Silver from HDFS",
+      "passed": true,
+      "detail": "hdfs://localhost:9000/fitpulse/silver: 100,122 rows, 39 columns"
+    },
+    {
+      "check": "Silver partitions (Spark) match HDFS directory listing",
+      "passed": true,
+      "detail": "12 months: 2024-01..2024-12"
+    },
+    {
+      "check": "ETL report: storage_mode == hdfs",
+      "passed": true,
+      "detail": "hdfs://localhost:9000/fitpulse/silver"
+    },
+    {
+      "check": "ETL report: rows written == rows read back == rows Spark reads now",
+      "passed": true,
+      "detail": "bronze=100,122 clean=100,122 silver=100,122"
+    },
+    {
+      "check": "Local vs HDFS Silver: same row count",
+      "passed": true,
+      "detail": "local=100,122 hdfs=100,122"
+    },
+    {
+      "check": "Local vs HDFS Silver: same columns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Local vs HDFS Silver: identical rows (exceptAll both directions)",
+      "passed": true,
+      "detail": "local-hdfs=0, hdfs-local=0"
+    }
+  ],
+  "timestamp": "2026-10-18 19:41:35"
+}

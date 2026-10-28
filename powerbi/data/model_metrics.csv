@@ -1,0 +1,7 @@
+model,metric,value
+Linear Regression (test),MAE,199.71263311260105
+Linear Regression (test),RMSE,263.64418934697864
+Linear Regression (test),R2,0.6295587174061572
+Baseline: training mean (test),MAE,334.51018668646066
+Baseline: training mean (test),RMSE,433.17058257844974
+Baseline: training mean (test),R2,-2.029875471265541e-06

@@ -1,0 +1,81 @@
+/// Every row of exports/E1_results.csv ... E5_results.csv: model, metric, value, evaluation split and status (VALID / BASELINE / REFERENCE / INVALID = leakage run).
+table supervised_results
+	lineageTag: dc515f42-c438-5675-8328-1906863272aa
+
+	column experiment_id
+		dataType: string
+		lineageTag: a8a01920-bb47-5779-b06e-642f951edf17
+		summarizeBy: none
+		sourceColumn: experiment_id
+
+	column model
+		dataType: string
+		lineageTag: 1aa74766-c886-54c1-a2db-f37f6ffd0c2c
+		summarizeBy: none
+		sourceColumn: model
+
+	column metric
+		dataType: string
+		lineageTag: 4f0ab08a-a13c-5fe4-b0b4-e9275aa1893d
+		summarizeBy: none
+		sourceColumn: metric
+
+	column value
+		dataType: double
+		lineageTag: 9ca9c87d-7475-5090-8856-69f64fd3e970
+		summarizeBy: none
+		sourceColumn: value
+
+	column split_type
+		dataType: string
+		lineageTag: 1dee6beb-9ada-5d57-b6aa-ff8582e297a3
+		summarizeBy: none
+		sourceColumn: split_type
+
+	column status
+		dataType: string
+		lineageTag: b88e2463-59e6-50c8-b85d-e34a9c3f9969
+		summarizeBy: none
+		sourceColumn: status
+
+	column source_file
+		dataType: string
+		isHidden
+		lineageTag: 8044b3ca-6b0d-512c-8fac-a546b809e8bc
+		summarizeBy: none
+		sourceColumn: source_file
+
+	measure 'Verified Test MAE (kcal)' = CALCULATE ( MAX ( supervised_results[value] ), supervised_results[experiment_id] = "E5", supervised_results[model] = "Linear Regression", supervised_results[split_type] = "test", supervised_results[status] = "VALID", supervised_results[metric] = "MAE (kcal)" )
+		formatString: #,0.0
+		displayFolder: 3 Calorie Prediction
+		lineageTag: 95488c55-a22e-54ed-8324-942c485bf14f
+
+	measure 'Verified Test RMSE (kcal)' = CALCULATE ( MAX ( supervised_results[value] ), supervised_results[experiment_id] = "E5", supervised_results[model] = "Linear Regression", supervised_results[split_type] = "test", supervised_results[status] = "VALID", supervised_results[metric] = "RMSE (kcal)" )
+		formatString: #,0.0
+		displayFolder: 3 Calorie Prediction
+		lineageTag: 8b59be5f-177d-58d7-8a3a-6625a0460ef3
+
+	measure 'Verified Test R2' = CALCULATE ( MAX ( supervised_results[value] ), supervised_results[experiment_id] = "E5", supervised_results[model] = "Linear Regression", supervised_results[split_type] = "test", supervised_results[status] = "VALID", supervised_results[metric] = "R2" )
+		formatString: 0.0000
+		displayFolder: 3 Calorie Prediction
+		lineageTag: 406ac98b-b110-5248-bbd5-b0ac7a00e8d3
+
+	measure 'Baseline Test MAE (kcal)' = CALCULATE ( MAX ( supervised_results[value] ), supervised_results[experiment_id] = "E5", supervised_results[model] = "Baseline: training mean", supervised_results[split_type] = "test", supervised_results[status] = "BASELINE", supervised_results[metric] = "MAE (kcal)" )
+		formatString: #,0.0
+		displayFolder: 3 Calorie Prediction
+		lineageTag: 533d8548-d1c2-55e4-bd25-c2bf62485f85
+
+	measure 'Result Value' = MAX ( supervised_results[value] )
+		formatString: 0.0000
+		displayFolder: 5 Model Evaluation
+		lineageTag: bb0ad255-2b5f-5e42-a6f1-14f57fa7fdf4
+
+	partition supervised_results = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "supervised_results.csv"), [Delimiter = ",", Columns = 7, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"experiment_id", type text}, {"model", type text}, {"metric", type text}, {"value", type number}, {"split_type", type text}, {"status", type text}, {"source_file", type text}}, "en-US")
+				in
+					Typed

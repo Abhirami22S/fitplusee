@@ -1,0 +1,260 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+======================================================================
+STORAGE MODE : HDFS (hdfs://localhost:9000)
+Silver source: hdfs://localhost:9000/fitpulse/silver
+[Stage 0:>                                                          (0 + 1) / 1]                                                                                Rows / columns: 100,122 / 39
+======================================================================
+[Stage 4:>                                                        (0 + 12) / 12][Stage 4:======================================>                   (8 + 4) / 12][Stage 6:>                                                          (0 + 8) / 8]                                                                                records 100,122; share meeting goal = 0.6134
+       Set  Records
+  Training    70383
+Validation    14943
+      Test    14796
+{'numTrees': 50, 'maxDepth': 5, 'validation_ROC_AUC': 0.7269165599743449, 'seconds': 9.0, 'status': 'ok'}
+[Stage 165:>                                                        (0 + 8) / 8]                                                                                [Stage 171:>                                                        (0 + 8) / 8]                                                                                [Stage 174:>                                                        (0 + 8) / 8]                                                                                {'numTrees': 50, 'maxDepth': 10, 'validation_ROC_AUC': 0.7492487190805689, 'seconds': 10.7, 'status': 'ok'}
+[Stage 255:>                                                        (0 + 8) / 8][Stage 255:==============>                                          (2 + 6) / 8]                                                                                [Stage 258:>                                                        (0 + 8) / 8]                                                                                [Stage 261:>                                                        (0 + 8) / 8]                                                                                [Stage 264:>                                                        (0 + 8) / 8][Stage 265:>                                                        (0 + 8) / 8]                                                                                [Stage 267:>                                                        (0 + 0) / 8][Stage 267:>                                                        (0 + 8) / 8][Stage 267:==============>                                          (2 + 6) / 8][Stage 267:===================================>                     (5 + 3) / 8][Stage 268:>                                                        (0 + 8) / 8]                                                                                [Stage 270:>                                                        (0 + 0) / 8][Stage 270:>                                                        (0 + 8) / 8][Stage 270:==============>                                          (2 + 6) / 8][Stage 271:>                                                        (0 + 8) / 8][Stage 271:============================>                            (4 + 4) / 8]                                                                                [Stage 273:>                                                        (0 + 0) / 8][Stage 273:>                                                        (0 + 8) / 8][Stage 273:=======>                                                 (1 + 7) / 8][Stage 273:===================================>                     (5 + 3) / 8][Stage 274:>                                                        (0 + 8) / 8][Stage 274:=======>                                                 (1 + 7) / 8]                                                                                [Stage 276:>                                                        (0 + 8) / 8]                                                                                {'numTrees': 50, 'maxDepth': 15, 'validation_ROC_AUC': 0.754868107289942, 'seconds': 42.1, 'status': 'ok'}
+[Stage 351:>                                                        (0 + 8) / 8][Stage 351:===================================>                     (5 + 3) / 8]                                                                                [Stage 354:>                                                        (0 + 8) / 8]                                                                                [Stage 357:>                                                        (0 + 8) / 8]                                                                                [Stage 360:>                                                        (0 + 8) / 8][Stage 360:=======>                                                 (1 + 7) / 8][Stage 360:==========================================>              (6 + 2) / 8]                                                                                [Stage 363:>                                                        (0 + 8) / 8][Stage 363:=======>                                                 (1 + 7) / 8][Stage 364:==============>                                          (2 + 6) / 8]                                                                                [Stage 366:>                                                        (0 + 0) / 8][Stage 366:>                                                        (0 + 8) / 8][Stage 366:=======>                                                 (1 + 7) / 8][Stage 366:=================================================>       (7 + 1) / 8][Stage 367:>                                                        (0 + 8) / 8]                                                                                [Stage 369:>                                                        (0 + 0) / 8][Stage 369:>                                                        (0 + 8) / 8][Stage 369:=====================>                                   (3 + 5) / 8][Stage 370:>                                                        (0 + 8) / 8][Stage 370:=======>                                                 (1 + 7) / 8]                                                                                [Stage 372:>                                                        (0 + 0) / 8][Stage 372:>                                                        (0 + 8) / 8][Stage 372:=======>                                                 (1 + 7) / 8][Stage 372:==============>                                          (2 + 6) / 8][Stage 372:=====================>                                   (3 + 5) / 8][Stage 373:>                                                        (0 + 8) / 8][Stage 373:=======>                                                 (1 + 7) / 8]                                                                                [Stage 375:>                                                        (0 + 0) / 8][Stage 375:>                                                        (0 + 8) / 8][Stage 375:=======>                                                 (1 + 7) / 8][Stage 375:=====================>                                   (3 + 5) / 8][Stage 376:>                                                        (0 + 8) / 8]                                                                                [Stage 378:>                                                        (0 + 0) / 8][Stage 378:>                                                        (0 + 8) / 8][Stage 378:=======>                                                 (1 + 7) / 8][Stage 378:==============>                                          (2 + 6) / 8][Stage 378:===================================>                     (5 + 3) / 8][Stage 379:>                                                        (0 + 8) / 8][Stage 379:==============>                                          (2 + 6) / 8]                                                                                [Stage 381:>                                                        (0 + 0) / 8][Stage 381:>                                                        (0 + 8) / 8][Stage 381:==============>                                          (2 + 6) / 8][Stage 381:============================>                            (4 + 4) / 8][Stage 381:===================================>                     (5 + 3) / 8][Stage 381:==========================================>              (6 + 2) / 8][Stage 381:=================================================>       (7 + 1) / 8][Stage 382:>                                                        (0 + 8) / 8][Stage 382:=====================>                                   (3 + 5) / 8]                                                                                [Stage 384:>                                                        (0 + 0) / 8][Stage 384:>                                                        (0 + 8) / 8][Stage 384:==============>                                          (2 + 6) / 8][Stage 384:=================================================>       (7 + 1) / 8][Stage 385:>                                                        (0 + 8) / 8]                                                                                [Stage 387:>                                                        (0 + 0) / 8][Stage 387:>                                                        (0 + 8) / 8][Stage 387:==========================================>              (6 + 2) / 8][Stage 387:=================================================>       (7 + 1) / 8][Stage 388:>                                                        (0 + 8) / 8]                                                                                [Stage 390:>                                                        (0 + 0) / 8][Stage 390:>                                                        (0 + 8) / 8][Stage 390:==============>                                          (2 + 6) / 8][Stage 390:============================>                            (4 + 4) / 8]                                                                                [Stage 394:==========================================>              (6 + 2) / 8]                                                                                {'numTrees': 50, 'maxDepth': 20, 'validation_ROC_AUC': 0.7541364530658723, 'seconds': 242.3, 'status': 'ok'}
+[Stage 439:=======>                                                 (1 + 7) / 8]                                                                                [Stage 444:>                                                        (0 + 8) / 8][Stage 444:==============>                                          (2 + 6) / 8][Stage 444:==========================================>              (6 + 2) / 8]                                                                                [Stage 447:>                                                        (0 + 8) / 8][Stage 447:===================================>                     (5 + 3) / 8]                                                                                [Stage 450:>                                                        (0 + 8) / 8]                                                                                [Stage 453:>                                                        (0 + 8) / 8][Stage 453:=================================================>       (7 + 1) / 8]                                                                                [Stage 456:>                                                        (0 + 8) / 8][Stage 456:============================>                            (4 + 4) / 8]                                                                                {'numTrees': 100, 'maxDepth': 5, 'validation_ROC_AUC': 0.7294222096587956, 'seconds': 20.5, 'status': 'ok'}
+[Stage 510:>                                                        (0 + 8) / 8]                                                                                [Stage 513:>                                                        (0 + 8) / 8][Stage 513:==============>                                          (2 + 6) / 8]                                                                                [Stage 516:>                                                        (0 + 8) / 8]                                                                                [Stage 519:>                                                        (0 + 8) / 8][Stage 519:===================================>                     (5 + 3) / 8]                                                                                [Stage 522:>                                                        (0 + 8) / 8]                                                                                [Stage 525:>                                                        (0 + 8) / 8]                                                                                [Stage 528:>                                                        (0 + 8) / 8][Stage 528:=======>                                                 (1 + 7) / 8]                                                                                [Stage 531:>                                                        (0 + 8) / 8][Stage 531:==============>                                          (2 + 6) / 8][Stage 532:>                                                        (0 + 8) / 8]                                                                                [Stage 534:>                                                        (0 + 8) / 8][Stage 534:============================>                            (4 + 4) / 8][Stage 535:>                                                        (0 + 8) / 8]                                                                                [Stage 537:>                                                        (0 + 8) / 8][Stage 537:=======>                                                 (1 + 7) / 8][Stage 537:==========================================>              (6 + 2) / 8][Stage 538:>                                                        (0 + 8) / 8]                                                                                [Stage 540:>                                                        (0 + 8) / 8][Stage 540:==========================================>              (6 + 2) / 8][Stage 541:>                                                        (0 + 8) / 8]                                                                                [Stage 543:>                                                        (0 + 8) / 8][Stage 543:=====================>                                   (3 + 5) / 8]                                                                                {'numTrees': 100, 'maxDepth': 10, 'validation_ROC_AUC': 0.7543854844047182, 'seconds': 78.4, 'status': 'ok'}
+[Stage 594:>                                                        (0 + 8) / 8][Stage 594:===================================>                     (5 + 3) / 8]                                                                                [Stage 597:>                                                        (0 + 8) / 8][Stage 597:=====================>                                   (3 + 5) / 8]                                                                                [Stage 600:>                                                        (0 + 8) / 8]                                                                                [Stage 603:>                                                        (0 + 8) / 8][Stage 603:=====================>                                   (3 + 5) / 8][Stage 603:=================================================>       (7 + 1) / 8]                                                                                [Stage 606:>                                                        (0 + 8) / 8][Stage 606:============================>                            (4 + 4) / 8][Stage 606:=================================================>       (7 + 1) / 8]                                                                                [Stage 609:>                                                        (0 + 8) / 8][Stage 609:=======>                                                 (1 + 7) / 8]                                                                                [Stage 612:>                                                        (0 + 8) / 8][Stage 612:=======>                                                 (1 + 7) / 8]                                                                                [Stage 615:>                                                        (0 + 8) / 8][Stage 615:===================================>                     (5 + 3) / 8][Stage 616:>                                                        (0 + 8) / 8][Stage 616:==============>                                          (2 + 6) / 8]                                                                                [Stage 618:>                                                        (0 + 8) / 8][Stage 618:=======>                                                 (1 + 7) / 8][Stage 618:==============>                                          (2 + 6) / 8][Stage 619:>                                                        (0 + 8) / 8]                                                                                [Stage 621:>                                                        (0 + 8) / 8][Stage 622:>                                                        (0 + 8) / 8]                                                                                [Stage 624:>                                                        (0 + 8) / 8][Stage 624:==============>                                          (2 + 6) / 8][Stage 624:=====================>                                   (3 + 5) / 8][Stage 624:==========================================>              (6 + 2) / 8][Stage 625:>                                                        (0 + 8) / 8][Stage 625:=====================>                                   (3 + 5) / 8]                                                                                [Stage 627:>                                                        (0 + 0) / 8][Stage 627:>                                                        (0 + 8) / 8][Stage 627:==============>                                          (2 + 6) / 8][Stage 627:==========================================>              (6 + 2) / 8][Stage 628:>                                                        (0 + 8) / 8]                                                                                [Stage 630:>                                                        (0 + 0) / 8][Stage 630:>                                                        (0 + 8) / 8][Stage 630:=================================================>       (7 + 1) / 8][Stage 631:>                                                        (0 + 8) / 8][Stage 631:============================>                            (4 + 4) / 8]                                                                                [Stage 633:>                                                        (0 + 0) / 8][Stage 633:>                                                        (0 + 8) / 8][Stage 633:==============>                                          (2 + 6) / 8][Stage 633:=====================>                                   (3 + 5) / 8][Stage 633:============================>                            (4 + 4) / 8][Stage 633:===================================>                     (5 + 3) / 8][Stage 633:==========================================>              (6 + 2) / 8][Stage 633:=================================================>       (7 + 1) / 8][Stage 634:>                                                        (0 + 8) / 8]                                                                                [Stage 636:>                                                        (0 + 0) / 8][Stage 636:>                                                        (0 + 8) / 8]Exception in thread "netty-rpc-env-timeout" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1617)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+26/10/11 14:01:23 ERROR Executor: Exception in task 7.0 in stage 636.0 (TID 2094)
+java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.ml.tree.impl.DTStatsAggregator.<init>(DTStatsAggregator.scala:77)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22(RandomForest.scala:653)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22$adapted(RandomForest.scala:649)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$6530/0x00000295bf793b90.apply(Unknown Source)
+	at scala.Array$.tabulate(Array.scala:441)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$21(RandomForest.scala:649)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$6519/0x00000295bf77c000.apply(Unknown Source)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2(RDD.scala:866)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2$adapted(RDD.scala:866)
+	at org.apache.spark.rdd.RDD$$Lambda$2282/0x00000295bed34ee0.apply(Unknown Source)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:107)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:171)
+	at org.apache.spark.scheduler.Task.run(Task.scala:147)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$5(Executor.scala:647)
+	at org.apache.spark.executor.Executor$TaskRunner$$Lambda$2245/0x00000295bed1a2d8.apply(Unknown Source)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:80)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:77)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:650)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Exception in thread "RemoteBlock-temp-file-clean-thread" java.lang.OutOfMemoryError: Java heap space
+[Stage 636:>                                                        (0 + 8) / 8]26/10/11 14:02:01 ERROR Executor: Exception in task 5.0 in stage 636.0 (TID 2092)
+java.lang.OutOfMemoryError: Java heap space
+26/10/11 14:02:01 ERROR Executor: Exception in task 6.0 in stage 636.0 (TID 2093)
+java.lang.OutOfMemoryError: Java heap space
+26/10/11 14:02:01 ERROR Executor: Exception in task 2.0 in stage 636.0 (TID 2089)
+java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Executor task launch worker for task 7.0 in stage 636.0 (TID 2094)" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "dispatcher-HeartbeatReceiver" java.lang.OutOfMemoryError: Java heap space
+26/10/11 14:02:01 ERROR Utils: uncaught error in thread Spark Context Cleaner, stopping SparkContext
+java.lang.OutOfMemoryError: Java heap space
+26/10/11 14:02:01 ERROR Utils: throw uncaught fatal error in thread Spark Context Cleaner
+java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Spark Context Cleaner" java.lang.OutOfMemoryError: Java heap space
+26/10/11 14:02:01 ERROR SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 6.0 in stage 636.0 (TID 2093),5,main]
+java.lang.OutOfMemoryError: Java heap space
+26/10/11 14:02:01 ERROR SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 2.0 in stage 636.0 (TID 2089),5,main]
+java.lang.OutOfMemoryError: Java heap space
+26/10/11 14:02:01 ERROR SparkUncaughtExceptionHandler: [Container in shutdown] Uncaught exception in thread Thread[Executor task launch worker for task 5.0 in stage 636.0 (TID 2092),5,main]
+java.lang.OutOfMemoryError: Java heap space
+26/10/11 14:02:01 ERROR TaskSetManager: Task 2 in stage 636.0 failed 1 times; aborting job
+[Stage 636:>                                                        (0 + 7) / 8]26/10/11 14:02:01 ERROR Instrumentation: org.apache.spark.SparkException: Job aborted due to stage failure: Task 2 in stage 636.0 failed 1 times, most recent failure: Lost task 2.0 in stage 636.0 (TID 2089) (192.168.1.47 executor driver): java.lang.OutOfMemoryError: Java heap space
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$3(DAGScheduler.scala:2935)
+	at scala.Option.getOrElse(Option.scala:201)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2935)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2927)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2927)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1295)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1295)
+	at scala.Option.foreach(Option.scala:437)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1295)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3207)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:3141)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:3130)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:50)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:1009)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2484)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2505)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2524)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2549)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1057)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:417)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1056)
+	at org.apache.spark.rdd.PairRDDFunctions.$anonfun$collectAsMap$1(PairRDDFunctions.scala:740)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:417)
+	at org.apache.spark.rdd.PairRDDFunctions.collectAsMap(PairRDDFunctions.scala:739)
+	at org.apache.spark.ml.tree.impl.RandomForest$.findBestSplits(RandomForest.scala:665)
+	at org.apache.spark.ml.tree.impl.RandomForest$.runBagged(RandomForest.scala:210)
+	at org.apache.spark.ml.tree.impl.RandomForest$.run(RandomForest.scala:304)
+	at org.apache.spark.ml.classification.RandomForestClassifier.$anonfun$train$1(RandomForestClassifier.scala:168)
+	at org.apache.spark.ml.util.Instrumentation$.$anonfun$instrumented$1(Instrumentation.scala:226)
+	at scala.util.Try$.apply(Try.scala:217)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:226)
+	at org.apache.spark.ml.classification.RandomForestClassifier.train(RandomForestClassifier.scala:139)
+	at org.apache.spark.ml.classification.RandomForestClassifier.train(RandomForestClassifier.scala:47)
+	at org.apache.spark.ml.Predictor.fit(Predictor.scala:115)
+	at org.apache.spark.ml.Predictor.fit(Predictor.scala:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+{'numTrees': 100, 'maxDepth': 15, 'validation_ROC_AUC': nan, 'seconds': 240.0, 'status': 'FAILED: Py4JJavaError'}
+26/10/11 14:02:02 ERROR DiskBlockManager: Exception while deleting local spark dir: D:\bigdata\fitpulsee\tools\tmp\blockmgr-8675b2e4-bc99-48f8-94c5-a1eade549375
+java.io.IOException: Failed to list files for dir: D:\bigdata\fitpulsee\tools\tmp\blockmgr-8675b2e4-bc99-48f8-94c5-a1eade549375\3e
+	at org.apache.spark.network.util.JavaUtils.listFilesSafely(JavaUtils.java:207)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:136)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:124)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:138)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:124)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:94)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1048)
+	at org.apache.spark.storage.DiskBlockManager.$anonfun$doStop$1(DiskBlockManager.scala:372)
+	at org.apache.spark.storage.DiskBlockManager.$anonfun$doStop$1$adapted(DiskBlockManager.scala:368)
+	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1324)
+	at org.apache.spark.storage.DiskBlockManager.doStop(DiskBlockManager.scala:368)
+	at org.apache.spark.storage.DiskBlockManager.stop(DiskBlockManager.scala:363)
+	at org.apache.spark.storage.BlockManager.stop(BlockManager.scala:2166)
+	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:118)
+	at org.apache.spark.SparkContext.$anonfun$stop$25(SparkContext.scala:2395)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1300)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2395)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2297)
+	at org.apache.spark.SparkContext$$anon$3.run(SparkContext.scala:2284)
+26/10/11 14:02:02 ERROR DiskBlockManager: Exception while deleting local spark dir: D:\bigdata\fitpulsee\tools\tmp\blockmgr-8675b2e4-bc99-48f8-94c5-a1eade549375
+java.io.IOException: Failed to list files for dir: D:\bigdata\fitpulsee\tools\tmp\blockmgr-8675b2e4-bc99-48f8-94c5-a1eade549375\38
+	at org.apache.spark.network.util.JavaUtils.listFilesSafely(JavaUtils.java:207)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:151)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:124)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:138)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:124)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:94)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1048)
+	at org.apache.spark.storage.DiskBlockManager.$anonfun$doStop$1(DiskBlockManager.scala:372)
+	at org.apache.spark.storage.DiskBlockManager.$anonfun$doStop$1$adapted(DiskBlockManager.scala:368)
+	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1324)
+	at org.apache.spark.storage.DiskBlockManager.doStop(DiskBlockManager.scala:368)
+	at org.apache.spark.storage.DiskBlockManager.$anonfun$addShutdownHook$2(DiskBlockManager.scala:350)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:231)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:205)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1937)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:205)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.util.Try$.apply(Try.scala:217)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:205)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:184)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+ERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\pyspark\errors\exceptions\captured.py", line 282, in deco
+    return f(*a, **kw)
+           ^^^^^^^^^^^
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\py4j\protocol.py", line 327, in get_return_value
+    raise Py4JJavaError(
+py4j.protocol.Py4JJavaError: <exception str() failed>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\py4j\clientserver.py", line 535, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abhirami S\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\py4j\clientserver.py", line 566, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+{'numTrees': 100, 'maxDepth': 20, 'validation_ROC_AUC': nan, 'seconds': 3.3, 'status': 'FAILED: Py4JError'}
+selected numTrees=50, maxDepth=15
+Traceback (most recent call last):
+  File "D:\bigdata\fitpulsee\FitPulse\models\spark_report_classification.py", line 149, in <module>
+    main()
+  File "D:\bigdata\fitpulsee\FitPulse\models\spark_report_classification.py", line 104, in main
+    p = model.transform(d).cache()
+        ^^^^^^^^^^^^^^^^^^
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\pyspark\ml\base.py", line 260, in transform
+    return self._transform(dataset)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\pyspark\ml\pipeline.py", line 311, in _transform
+    dataset = t.transform(dataset)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\pyspark\ml\base.py", line 260, in transform
+    return self._transform(dataset)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\pyspark\ml\util.py", line 212, in wrapped
+    return f(self, dataset)
+           ^^^^^^^^^^^^^^^^
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\pyspark\ml\wrapper.py", line 428, in _transform
+    self._transfer_params_to_java()
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\pyspark\ml\wrapper.py", line 195, in _transfer_params_to_java
+    pair = self._make_java_param_pair(param, self._paramMap[param])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\pyspark\ml\wrapper.py", line 180, in _make_java_param_pair
+    java_param = self._java_obj.getParam(param.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\py4j\java_gateway.py", line 1361, in __call__
+    answer = self.gateway_client.send_command(command)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\py4j\java_gateway.py", line 1036, in send_command
+    connection = self._get_connection()
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\py4j\clientserver.py", line 284, in _get_connection
+    connection = self._create_new_connection()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\py4j\clientserver.py", line 291, in _create_new_connection
+    connection.connect_to_java_server()
+  File "D:\bigdata\fitpulsee\.venv\Lib\site-packages\py4j\clientserver.py", line 438, in connect_to_java_server
+    self.socket.connect((self.java_address, self.java_port))
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+ERROR: The process "23212" not found.

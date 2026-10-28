@@ -1,0 +1,6 @@
+$ hdfs dfs -du -h /fitpulse
+(exit code 0)
+
+0       0       /fitpulse/_selftest_1791705267
+11.2 M  11.2 M  /fitpulse/bronze
+7.0 M   7.0 M   /fitpulse/silver

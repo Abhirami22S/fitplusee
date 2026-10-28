@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "a51b4717a79b0721f495",
+  "position": {
+    "x": 20,
+    "y": 672,
+    "z": 17000,
+    "height": 44,
+    "width": 1240,
+    "tabOrder": 17000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Derived: sleep_hours = sleep_minutes / 60. Active + sedentary + sleep minutes = 1,440 per day in every record. Intensity (Low/Medium/High) and activity type are the dataset's own categorical fields. Line-chart axes are auto-scaled, so small monthly differences look larger than they are.",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

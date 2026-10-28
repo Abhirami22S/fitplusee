@@ -1,0 +1,116 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "2ba7e6689e9adefaa19e",
+  "position": {
+    "x": 20,
+    "y": 194,
+    "z": 4000,
+    "height": 378,
+    "width": 500,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "model_evaluation"
+                    }
+                  },
+                  "Property": "metric_label"
+                }
+              },
+              "queryRef": "model_evaluation.metric_label",
+              "nativeQueryRef": "metric_label"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "model_evaluation"
+                    }
+                  },
+                  "Property": "evaluation_set"
+                }
+              },
+              "queryRef": "model_evaluation.evaluation_set",
+              "nativeQueryRef": "evaluation_set"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "model_evaluation"
+                    }
+                  },
+                  "Property": "Metric Value"
+                }
+              },
+              "queryRef": "model_evaluation.Metric Value",
+              "nativeQueryRef": "Metric Value"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Metrics of the selected experiment (by evaluation set)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Metrics for the selected experiment by evaluation set'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

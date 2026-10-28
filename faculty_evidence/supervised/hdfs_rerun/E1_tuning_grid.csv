@@ -1,0 +1,9 @@
+reg,validation_score,seconds,status,model,depth,iters
+0.0,0.7365275344094734,18.9,ok,Logistic Regression,,
+0.01,0.7360707950520256,16.2,ok,Logistic Regression,,
+0.1,0.7323658470209933,10.9,ok,Logistic Regression,,
+1.0,0.7079720004773633,5.5,ok,Logistic Regression,,
+,0.7510134939458136,68.2,ok,Gradient-Boosted Trees,3.0,50.0
+,0.756081114215211,100.7,ok,Gradient-Boosted Trees,3.0,100.0
+,0.7671295512057849,106.2,ok,Gradient-Boosted Trees,5.0,50.0
+,0.7700800287441706,284.7,ok,Gradient-Boosted Trees,5.0,100.0

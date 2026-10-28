@@ -1,0 +1,19 @@
+﻿FAILURE-MODE TEST  2026-10-11T13:34:39
+local Silver BEFORE: 194 files, 7369100 bytes, newest write 2026-10-05T23:59:14.0692020+05:30
+
+--- A) HDFS selected, NameNode stopped ---
+exit code: 2
+  ERROR: HDFS mode selected but the NameNode at localhost:9000 is unreachable ([WinError 10061] No connection could be made because the target machine actively refused it). Start it with .\start_hdfs.ps1. Refusing to fall back to local storage.
+local Silver AFTER : 194 files, 7369100 bytes, newest write 2026-10-05T23:59:14.0692020+05:30
+local Silver untouched: True
+
+--- B) HDFS selected but no URI configured ---
+exit code: 2
+  ERROR: HDFS mode selected but no HDFS URI given. Pass --hdfs-uri or set FITPULSE_HDFS_URI (run_fitpulse_hdfs.ps1 reads it from `hdfs getconf -confKey fs.defaultFS`).
+
+--- C) LOCAL mode (explicit fallback) while HDFS is down; output to a scratch dir ---
+exit code: 0
+  STORAGE MODE : LOCAL filesystem (Parquet fallback - NOT HDFS)
+  Silver rows written   : 100,122
+  Read back from storage: 100,122 rows (matches)
+  Storage mode used     : LOCAL  [LOCAL filesystem (Parquet fallback - NOT HDFS)]

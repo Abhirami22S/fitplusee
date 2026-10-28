@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "e704939d5d3b3381a1bf",
+  "displayName": "Fitness Overview",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "annotations": [
+    {
+      "name": "description",
+      "value": "Population KPIs, monthly trend, steps vs calories per user, step-goal achievement by weekday."
+    }
+  ]
+}

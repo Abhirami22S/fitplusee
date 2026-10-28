@@ -1,0 +1,101 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "0b6dd842026cacbbf2f7",
+  "position": {
+    "x": 650,
+    "y": 444,
+    "z": 9000,
+    "height": 140,
+    "width": 610,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "experiments"
+                    }
+                  },
+                  "Property": "experiment_name"
+                }
+              },
+              "queryRef": "experiments.experiment_name",
+              "nativeQueryRef": "experiment_name"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "crosscheck"
+                    }
+                  },
+                  "Property": "Cross-check Checks"
+                }
+              },
+              "queryRef": "crosscheck.Cross-check Checks",
+              "nativeQueryRef": "Cross-check Checks"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "crosscheck"
+                    }
+                  },
+                  "Property": "Cross-check Passed"
+                }
+              },
+              "queryRef": "crosscheck.Cross-check Passed",
+              "nativeQueryRef": "Cross-check Passed"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cross-check by experiment (source: hdfs_rerun/sklearn_crosscheck.csv)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Number of cross-check checks and checks passed per experiment'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

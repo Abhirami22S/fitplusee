@@ -1,0 +1,67 @@
+experiment_id,model,metric,value,split_type,status
+E3,Random Forest,Accuracy,0.5354691075514875,stratified 5-fold CV (out-of-fold),VALID
+E3,Random Forest,Precision (positive class),0.5291828793774319,stratified 5-fold CV (out-of-fold),VALID
+E3,Random Forest,Recall (positive class),0.6238532110091743,stratified 5-fold CV (out-of-fold),VALID
+E3,Random Forest,F1 (positive class),0.5726315789473684,stratified 5-fold CV (out-of-fold),VALID
+E3,Random Forest,F1 (weighted),0.5318366855353487,stratified 5-fold CV (out-of-fold),VALID
+E3,Random Forest,F1 (macro),0.5319298245614035,stratified 5-fold CV (out-of-fold),VALID
+E3,Random Forest,ROC AUC,0.542478320975242,stratified 5-fold CV (out-of-fold),VALID
+E3,Random Forest,Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),VALID
+E3,Random Forest,Accuracy (mean over folds),0.5353988967461302,stratified 5-fold CV (out-of-fold),VALID
+E3,Random Forest,Accuracy (sd over folds),0.04063986595834524,stratified 5-fold CV (out-of-fold),VALID
+E3,Random Forest,ROC AUC (mean over folds),0.544649106731805,stratified 5-fold CV (out-of-fold),VALID
+E3,Random Forest,ROC AUC (sd over folds),0.037737886099952364,stratified 5-fold CV (out-of-fold),VALID
+E3,Logistic Regression,Accuracy,0.5377574370709383,stratified 5-fold CV (out-of-fold),VALID
+E3,Logistic Regression,Precision (positive class),0.5416666666666666,stratified 5-fold CV (out-of-fold),VALID
+E3,Logistic Regression,Recall (positive class),0.47706422018348627,stratified 5-fold CV (out-of-fold),VALID
+E3,Logistic Regression,F1 (positive class),0.5073170731707317,stratified 5-fold CV (out-of-fold),VALID
+E3,Logistic Regression,F1 (weighted),0.536051727024806,stratified 5-fold CV (out-of-fold),VALID
+E3,Logistic Regression,F1 (macro),0.5359861227922624,stratified 5-fold CV (out-of-fold),VALID
+E3,Logistic Regression,ROC AUC,0.5485526370910311,stratified 5-fold CV (out-of-fold),VALID
+E3,Logistic Regression,Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),VALID
+E3,Logistic Regression,Accuracy (mean over folds),0.5378824329906928,stratified 5-fold CV (out-of-fold),VALID
+E3,Logistic Regression,Accuracy (sd over folds),0.04420226101526822,stratified 5-fold CV (out-of-fold),VALID
+E3,Logistic Regression,ROC AUC (mean over folds),0.5725016649607338,stratified 5-fold CV (out-of-fold),VALID
+E3,Logistic Regression,ROC AUC (sd over folds),0.033205197477390286,stratified 5-fold CV (out-of-fold),VALID
+E3,Random Forest + average steps (LEAKAGE),Accuracy,0.7322654462242563,stratified 5-fold CV (out-of-fold),INVALID
+E3,Random Forest + average steps (LEAKAGE),ROC AUC,0.7977671651795065,stratified 5-fold CV (out-of-fold),INVALID
+E3,Random Forest + average steps (LEAKAGE),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),INVALID
+E3,Random Forest + average steps (LEAKAGE),Accuracy (mean over folds),0.7321960584189935,stratified 5-fold CV (out-of-fold),INVALID
+E3,Random Forest + average steps (LEAKAGE),Accuracy (sd over folds),0.05754156154295525,stratified 5-fold CV (out-of-fold),INVALID
+E3,Random Forest + average steps (LEAKAGE),ROC AUC (mean over folds),0.8040506036320728,stratified 5-fold CV (out-of-fold),INVALID
+E3,Random Forest + average steps (LEAKAGE),ROC AUC (sd over folds),0.046716498645567206,stratified 5-fold CV (out-of-fold),INVALID
+E3,Logistic Regression + average steps (LEAKAGE),Accuracy,0.7368421052631579,stratified 5-fold CV (out-of-fold),INVALID
+E3,Logistic Regression + average steps (LEAKAGE),ROC AUC,0.8241590214067278,stratified 5-fold CV (out-of-fold),INVALID
+E3,Logistic Regression + average steps (LEAKAGE),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),INVALID
+E3,Logistic Regression + average steps (LEAKAGE),Accuracy (mean over folds),0.7369778377196179,stratified 5-fold CV (out-of-fold),INVALID
+E3,Logistic Regression + average steps (LEAKAGE),Accuracy (sd over folds),0.03822949971771023,stratified 5-fold CV (out-of-fold),INVALID
+E3,Logistic Regression + average steps (LEAKAGE),ROC AUC (mean over folds),0.8267366434391608,stratified 5-fold CV (out-of-fold),INVALID
+E3,Logistic Regression + average steps (LEAKAGE),ROC AUC (sd over folds),0.03983913352157816,stratified 5-fold CV (out-of-fold),INVALID
+E3,Random Forest: logging-window coverage ONLY (mean logged month),Accuracy,0.5675057208237986,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Random Forest: logging-window coverage ONLY (mean logged month),ROC AUC,0.6077353273846927,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Random Forest: logging-window coverage ONLY (mean logged month),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Random Forest: logging-window coverage ONLY (mean logged month),Accuracy (mean over folds),0.5674272800174964,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Random Forest: logging-window coverage ONLY (mean logged month),Accuracy (sd over folds),0.021900016157121314,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Random Forest: logging-window coverage ONLY (mean logged month),ROC AUC (mean over folds),0.6180021923845367,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Random Forest: logging-window coverage ONLY (mean logged month),ROC AUC (sd over folds),0.02706991018948195,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),Accuracy,0.5835240274599542,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),ROC AUC,0.6194545683046374,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),Accuracy (mean over folds),0.5833369784452384,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),Accuracy (sd over folds),0.04296295460932021,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),ROC AUC (mean over folds),0.6224000073749939,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: logging-window coverage ONLY (mean logged month),ROC AUC (sd over folds),0.02809944559351684,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),Accuracy,0.5423340961098398,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),ROC AUC,0.540844539399271,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),Accuracy (mean over folds),0.5421119778377196,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),Accuracy (sd over folds),0.057333870021464464,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),ROC AUC (mean over folds),0.5447146436090091,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Random Forest: raw average weight_kg instead of baseline weight (ablation),ROC AUC (sd over folds),0.061965757727785155,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),Accuracy,0.5469107551487414,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),ROC AUC,0.5720958485191237,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),Baseline accuracy (always majority class),0.5011441647597255,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),Accuracy (mean over folds),0.5469466112609658,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),Accuracy (sd over folds),0.03565143589190357,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),ROC AUC (mean over folds),0.5758608629189779,stratified 5-fold CV (out-of-fold),REFERENCE
+E3,Logistic Regression: raw average weight_kg instead of baseline weight (ablation),ROC AUC (sd over folds),0.03168345133880607,stratified 5-fold CV (out-of-fold),REFERENCE

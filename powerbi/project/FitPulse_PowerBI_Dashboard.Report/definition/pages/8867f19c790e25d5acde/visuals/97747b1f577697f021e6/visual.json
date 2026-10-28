@@ -1,0 +1,115 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "97747b1f577697f021e6",
+  "position": {
+    "x": 20,
+    "y": 518,
+    "z": 12000,
+    "height": 150,
+    "width": 620,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "activity_type"
+                }
+              },
+              "queryRef": "fact_daily.activity_type",
+              "nativeQueryRef": "activity_type"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Test MAE (recomputed, kcal)"
+                }
+              },
+              "queryRef": "fact_daily.Test MAE (recomputed, kcal)",
+              "nativeQueryRef": "Test MAE (recomputed, kcal)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Test RMSE (recomputed, kcal)"
+                }
+              },
+              "queryRef": "fact_daily.Test RMSE (recomputed, kcal)",
+              "nativeQueryRef": "Test RMSE (recomputed, kcal)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Test Days"
+                }
+              },
+              "queryRef": "fact_daily.Test Days",
+              "nativeQueryRef": "Test Days"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Test accuracy by activity type (recomputed from test rows)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Table of test MAE and RMSE by activity type'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

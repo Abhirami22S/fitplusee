@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "3cc5d18fc85fd77a6384",
+  "position": {
+    "x": 20,
+    "y": 672,
+    "z": 8000,
+    "height": 44,
+    "width": 1240,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Sources: faculty_evidence/report_aligned/*, faculty_evidence/classification_results.csv, confusion_matrix.csv, silhouette_scores.csv, cluster_summary.csv, regression_results.csv (file names are recorded per row in model_evaluation.source_file).",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

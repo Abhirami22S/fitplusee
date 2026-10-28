@@ -1,0 +1,119 @@
+{
+  "confusion_matrices": [
+    "experiment_id",
+    "evaluation_set",
+    "actual",
+    "predicted",
+    "count",
+    "share_of_actual"
+  ],
+  "dim_date": [
+    "Date",
+    "Year",
+    "MonthNumber",
+    "Month",
+    "YearMonth",
+    "DayOfWeek",
+    "DayOfWeekNumber"
+  ],
+  "dim_user": [
+    "user_id",
+    "age",
+    "age_group",
+    "gender",
+    "days",
+    "avg_steps",
+    "avg_calories",
+    "segment_id",
+    "PC1",
+    "PC2",
+    "segment_label"
+  ],
+  "experiments": [
+    "experiment_id",
+    "experiment_name",
+    "algorithm",
+    "target",
+    "data_granularity",
+    "split_method"
+  ],
+  "fact_daily": [
+    "row_id",
+    "user_id",
+    "date",
+    "month",
+    "day_of_week",
+    "activity_type",
+    "intensity",
+    "steps",
+    "distance_km",
+    "calories_burned",
+    "predicted_calories",
+    "calorie_error",
+    "model_split",
+    "active_minutes",
+    "sedentary_minutes",
+    "sleep_hours",
+    "sleep_quality_score",
+    "avg_heart_rate",
+    "daily_step_goal",
+    "goal_achieved",
+    "daily_calorie_goal",
+    "calorie_goal_achieved",
+    "age_group",
+    "gender",
+    "segment_id",
+    "segment_label",
+    "error_bin_kcal"
+  ],
+  "kmeans_k_selection": [
+    "experiment_id",
+    "K",
+    "metric",
+    "value"
+  ],
+  "model_evaluation": [
+    "experiment_id",
+    "experiment_name",
+    "algorithm",
+    "target",
+    "data_granularity",
+    "evaluation_set",
+    "metric",
+    "value",
+    "is_baseline",
+    "source_file",
+    "metric_label"
+  ],
+  "model_metrics": [
+    "model",
+    "metric",
+    "value"
+  ],
+  "monthly_summary": [
+    "month",
+    "activity_type",
+    "days",
+    "users",
+    "total_steps",
+    "avg_steps",
+    "avg_calories",
+    "avg_active_min",
+    "avg_sedentary_min",
+    "avg_sleep_hours",
+    "avg_sleep_quality",
+    "goal_rate"
+  ],
+  "segment_profile": [
+    "cluster",
+    "Users",
+    "AvgSteps",
+    "AvgActiveMin",
+    "AvgSedentaryMin",
+    "AvgCalories",
+    "AvgHeartRate",
+    "AvgSleep",
+    "AvgIntensity",
+    "segment_label"
+  ]
+}

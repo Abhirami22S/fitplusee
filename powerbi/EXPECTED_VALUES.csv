@@ -1,0 +1,42 @@
+measure,expected_value
+Total days (rows),100122.0
+Distinct users,437.0
+Total steps,863529003.0
+Average daily steps,8624.767813267814
+Average calories burned,662.2012954195883
+Average active minutes,69.92943608797268
+Average sedentary minutes,947.2411158386768
+Average sleep hours,7.047157467889175
+Average sleep quality,67.0992778809852
+Personal step-goal achievement rate,0.3375182277621302
+Test-set MAE (kcal),199.71260060060058
+Test-set days,14985.0
+Average daily steps in 2024-01,8892.578393351801
+Average daily steps in 2024-02,9607.201731317116
+Average daily steps in 2024-03,10121.631953933242
+Average daily steps in 2024-04,10054.083115840192
+Average daily steps in 2024-05,9635.104689092763
+Average daily steps in 2024-06,8988.09728558394
+Average daily steps in 2024-07,7998.789191167501
+Average daily steps in 2024-08,7290.170430107527
+Average daily steps in 2024-09,6851.603450818463
+Average daily steps in 2024-10,6795.573765867419
+Average daily steps in 2024-11,7301.089895470383
+Average daily steps in 2024-12,7931.947862196247
+Average distance (km),6.540043546872816
+Average heart rate (bpm),130.8155550228721
+Calorie-goal achievement rate,0.3533089630650606
+Active share of waking time,0.06874897818808998
+Test-set mean error / bias (kcal),-3.630414414414415
+Test-set RMSE (kcal),263.6441730922802
+Test-set R2,0.6295587630844722
+Baseline (training mean) test MAE (kcal),334.51018668646054
+Step-goal achievement on Friday,0.25215365061432
+Step-goal achievement on Monday,0.2436732734380358
+Step-goal achievement on Saturday,0.5690482914430952
+Step-goal achievement on Sunday,0.562491223142817
+Step-goal achievement on Thursday,0.24798472634705135
+Step-goal achievement on Tuesday,0.24192535751656785
+Step-goal achievement on Wednesday,0.24993101545253862
+Cross-check checks,103.0
+Cross-check checks passed,103.0

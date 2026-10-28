@@ -1,0 +1,12 @@
+depth,validation_score,seconds,status,model,iters,reg
+5.0,0.6502328052354108,15.4,ok,Random Forest,,
+8.0,0.6475993990376482,12.4,ok,Random Forest,,
+12.0,0.638469914660639,350.4,ok,Random Forest,,
+3.0,0.6470393806297922,46.7,ok,Gradient-Boosted Trees,50.0,
+3.0,0.645047948403863,96.6,ok,Gradient-Boosted Trees,100.0,
+5.0,0.6357001414427158,83.5,ok,Gradient-Boosted Trees,50.0,
+5.0,0.6361868668069816,123.9,ok,Gradient-Boosted Trees,100.0,
+,0.6528829950664239,13.7,ok,Logistic Regression,,0.0
+,0.65057084655834,8.4,ok,Logistic Regression,,0.01
+,0.6475365957648397,5.3,ok,Logistic Regression,,0.1
+,0.5953549264700907,4.4,ok,Logistic Regression,,1.0

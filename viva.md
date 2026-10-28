@@ -23,19 +23,20 @@ same code that works on 100k rows on a laptop is the same code that would run on
 the transformation logic. That's the actual point of learning Spark for a small project:
 the *pattern*, not the row count.
 
-### HDFS-style partitioned storage
-**What it is:** distributed filesystems like HDFS store big datasets as many partitioned
-files across machines, organized so a query touching one partition never has to read the
-others.
-**Where it's used:** `data/processed/fitpulse_silver/` is written by Spark as Parquet
-files partitioned by `month` (folders like `month=2024-01/`, `month=2024-02/`, …) — this
-is a **local simulation** of that pattern, clearly labeled as such since we don't have an
-actual HDFS cluster in a student environment.
-**Why not just one CSV file:** partitioning means a query filtering on month only opens
-the matching folder's files (partition pruning) instead of scanning everything — at real
-scale (millions of files, petabytes of data) this is the difference between a query
-touching gigabytes and touching the whole dataset. Parquet itself also adds columnar
-storage and compression on top, which a flat CSV doesn't have.
+### HDFS (real, single-node) and the local Parquet fallback
+**What it is:** HDFS splits files into blocks held by DataNodes, with metadata on a NameNode; blocks can be
+replicated so a node failure does not lose data.
+**What we actually run:** Hadoop 3.4.1 on this Windows laptop with **one NameNode and one DataNode, replication factor 1**.
+`etl/spark_etl.py --storage hdfs` reads the Bronze CSV from `hdfs://localhost:9000/fitpulse/bronze/` and writes the Silver
+Parquet (partitioned by `month`) to `hdfs://localhost:9000/fitpulse/silver/`. The default (no flag) still writes local
+Parquet to `data/processed/fitpulse_silver/`; the two modes are never mixed silently, and HDFS mode exits with code 2 if
+the NameNode is down. Evidence: `faculty_evidence/hdfs/` and notebook section 11.
+**Be precise about the limits:** with one node there is no real fault tolerance or horizontal scaling to demonstrate - the
+report's "replication factor 3" describes what HDFS does on a cluster, not what this deployment does. The Streamlit
+dashboard, the scikit-learn models and the Power BI exports read **local** files (the local Silver is proven row-for-row
+identical to the HDFS Silver), not HDFS.
+**Why partition by month:** a query filtering on month opens only the matching folder (partition pruning); Parquet adds
+columnar storage and compression.
 
 ### Spark SQL (the Hive/SQL-on-big-data pattern)
 **What it is:** the ability to register a distributed DataFrame as a temporary SQL table
@@ -136,18 +137,9 @@ than Linear Regression's R² = 0.812. Feature importance shows `stress_level` (5
 `sedentary_minutes` (27%) are by far the two biggest drivers — a genuinely useful,
 explainable insight for the user.
 
-### Model 4 — Abnormal Heart Rate / Health Risk Flagging
-**Business question:** "Was anything about my heart rate today unusual, for ME
-specifically?"
-**Algorithm:** Isolation Forest (unsupervised anomaly detection), fit separately per user.
-**How it works, plainly:** it learns the "normal shape" of a user's own heart rate data
-and flags days that sit apart from that shape — no labels needed, since we never know in
-advance which days are actually anomalous.
-**Result:** flags 3.1% of days; a much simpler z-score threshold rule (flag if >2.5
-standard deviations from that user's own mean) flags 0.9% and **agrees with Isolation
-Forest on 97.6% of days** — strong evidence the model isn't flagging noise.
-**Explicitly not a diagnosis:** the dashboard copy always frames this as "worth a look,"
-never a medical claim — say this plainly if asked.
+### Model 4 — removed
+Heart-rate anomaly flagging was removed from the live project (it is not one of the supervised experiments E1-E5). Its script is kept in `archive/anomaly/`;
+the Streamlit Heart Rate tab now only plots the user's own resting, average and peak heart rate over the last 30 days. There is no model behind that tab.
 
 ### Model 5 — Personalized Recommendation Engine
 **Business question:** "What's one concrete thing I should do differently today?"
@@ -167,13 +159,40 @@ descriptive statistics computed in a batch job. Saying this plainly is the corre
 
 ---
 
+### Model 7 - Calorie-burn Linear Regression (Spark MLlib)
+*(Now experiment **E5**: Random Forest and GBT regressors were added for comparison - see the supervised section below.)*
+**Task:** estimate a day's `calories_burned` (same day, not a forecast) from steps, distance, active minutes, heart rate and body profile.
+**Where:** `models/train_calorie_regression.py`; coefficients saved in `models/artifacts/calorie_linreg_config.json`; used live by the dashboard.
+**Result (held-out test days):** MAE 199.7 kcal, RMSE 263.6 kcal, R-squared 0.630. The "always predict the training mean" baseline has MAE 334.5 kcal and R-squared 0.
+**Why it is honest:** scaling and one-hot encoding are fitted on the training split only; calorie-derived columns and the dependent minute columns are excluded;
+a chronological check (train before 2024-10-15) gives R-squared 0.58, so the relationship drifts over the year.
+**Expected questions:** *Why are the steps and distance coefficients of opposite sign?* They are 94% correlated, so only their combination is identifiable.
+*Is 0.63 good?* It is moderate: a useful estimate, not a measurement. *Why not predict tomorrow's calories?* That is a different problem; the report asks for a calorie-burn estimate.
+
+### Supervised experiments E1-E5 (this replaces the old "report experiments vs notebook experiments" split)
+Every experiment is now **supervised**; the two earlier user-segmentation experiments were replaced by E3 and E4 and their code and outputs are in `archive/` (see `archive/README.md`).
+* **E1** same-day goal (`steps >= 8,000`): Random Forest (unchanged) + Logistic Regression + Gradient-Boosted Trees, random 70/15/15, seed 42.
+* **E2** next-day goal from history strictly before the day (window frames end at -1), **chronological** split; accuracy must be read against the test-block baseline, ROC-AUC is the fairer summary.
+* **E3** user-level `high_achiever` (above-median goal rate), 437 users, stratified 5-fold CV; **E4** `activity_level` High/Low from `active_minutes`, user-held-out split.
+* **E5** calories: the Linear Regression above plus Random Forest and GBT regressors.
+Say first: calories, distance, active/sedentary minutes, max heart rate and sleep quality are **partly derived** in this demonstration dataset; every leakage run is stored with status INVALID and is never a result.
+All numbers, limitations and 10 viva questions with answers: `SUPERVISED_REPORT.md` (project root); raw results: `exports/E<n>_results.csv`.
+The legacy Streamlit app uses **Logistic Regression** for its goal probability (ROC-AUC 0.755 in `models/metrics_report.md`, an earlier run that was not repeated); it is not part of E1-E5.
+
+### Is there a Power BI dashboard?
+Yes - it is the primary dashboard: `powerbi/FitPulse_PowerBI_Dashboard.pbix`, five pages (Fitness Overview, Activity and Sleep, Calorie Prediction, Supervised Results E3 and E4, Model Evaluation).
+Pages 4 and 5 show only the supervised experiments and read `exports/E<n>_results.csv` (plus the cross-check counts from the HDFS rerun). The generated project has been rebuilt and passes its automated validation
+(`faculty_evidence/powerbi/project_validation.md`); the `.pbix` has to be re-opened, refreshed and re-saved in Power BI Desktop so that it matches the project.
+Say precisely: Power BI does **not** read HDFS; what Power BI Desktop renders from the regenerated file (cards, slicers) must be re-checked after that re-save - the earlier Desktop check applied to the previous `.pbix`.
+The earlier Streamlit app is legacy and optional.
+
 ## "How is the dashboard connected to the big-data pipeline?"
 
 Two layers that never touch each other at the wrong time:
 
 - **Offline (batch, runs on the full dataset):** `etl/spark_etl.py` and
   `etl/spark_benchmarks.py` process all 100,122 rows / 437 users with Spark, and
-  `models/train_*.py` train the four ML models against that processed data. This all runs
+  `models/train_*.py` train the three legacy ML models against that processed data. This all runs
   ahead of time, on a schedule, not per user request — exactly like a real production
   system wouldn't retrain a model every time a user opens the app.
 - **Online (per request, one user at a time):** `dashboard/app.py` loads the *already
@@ -206,13 +225,6 @@ Postgres (or a managed equivalent like Amazon RDS/Aurora) for the per-user servi
 and possibly a cache layer (Redis) in front of it for the hottest lookups (today's stats,
 the latest percentile row) — SQLite is a single-file, single-writer database, fine for a
 student demo, not for concurrent multi-user traffic.
-
-**"Why Isolation Forest instead of a simpler anomaly method?"**
-We actually built both and compare them (`models/train_anomaly_detection.py`) — a
-per-user z-score threshold is the simple fallback, and it agrees with Isolation Forest
-97.6% of the time. Isolation Forest is used as the primary method because it can catch
-multivariate anomalies (an unusual *combination* of resting/avg/max heart rate) that a
-per-column z-score threshold, checked independently per column, could miss.
 
 **"Why personalize the step/calorie goals instead of using a fixed target like 10,000
 steps?"**

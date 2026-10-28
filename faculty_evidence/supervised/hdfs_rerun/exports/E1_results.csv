@@ -1,0 +1,70 @@
+experiment_id,model,metric,value,split_type,status
+E1,Random Forest,Accuracy,0.7293046911597404,validation,VALID
+E1,Random Forest,Precision (positive class),0.7708021390374331,validation,VALID
+E1,Random Forest,Recall (positive class),0.7911955209133824,validation,VALID
+E1,Random Forest,F1 (positive class),0.7808657023674088,validation,VALID
+E1,Random Forest,F1 (weighted),0.728217248812576,validation,VALID
+E1,Random Forest,F1 (macro),0.7134397646343038,validation,VALID
+E1,Random Forest,ROC AUC,0.7548685024583048,validation,VALID
+E1,Random Forest,Baseline accuracy (always majority class),0.6095830823797096,validation,VALID
+E1,Random Forest,Accuracy,0.735198702351987,test,VALID
+E1,Random Forest,Precision (positive class),0.7801126516464472,test,VALID
+E1,Random Forest,Recall (positive class),0.7922992299229923,test,VALID
+E1,Random Forest,F1 (positive class),0.7861587162973475,test,VALID
+E1,Random Forest,F1 (weighted),0.7345566152197562,test,VALID
+E1,Random Forest,F1 (macro),0.7192550458150446,test,VALID
+E1,Random Forest,ROC AUC,0.7585353864864229,test,VALID
+E1,Random Forest,Baseline accuracy (always majority class),0.6143552311435523,test,VALID
+E1,Logistic Regression,Accuracy,0.7333199491400656,validation,VALID
+E1,Logistic Regression,Precision (positive class),0.7552809884416102,validation,VALID
+E1,Logistic Regression,Recall (positive class),0.8321440333735866,validation,VALID
+E1,Logistic Regression,F1 (positive class),0.7918516583964481,validation,VALID
+E1,Logistic Regression,F1 (weighted),0.7282683808986852,validation,VALID
+E1,Logistic Regression,F1 (macro),0.7104216861947793,validation,VALID
+E1,Logistic Regression,ROC AUC,0.7365301594564561,validation,VALID
+E1,Logistic Regression,Baseline accuracy (always majority class),0.6095830823797096,validation,VALID
+E1,Logistic Regression,Accuracy,0.7356042173560422,test,VALID
+E1,Logistic Regression,Precision (positive class),0.7589517903580716,test,VALID
+E1,Logistic Regression,Recall (positive class),0.8347634763476348,test,VALID
+E1,Logistic Regression,F1 (positive class),0.7950544844928751,test,VALID
+E1,Logistic Regression,F1 (weighted),0.7304651424740691,test,VALID
+E1,Logistic Regression,F1 (macro),0.7113124669227513,test,VALID
+E1,Logistic Regression,ROC AUC,0.7395994585438216,test,VALID
+E1,Logistic Regression,Baseline accuracy (always majority class),0.6143552311435523,test,VALID
+E1,Gradient-Boosted Trees,Accuracy,0.7293046911597404,validation,VALID
+E1,Gradient-Boosted Trees,Precision (positive class),0.7750977835723598,validation,VALID
+E1,Gradient-Boosted Trees,Recall (positive class),0.7831814688769348,validation,VALID
+E1,Gradient-Boosted Trees,F1 (positive class),0.7791186588762081,validation,VALID
+E1,Gradient-Boosted Trees,F1 (weighted),0.7288957801657834,validation,VALID
+E1,Gradient-Boosted Trees,F1 (macro),0.7147991116898971,validation,VALID
+E1,Gradient-Boosted Trees,ROC AUC,0.7700870006431458,validation,VALID
+E1,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.6095830823797096,validation,VALID
+E1,Gradient-Boosted Trees,Accuracy,0.7381724790483915,test,VALID
+E1,Gradient-Boosted Trees,Precision (positive class),0.7864674868189807,test,VALID
+E1,Gradient-Boosted Trees,Recall (positive class),0.7876787678767877,test,VALID
+E1,Gradient-Boosted Trees,F1 (positive class),0.7870726613169178,test,VALID
+E1,Gradient-Boosted Trees,F1 (weighted),0.7381124156555368,test,VALID
+E1,Gradient-Boosted Trees,F1 (macro),0.7235942355540546,test,VALID
+E1,Gradient-Boosted Trees,ROC AUC,0.7734647527143181,test,VALID
+E1,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.6143552311435523,test,VALID
+E1,Random Forest + steps & distance_km (LEAKAGE),Accuracy,0.9895241957285753,test,INVALID
+E1,Random Forest + steps & distance_km (LEAKAGE),F1 (weighted),0.9895034322925209,test,INVALID
+E1,Random Forest + steps & distance_km (LEAKAGE),ROC AUC,0.9996017354977699,test,INVALID
+E1,Logistic Regression + steps & distance_km (LEAKAGE),Accuracy,0.9997972424979724,test,INVALID
+E1,Logistic Regression + steps & distance_km (LEAKAGE),F1 (weighted),0.9997972325668059,test,INVALID
+E1,Logistic Regression + steps & distance_km (LEAKAGE),ROC AUC,0.9999994987230935,test,INVALID
+E1,Gradient-Boosted Trees + steps & distance_km (LEAKAGE),Accuracy,0.9902676399026764,test,INVALID
+E1,Gradient-Boosted Trees + steps & distance_km (LEAKAGE),F1 (weighted),0.9902532655037166,test,INVALID
+E1,Gradient-Boosted Trees + steps & distance_km (LEAKAGE),ROC AUC,0.9996130335080476,test,INVALID
+E1,Random Forest,Accuracy,0.7232011747430249,test (user-held-out),VALID
+E1,Random Forest,F1 (weighted),0.7232178968524596,test (user-held-out),VALID
+E1,Random Forest,ROC AUC,0.7498210213730541,test (user-held-out),VALID
+E1,Random Forest,Baseline accuracy (always majority class),0.6168216674824605,test (user-held-out),VALID
+E1,Logistic Regression,Accuracy,0.7315222711698482,test (user-held-out),VALID
+E1,Logistic Regression,F1 (weighted),0.7275267556480665,test (user-held-out),VALID
+E1,Logistic Regression,ROC AUC,0.7340361272001421,test (user-held-out),VALID
+E1,Logistic Regression,Baseline accuracy (always majority class),0.6168216674824605,test (user-held-out),VALID
+E1,Gradient-Boosted Trees,Accuracy,0.7223853809756894,test (user-held-out),VALID
+E1,Gradient-Boosted Trees,F1 (weighted),0.7223009350094648,test (user-held-out),VALID
+E1,Gradient-Boosted Trees,ROC AUC,0.7607763436053997,test (user-held-out),VALID
+E1,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.6168216674824605,test (user-held-out),VALID

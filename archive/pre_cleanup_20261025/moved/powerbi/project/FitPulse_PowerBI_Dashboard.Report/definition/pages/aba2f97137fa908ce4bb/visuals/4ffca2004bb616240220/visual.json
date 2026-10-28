@@ -1,0 +1,171 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "4ffca2004bb616240220",
+  "position": {
+    "x": 330,
+    "y": 170,
+    "z": 7000,
+    "height": 244,
+    "width": 500,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "segment_profile"
+                    }
+                  },
+                  "Property": "segment_label"
+                }
+              },
+              "queryRef": "segment_profile.segment_label",
+              "nativeQueryRef": "segment_label"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "segment_profile"
+                    }
+                  },
+                  "Property": "Users"
+                }
+              },
+              "queryRef": "segment_profile.Users",
+              "nativeQueryRef": "Users"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "segment_profile"
+                    }
+                  },
+                  "Property": "AvgSteps"
+                }
+              },
+              "queryRef": "segment_profile.AvgSteps",
+              "nativeQueryRef": "AvgSteps"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "segment_profile"
+                    }
+                  },
+                  "Property": "AvgActiveMin"
+                }
+              },
+              "queryRef": "segment_profile.AvgActiveMin",
+              "nativeQueryRef": "AvgActiveMin"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "segment_profile"
+                    }
+                  },
+                  "Property": "AvgSedentaryMin"
+                }
+              },
+              "queryRef": "segment_profile.AvgSedentaryMin",
+              "nativeQueryRef": "AvgSedentaryMin"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "segment_profile"
+                    }
+                  },
+                  "Property": "AvgCalories"
+                }
+              },
+              "queryRef": "segment_profile.AvgCalories",
+              "nativeQueryRef": "AvgCalories"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "segment_profile"
+                    }
+                  },
+                  "Property": "AvgHeartRate"
+                }
+              },
+              "queryRef": "segment_profile.AvgHeartRate",
+              "nativeQueryRef": "AvgHeartRate"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "segment_profile"
+                    }
+                  },
+                  "Property": "AvgSleep"
+                }
+              },
+              "queryRef": "segment_profile.AvgSleep",
+              "nativeQueryRef": "AvgSleep"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segment profile (user averages, measured by Spark MLlib)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Table of segment profiles'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

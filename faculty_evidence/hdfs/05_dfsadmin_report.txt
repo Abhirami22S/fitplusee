@@ -1,0 +1,45 @@
+$ hdfs dfsadmin -report
+(exit code 0)
+
+Configured Capacity: 240871534592 (224.33 GB)
+Present Capacity: 165688344700 (154.31 GB)
+DFS Remaining: 165669138432 (154.29 GB)
+DFS Used: 19206268 (18.32 MB)
+DFS Used%: 0.01%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (1):
+
+Name: 127.0.0.1:9866 (127.0.0.1)
+Hostname: localhost
+Decommission Status : Normal
+Configured Capacity: 240871534592 (224.33 GB)
+DFS Used: 19206268 (18.32 MB)
+Non DFS Used: 75183189892 (70.02 GB)
+DFS Remaining: 165669138432 (154.29 GB)
+DFS Used%: 0.01%
+DFS Remaining%: 68.78%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 18 19:40:48 IST 2026
+Last Block Report: Sun Oct 18 19:25:17 IST 2026
+Num of Blocks: 97
+
+

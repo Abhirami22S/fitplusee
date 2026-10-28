@@ -1,0 +1,290 @@
+/// One row per USER-DAY (100,122 rows). Source: Silver dataset + Linear Regression predictions.
+table fact_daily
+	lineageTag: 05fa364f-f460-5193-9673-60749527a9f0
+
+	column row_id
+		dataType: int64
+		isHidden
+		lineageTag: 07afba6a-2881-596f-acd6-2f046ef2a4e0
+		summarizeBy: none
+		sourceColumn: row_id
+
+	column user_id
+		dataType: int64
+		isHidden
+		lineageTag: 92d6bbf9-0d62-50ca-8422-442bc6a4baf6
+		summarizeBy: none
+		sourceColumn: user_id
+
+	column date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: bf4b3b2a-c921-518f-8995-6c4b29646973
+		summarizeBy: none
+		sourceColumn: date
+
+	column month
+		dataType: string
+		isHidden
+		lineageTag: 96052805-261e-51b8-a2cd-bfe09ba786b6
+		summarizeBy: none
+		sourceColumn: month
+
+	column day_of_week
+		dataType: string
+		lineageTag: 2f18cff9-3d49-583b-8eef-b3944ee3e1cb
+		summarizeBy: none
+		sourceColumn: day_of_week
+
+	column activity_type
+		dataType: string
+		lineageTag: 4aa5e095-767e-5309-9167-f6b69c8bde15
+		summarizeBy: none
+		sourceColumn: activity_type
+
+	column intensity
+		dataType: string
+		lineageTag: d0d38dc0-59b2-5a5c-a1fc-25a84b553d1c
+		summarizeBy: none
+		sourceColumn: intensity
+
+	column steps
+		dataType: int64
+		formatString: #,0
+		lineageTag: 6666e7e4-33c5-5469-8b2b-90a511a27f2e
+		summarizeBy: none
+		sourceColumn: steps
+
+	column distance_km
+		dataType: double
+		formatString: 0.00
+		lineageTag: 0fbab6dd-33e3-5eb8-ba37-be134b26f2a3
+		summarizeBy: none
+		sourceColumn: distance_km
+
+	column calories_burned
+		dataType: double
+		formatString: #,0.0
+		lineageTag: 4f075fd3-22a9-557d-9048-ef8ab8788f84
+		summarizeBy: none
+		sourceColumn: calories_burned
+
+	column predicted_calories
+		dataType: double
+		formatString: #,0.0
+		lineageTag: 89edfa4e-bb7a-59b1-8584-7e266fd1373e
+		summarizeBy: none
+		sourceColumn: predicted_calories
+
+	column calorie_error
+		dataType: double
+		formatString: #,0.0
+		lineageTag: d9cf6d99-ba8f-5989-91ed-4693117b46f8
+		summarizeBy: none
+		sourceColumn: calorie_error
+
+	column model_split
+		dataType: string
+		lineageTag: c555c126-0125-56ab-9a98-09c1ab0607e0
+		summarizeBy: none
+		sourceColumn: model_split
+
+	column active_minutes
+		dataType: int64
+		lineageTag: 8c9a8b97-2a2f-58ef-b215-abf04fe35ff4
+		summarizeBy: none
+		sourceColumn: active_minutes
+
+	column sedentary_minutes
+		dataType: int64
+		lineageTag: 8296f53b-ccb4-56c2-8476-b74df6bfb8f3
+		summarizeBy: none
+		sourceColumn: sedentary_minutes
+
+	column sleep_hours
+		dataType: double
+		formatString: 0.00
+		lineageTag: 6c8e707b-f428-5a8b-a285-e9a82c038105
+		summarizeBy: none
+		sourceColumn: sleep_hours
+
+	column sleep_quality_score
+		dataType: double
+		lineageTag: 99e2b11d-199a-5b1b-99a7-e9320f4b9bd5
+		summarizeBy: none
+		sourceColumn: sleep_quality_score
+
+	column avg_heart_rate
+		dataType: int64
+		lineageTag: d926f026-ea0d-539d-a52c-023fb52d970d
+		summarizeBy: none
+		sourceColumn: avg_heart_rate
+
+	column daily_step_goal
+		dataType: double
+		isHidden
+		lineageTag: 0e530483-a893-5b1e-b7e1-9adb401826b6
+		summarizeBy: none
+		sourceColumn: daily_step_goal
+
+	column goal_achieved
+		dataType: int64
+		lineageTag: 988501c5-26f5-50e6-8664-2c4cefcbbc5e
+		summarizeBy: none
+		sourceColumn: goal_achieved
+
+	column daily_calorie_goal
+		dataType: double
+		isHidden
+		lineageTag: abb03049-8d78-5f77-b205-9d1a822a4d4e
+		summarizeBy: none
+		sourceColumn: daily_calorie_goal
+
+	column calorie_goal_achieved
+		dataType: int64
+		lineageTag: 46f65d20-e625-59b1-b637-3887b9ea45a8
+		summarizeBy: none
+		sourceColumn: calorie_goal_achieved
+
+	column age_group
+		dataType: string
+		lineageTag: a29cd011-8216-59a8-99e4-347653e6eec6
+		summarizeBy: none
+		sourceColumn: age_group
+
+	column gender
+		dataType: string
+		lineageTag: 04c12faa-eb01-5db2-a198-7285aa6c4c1f
+		summarizeBy: none
+		sourceColumn: gender
+
+	column error_bin_kcal
+		dataType: int64
+		lineageTag: c0fc4fe5-cbff-5f24-906f-756724996d4a
+		summarizeBy: none
+		sourceColumn: error_bin_kcal
+
+	measure 'Total Users' = DISTINCTCOUNT ( fact_daily[user_id] )
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: 6200455f-7273-524b-8fd0-a392432d2bc3
+
+	measure 'User-Days' = COUNTROWS ( fact_daily )
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: af73a7f0-3de2-58e1-85aa-1846018d53a4
+
+	measure 'Total Steps' = SUM ( fact_daily[steps] )
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: c667376a-be6a-5d34-b684-89919a59c5c3
+
+	measure 'Avg Daily Steps' = AVERAGE ( fact_daily[steps] )
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: e09b268b-83ca-5e14-b428-d723e001e63a
+
+	measure 'Avg Calories Burned' = AVERAGE ( fact_daily[calories_burned] )
+		formatString: #,0.0
+		displayFolder: 1 Overview
+		lineageTag: 720585c2-cf9c-59c1-bf54-56c06deeca57
+
+	measure 'Avg Active Minutes' = AVERAGE ( fact_daily[active_minutes] )
+		formatString: #,0.0
+		displayFolder: 1 Overview
+		lineageTag: f888b3fc-b386-510f-9db4-ee65af78f39e
+
+	measure 'Step-Goal Achievement %' = DIVIDE ( SUM ( fact_daily[goal_achieved] ), COUNTROWS ( fact_daily ) )
+		formatString: 0.0%
+		displayFolder: 1 Overview
+		lineageTag: 8077024d-c979-5839-9f93-fb5a3a0685b6
+
+	measure 'Calorie-Goal Achievement %' = DIVIDE ( SUM ( fact_daily[calorie_goal_achieved] ), COUNTROWS ( fact_daily ) )
+		formatString: 0.0%
+		displayFolder: 1 Overview
+		lineageTag: 14c7d58e-e692-5721-8770-27ed320ba42e
+
+	measure 'Avg Steps Prev Month' = CALCULATE ( [Avg Daily Steps], DATEADD ( dim_date[Date], -1, MONTH ) )
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: 93d85924-4454-57ba-818b-ab3f65d5bb72
+
+	measure 'Steps MoM %' = DIVIDE ( [Avg Daily Steps] - [Avg Steps Prev Month], [Avg Steps Prev Month] )
+		formatString: 0.0%
+		displayFolder: 1 Overview
+		lineageTag: fe5ab00d-9244-58fc-8a5d-1c34b7baf336
+
+	measure 'Avg Distance (km)' = AVERAGE ( fact_daily[distance_km] )
+		formatString: 0.00
+		displayFolder: 2 Activity and Sleep
+		lineageTag: 40264959-1849-5070-8846-39890a4401a2
+
+	measure 'Avg Sedentary Minutes' = AVERAGE ( fact_daily[sedentary_minutes] )
+		formatString: #,0.0
+		displayFolder: 2 Activity and Sleep
+		lineageTag: 1c9cf283-2ce6-54d0-9d27-7fc058ddce37
+
+	measure 'Avg Sleep Hours' = AVERAGE ( fact_daily[sleep_hours] )
+		formatString: 0.00
+		displayFolder: 2 Activity and Sleep
+		lineageTag: 593247f6-bb31-5ace-8664-44d386cd79f1
+
+	measure 'Avg Sleep Quality' = AVERAGE ( fact_daily[sleep_quality_score] )
+		formatString: #,0.0
+		displayFolder: 2 Activity and Sleep
+		lineageTag: 145db94d-b137-56a2-9ebd-38d6e90142c1
+
+	measure 'Avg Heart Rate' = AVERAGE ( fact_daily[avg_heart_rate] )
+		formatString: #,0.0
+		displayFolder: 2 Activity and Sleep
+		lineageTag: 333d8335-c899-5dfc-8d2e-4f57532df0c6
+
+	measure 'Active Share of Waking Time %' = DIVIDE ( SUM ( fact_daily[active_minutes] ), SUM ( fact_daily[active_minutes] ) + SUM ( fact_daily[sedentary_minutes] ) )
+		formatString: 0.0%
+		displayFolder: 2 Activity and Sleep
+		lineageTag: ff281293-de34-5151-bc00-64f56008c2da
+
+	measure 'Avg Predicted Calories' = AVERAGE ( fact_daily[predicted_calories] )
+		formatString: #,0.0
+		displayFolder: 3 Calorie Prediction
+		lineageTag: 26dbb067-370c-5af7-9c4d-067e6323dd93
+
+	measure 'Test Days' = CALCULATE ( COUNTROWS ( fact_daily ), fact_daily[model_split] = "test" )
+		formatString: #,0
+		displayFolder: 3 Calorie Prediction
+		lineageTag: cae6c1bd-b637-5cb2-b577-59d6ad583218
+
+	measure 'Avg Prediction Error (bias, kcal)' = CALCULATE ( AVERAGE ( fact_daily[calorie_error] ), fact_daily[model_split] = "test" )
+		formatString: #,0.0
+		displayFolder: 3 Calorie Prediction
+		lineageTag: e1a2431c-49be-5ddf-b267-5c900fd6ef68
+
+	measure 'Test MAE (recomputed, kcal)' = CALCULATE ( AVERAGEX ( fact_daily, ABS ( fact_daily[calorie_error] ) ), fact_daily[model_split] = "test" )
+		formatString: #,0.0
+		displayFolder: 3 Calorie Prediction
+		lineageTag: 00b0f8df-0dc3-56b0-a6b5-6e5a20a4ca4b
+
+	measure 'Test RMSE (recomputed, kcal)' = CALCULATE ( SQRT ( AVERAGEX ( fact_daily, fact_daily[calorie_error] ^ 2 ) ), fact_daily[model_split] = "test" )
+		formatString: #,0.0
+		displayFolder: 3 Calorie Prediction
+		lineageTag: a530ffac-fc32-53c5-a54b-28ab5ee91f96
+
+	measure 'Test R2 (recomputed)' =
+			VAR T = CALCULATETABLE ( fact_daily, fact_daily[model_split] = "test" )
+			VAR MeanActual = AVERAGEX ( T, fact_daily[calories_burned] )
+			VAR SSE = SUMX ( T, fact_daily[calorie_error] ^ 2 )
+			VAR SST = SUMX ( T, ( fact_daily[calories_burned] - MeanActual ) ^ 2 )
+			RETURN 1 - DIVIDE ( SSE, SST )
+		formatString: 0.0000
+		displayFolder: 3 Calorie Prediction
+		lineageTag: 8c035120-9cf2-5212-849f-b4e61024b6dc
+
+	partition fact_daily = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "fact_daily.csv"), [Delimiter = ",", Columns = 25, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"row_id", Int64.Type}, {"user_id", Int64.Type}, {"date", type date}, {"month", type text}, {"day_of_week", type text}, {"activity_type", type text}, {"intensity", type text}, {"steps", Int64.Type}, {"distance_km", type number}, {"calories_burned", type number}, {"predicted_calories", type number}, {"calorie_error", type number}, {"model_split", type text}, {"active_minutes", Int64.Type}, {"sedentary_minutes", Int64.Type}, {"sleep_hours", type number}, {"sleep_quality_score", type number}, {"avg_heart_rate", Int64.Type}, {"daily_step_goal", type number}, {"goal_achieved", Int64.Type}, {"daily_calorie_goal", type number}, {"calorie_goal_achieved", Int64.Type}, {"age_group", type text}, {"gender", type text}, {"error_bin_kcal", Int64.Type}}, "en-US")
+				in
+					Typed

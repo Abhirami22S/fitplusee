@@ -1,0 +1,59 @@
+/// Test-set confusion matrices of the two Random Forest experiments (E1, E2).
+table confusion_matrices
+	lineageTag: 433befa5-f8ee-5879-b2e7-1e211bf7239b
+
+	column experiment_id
+		dataType: string
+		lineageTag: 01d736f6-bd98-5b2c-a3ad-0f3f0ec7e139
+		summarizeBy: none
+		sourceColumn: experiment_id
+
+	column evaluation_set
+		dataType: string
+		lineageTag: 12f7612d-337f-5989-b63b-7af895f75097
+		summarizeBy: none
+		sourceColumn: evaluation_set
+
+	column actual
+		dataType: string
+		lineageTag: fe000f9b-7b37-5ddb-8327-f3446fe42e7a
+		summarizeBy: none
+		sourceColumn: actual
+
+	column predicted
+		dataType: string
+		lineageTag: dbcbb131-54e3-5641-b3f4-fab4589be409
+		summarizeBy: none
+		sourceColumn: predicted
+
+	column count
+		dataType: int64
+		lineageTag: ce295a0f-d4ab-58b1-8acd-4a2ed42d9115
+		summarizeBy: none
+		sourceColumn: count
+
+	column share_of_actual
+		dataType: double
+		lineageTag: 545745b2-e90d-5714-88c1-97b1fc37110f
+		summarizeBy: none
+		sourceColumn: share_of_actual
+
+	measure 'Confusion Count' = SUM ( confusion_matrices[count] )
+		formatString: #,0
+		displayFolder: 5 Model Evaluation
+		lineageTag: 28d68f43-d0e9-5ed0-9c5a-71bf0dbacaea
+
+	measure 'Confusion Share of Actual' = AVERAGE ( confusion_matrices[share_of_actual] )
+		formatString: 0.0%
+		displayFolder: 5 Model Evaluation
+		lineageTag: 5e9cf2d4-dfc7-5dee-b18a-8fec210cf300
+
+	partition confusion_matrices = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "confusion_matrices.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"experiment_id", type text}, {"evaluation_set", type text}, {"actual", type text}, {"predicted", type text}, {"count", Int64.Type}, {"share_of_actual", type number}}, "en-US")
+				in
+					Typed

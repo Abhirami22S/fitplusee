@@ -1,0 +1,49 @@
+/// One row per evaluated experiment (E1-E5): target, granularity, split.
+table experiments
+	lineageTag: ea3250f0-2b95-5811-b245-cd1b3df7d949
+
+	column experiment_id
+		dataType: string
+		lineageTag: 438d4786-4361-5c02-94e3-44c155174bc5
+		summarizeBy: none
+		sourceColumn: experiment_id
+
+	column experiment_name
+		dataType: string
+		lineageTag: ad415774-462a-5c3f-a8a4-d290fe8eb24b
+		summarizeBy: none
+		sourceColumn: experiment_name
+
+	column algorithm
+		dataType: string
+		lineageTag: a05603c9-373b-5762-8d7e-d51c41834f73
+		summarizeBy: none
+		sourceColumn: algorithm
+
+	column target
+		dataType: string
+		lineageTag: b0464ce0-171e-53b9-b0cf-bab1e4398b61
+		summarizeBy: none
+		sourceColumn: target
+
+	column data_granularity
+		dataType: string
+		lineageTag: 399037a5-b6c0-55bf-b192-7bf400ce5b95
+		summarizeBy: none
+		sourceColumn: data_granularity
+
+	column split_method
+		dataType: string
+		lineageTag: bfc09b6e-6f1a-5151-843c-aa70654ac1f0
+		summarizeBy: none
+		sourceColumn: split_method
+
+	partition experiments = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "experiments.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"experiment_id", type text}, {"experiment_name", type text}, {"algorithm", type text}, {"target", type text}, {"data_granularity", type text}, {"split_method", type text}}, "en-US")
+				in
+					Typed

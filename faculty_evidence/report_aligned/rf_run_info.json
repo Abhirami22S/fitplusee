@@ -1,0 +1,8 @@
+{
+  "storage_mode":"hdfs",
+  "silver_source":"hdfs:\/\/localhost:9000\/fitpulse\/silver",
+  "numTrees":50,
+  "maxDepth":15,
+  "records":100122,
+  "positive_share":0.6134416012
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "60dc54c11519147ed795",
+  "position": {
+    "x": 860,
+    "y": 462,
+    "z": 16000,
+    "height": 206,
+    "width": 400,
+    "tabOrder": 16000
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_user"
+                    }
+                  },
+                  "Property": "user_id"
+                }
+              },
+              "queryRef": "dim_user.user_id",
+              "nativeQueryRef": "user_id"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Avg Sedentary Minutes"
+                }
+              },
+              "queryRef": "fact_daily.Avg Sedentary Minutes",
+              "nativeQueryRef": "Avg Sedentary Minutes"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Avg Sleep Quality"
+                }
+              },
+              "queryRef": "fact_daily.Avg Sleep Quality",
+              "nativeQueryRef": "Avg Sleep Quality"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sedentary minutes vs sleep quality - per user'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Scatter of sedentary minutes against sleep quality per user'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -3,6 +3,7 @@
 #   .\run_faculty_demo.ps1            -> opens the notebook in Jupyter Lab
 #   .\run_faculty_demo.ps1 pipeline   -> runs data/prepare_raw_dataset.py + etl/spark_etl.py
 #   .\run_faculty_demo.ps1 execute    -> re-executes the whole notebook headless (~6 min), saving outputs
+#   .\run_faculty_demo.ps1 supervised -> runs the supervised experiments E1-E5 (see run_supervised.ps1), then rebuilds the notebook sections 5-7
 #
 # Sets up the local JDK 17 + Hadoop winutils (in ..\tools) that Spark needs on this machine,
 # and keeps Spark's temp files on D: (C: is almost full).
@@ -29,6 +30,10 @@ switch ($Mode) {
     }
     "execute" {
         & $Py -m nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=1800 FitPulse_Faculty_Demo.ipynb
+    }
+    "supervised" {
+        & "$Root\run_supervised.ps1" -Experiment All
+        if ($LASTEXITCODE -eq 0) { & $Py scripts/build_supervised_notebook.py }
     }
     default {
         & $Py -m jupyterlab FitPulse_Faculty_Demo.ipynb

@@ -1,0 +1,63 @@
+/// Calendar 2024-01-01..2024-12-31, marked as the date table.
+table dim_date
+	lineageTag: 8edbfc2c-3341-5a69-a173-b6245c088350
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		isKey
+		lineageTag: 1de4b1f3-c7e3-5212-aeb9-4c2cf38eae1d
+		summarizeBy: none
+		sourceColumn: Date
+
+	column Year
+		dataType: int64
+		isHidden
+		lineageTag: 4cd1e289-b269-515e-8e56-4ccf70b6e6ce
+		summarizeBy: none
+		sourceColumn: Year
+
+	column MonthNumber
+		dataType: int64
+		isHidden
+		lineageTag: 5f59318c-71b8-5ebc-8df8-dbcb568ecdea
+		summarizeBy: none
+		sourceColumn: MonthNumber
+
+	column Month
+		dataType: string
+		lineageTag: 7bbfb87c-dce6-5cbb-a44a-597162dca70c
+		summarizeBy: none
+		sourceColumn: Month
+		sortByColumn: MonthNumber
+
+	column YearMonth
+		dataType: string
+		lineageTag: 9135c8a9-fc33-5862-b121-bae969edf6a1
+		summarizeBy: none
+		sourceColumn: YearMonth
+
+	column DayOfWeek
+		dataType: string
+		lineageTag: 5ca7273b-4cf2-527d-9794-af6fcb410072
+		summarizeBy: none
+		sourceColumn: DayOfWeek
+		sortByColumn: DayOfWeekNumber
+
+	column DayOfWeekNumber
+		dataType: int64
+		isHidden
+		lineageTag: 33eeb447-14bd-5129-8f87-c423ed815a83
+		summarizeBy: none
+		sourceColumn: DayOfWeekNumber
+
+	partition dim_date = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "dim_date.csv"), [Delimiter = ",", Columns = 7, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"Date", type date}, {"Year", Int64.Type}, {"MonthNumber", Int64.Type}, {"Month", type text}, {"YearMonth", type text}, {"DayOfWeek", type text}, {"DayOfWeekNumber", Int64.Type}}, "en-US")
+				in
+					Typed

@@ -1,0 +1,53 @@
+﻿=== E4 (local) -> D:\bigdata\fitpulsee\FitPulse\faculty_evidence\supervised\E4_run.log
+
+    {'depth': 5, 'validation_score': 0.49743910196240565, 'seconds': 8.2, 'status': 'ok'}
+[Stage 212:=======>                                                 (1 + 7) / 8]
+[Stage 215:>                                                        (0 + 8) / 8]
+[Stage 218:>                                                        (0 + 8) / 8]
+    {'depth': 10, 'validation_score': 0.4948219579434964, 'seconds': 9.5, 'status': 'ok'}
+[Stage 535:==========================================>              (6 + 2) / 8]
+    {'depth': 3, 'iters': 50, 'validation_score': 0.49303492343975713, 'seconds': 33.0, 'status': 'ok'}
+[Stage 1034:==========================================>             (6 + 2) / 8]
+[Stage 1235:============================>                           (4 + 4) / 8]
+[Stage 1235:==========================================>             (6 + 2) / 8]
+[Stage 1235:=================================================>      (7 + 1) / 8]
+    {'depth': 3, 'iters': 100, 'validation_score': 0.4959137112464667, 'seconds': 660.1, 'status': 'ok'}
+    {'depth': 5, 'iters': 50, 'validation_score': 0.4969140230188259, 'seconds': 47.1, 'status': 'ok'}
+[Stage 2941:==========================================>             (6 + 2) / 8]
+[Stage 3454:============================>                           (4 + 4) / 8]
+    {'depth': 5, 'iters': 100, 'validation_score': 0.49694660213024433, 'seconds': 94.5, 'status': 'ok'}
+    {'reg': 0.0, 'validation_score': 0.4966016560148904, 'seconds': 10.0, 'status': 'ok'}
+    {'reg': 0.01, 'validation_score': 0.4968390977523193, 'seconds': 5.3, 'status': 'ok'}
+    {'reg': 0.1, 'validation_score': 0.49680231152772203, 'seconds': 3.5, 'status': 'ok'}
+    {'reg': 1.0, 'validation_score': 0.49670352613170304, 'seconds': 2.9, 'status': 'ok'}
+Random Forest            [numTrees=50, maxDepth=5] TEST: acc 0.5056  macro-F1 0.4406  AUC 0.4965 | baseline 0.5079  
+CM(tn,fp,fn,tp)=(5188, 1038, 5022, 1010)
+Gradient-Boosted Trees   [maxDepth=5, maxIter=100] TEST: acc 0.5036  macro-F1 0.5002  AUC 0.4999 | baseline 0.5079  
+CM(tn,fp,fn,tp)=(3593, 2633, 3452, 2580)
+Logistic Regression      [regParam=0.01] TEST: acc 0.5040  macro-F1 0.4442  AUC 0.4999 | baseline 0.5079  
+CM(tn,fp,fn,tp)=(5100, 1126, 4954, 1078)
+LEAKAGE +calories_burned    Random Forest            test acc 0.7878  macro-F1 0.7876  AUC 0.8905   -> INVALID 
+(calories = MET x weight x duration; duration = active_minutes)
+LEAKAGE +calories_burned    Gradient-Boosted Trees   test acc 0.8982  macro-F1 0.8982  AUC 0.9673   -> INVALID 
+(calories = MET x weight x duration; duration = active_minutes)
+LEAKAGE +calories_burned    Logistic Regression      test acc 0.8763  macro-F1 0.8763  AUC 0.9512   -> INVALID 
+(calories = MET x weight x duration; duration = active_minutes)
+LEAKAGE +sedentary_minutes  Random Forest            test acc 0.8032  macro-F1 0.8030  AUC 0.9027   -> INVALID 
+(sedentary = 1440 - sleep - active)
+LEAKAGE +sedentary_minutes  Gradient-Boosted Trees   test acc 0.9741  macro-F1 0.9741  AUC 0.9976   -> INVALID 
+(sedentary = 1440 - sleep - active)
+LEAKAGE +sedentary_minutes  Logistic Regression      test acc 0.9693  macro-F1 0.9693  AUC 0.9966   -> INVALID 
+(sedentary = 1440 - sleep - active)
+wrote D:\bigdata\fitpulsee\FitPulse\exports\E4_results.csv (78 rows)
+E4 comparison table (user-held-out TEST users):
+metric                  Accuracy  Baseline accuracy (always majority class)  F1 (macro)  ROC AUC
+model                                                                                           
+Gradient-Boosted Trees    0.5036                                     0.5079      0.5002   0.4999
+Logistic Regression       0.5040                                     0.5079      0.4442   0.4999
+Random Forest             0.5056                                     0.5079      0.4406   0.4965
+[Stage 8302:>                                                     (0 + 12) / 12]
+[Stage 8302:====>                                                 (1 + 11) / 12]
+[Stage 8304:>                                                       (0 + 8) / 8]
+Storage mode used: LOCAL
+
+

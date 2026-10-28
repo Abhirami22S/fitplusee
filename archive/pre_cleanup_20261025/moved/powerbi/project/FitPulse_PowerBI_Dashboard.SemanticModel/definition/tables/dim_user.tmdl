@@ -1,0 +1,100 @@
+/// One row per USER (437). Segment = user-level K-Means (experiment E3).
+table dim_user
+	lineageTag: 2f92c427-e769-55b1-8c46-1d5d3127e24b
+
+	column user_id
+		dataType: int64
+		lineageTag: 4bc17c08-b5c3-5829-9f6f-30e859fc6375
+		summarizeBy: none
+		sourceColumn: user_id
+
+	column age
+		dataType: int64
+		lineageTag: 664d33b7-d2b6-5d09-992a-500b55149661
+		summarizeBy: none
+		sourceColumn: age
+
+	column age_group
+		dataType: string
+		lineageTag: d5036084-293d-5898-b2f4-2b4a60aa226e
+		summarizeBy: none
+		sourceColumn: age_group
+
+	column gender
+		dataType: string
+		lineageTag: adb8bbc4-ed96-598b-bf6e-054acbee29d5
+		summarizeBy: none
+		sourceColumn: gender
+
+	column days
+		dataType: int64
+		lineageTag: 754cfaf8-e72d-5e1f-8044-44a80c3031d1
+		summarizeBy: none
+		sourceColumn: days
+
+	column avg_steps
+		dataType: double
+		lineageTag: f4adfbf7-f6c6-53b2-9938-af6ea74e4886
+		summarizeBy: none
+		sourceColumn: avg_steps
+
+	column avg_calories
+		dataType: double
+		lineageTag: bc8a44cb-3019-51a3-8297-14436d7688ac
+		summarizeBy: none
+		sourceColumn: avg_calories
+
+	column segment_id
+		dataType: int64
+		isHidden
+		lineageTag: c23f4645-e0a4-5917-a953-c8a7887b607d
+		summarizeBy: none
+		sourceColumn: segment_id
+
+	column PC1
+		dataType: double
+		lineageTag: b172f431-dee2-53a0-a97b-8efffed17ae1
+		summarizeBy: none
+		sourceColumn: PC1
+
+	column PC2
+		dataType: double
+		lineageTag: 25b25ff1-4949-567d-86ae-23e735509762
+		summarizeBy: none
+		sourceColumn: PC2
+
+	column segment_label
+		dataType: string
+		lineageTag: a4204be0-7fc7-5d3b-ac50-4ca58a0e950e
+		summarizeBy: none
+		sourceColumn: segment_label
+
+	measure 'Users in Segment' = COUNTROWS ( dim_user )
+		formatString: #,0
+		displayFolder: 4 Segmentation
+		lineageTag: 5aaad585-6533-5ec3-acf5-f1375f85bd58
+
+	measure 'Segment Share %' = DIVIDE ( COUNTROWS ( dim_user ), CALCULATE ( COUNTROWS ( dim_user ), ALL ( dim_user[segment_label] ) ) )
+		formatString: 0.0%
+		displayFolder: 4 Segmentation
+		lineageTag: 2dacd787-d00b-59df-99df-0156bd5ab480
+
+	measure 'Segment Avg Steps' = AVERAGE ( dim_user[avg_steps] )
+		formatString: #,0
+		displayFolder: 4 Segmentation
+		lineageTag: 5186beb7-3ffd-5d7e-8748-d4babecbf901
+
+	measure 'Segment Avg Calories' = AVERAGE ( dim_user[avg_calories] )
+		formatString: #,0.0
+		displayFolder: 4 Segmentation
+		lineageTag: c3dc04ed-a07e-5ba9-8558-59f32c31539b
+
+	partition dim_user = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "dim_user.csv"), [Delimiter = ",", Columns = 11, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"user_id", Int64.Type}, {"age", Int64.Type}, {"age_group", type text}, {"gender", type text}, {"days", Int64.Type}, {"avg_steps", type number}, {"avg_calories", type number}, {"segment_id", Int64.Type}, {"PC1", type number}, {"PC2", type number}, {"segment_label", type text}}, "en-US")
+				in
+					Typed

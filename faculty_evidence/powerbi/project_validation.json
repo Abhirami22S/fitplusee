@@ -1,0 +1,331 @@
+{
+  "passed": 65,
+  "total": 65,
+  "checks": [
+    {
+      "check": "A1 .pbip, .Report/definition.pbir and .SemanticModel/definition.pbism exist",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A2 report binds to the semantic model by relative path",
+      "passed": true,
+      "detail": "{'byPath': {'path': '../FitPulse_PowerBI_Dashboard.SemanticModel'}}"
+    },
+    {
+      "check": "A3 DataFolder parameter points at an existing folder",
+      "passed": true,
+      "detail": "D:\\bigdata\\fitpulsee\\FitPulse\\powerbi\\data\\"
+    },
+    {
+      "check": "A4 table crosscheck: CSV exists and TMDL columns == CSV header",
+      "passed": true,
+      "detail": "crosscheck.csv 7 cols"
+    },
+    {
+      "check": "A4 table dim_date: CSV exists and TMDL columns == CSV header",
+      "passed": true,
+      "detail": "dim_date.csv 7 cols"
+    },
+    {
+      "check": "A4 table dim_user: CSV exists and TMDL columns == CSV header",
+      "passed": true,
+      "detail": "dim_user.csv 7 cols"
+    },
+    {
+      "check": "A4 table experiments: CSV exists and TMDL columns == CSV header",
+      "passed": true,
+      "detail": "experiments.csv 2 cols"
+    },
+    {
+      "check": "A4 table fact_daily: CSV exists and TMDL columns == CSV header",
+      "passed": true,
+      "detail": "fact_daily.csv 25 cols"
+    },
+    {
+      "check": "A4 table supervised_results: CSV exists and TMDL columns == CSV header",
+      "passed": true,
+      "detail": "supervised_results.csv 7 cols"
+    },
+    {
+      "check": "A5 tables in model == tables in spec",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A6 relationship fact_daily[date] -> dim_date[Date] uses existing columns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A7 relationship dim_date[Date] is unique (one side) and covers all fact_daily[date] values",
+      "passed": true,
+      "detail": "360 distinct -> 366 keys"
+    },
+    {
+      "check": "A6 relationship fact_daily[user_id] -> dim_user[user_id] uses existing columns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A7 relationship dim_user[user_id] is unique (one side) and covers all fact_daily[user_id] values",
+      "passed": true,
+      "detail": "437 distinct -> 437 keys"
+    },
+    {
+      "check": "A6 relationship supervised_results[experiment_id] -> experiments[experiment_id] uses existing columns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A7 relationship experiments[experiment_id] is unique (one side) and covers all supervised_results[experiment_id] values",
+      "passed": true,
+      "detail": "5 distinct -> 5 keys"
+    },
+    {
+      "check": "A6 relationship crosscheck[experiment_id] -> experiments[experiment_id] uses existing columns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A7 relationship experiments[experiment_id] is unique (one side) and covers all crosscheck[experiment_id] values",
+      "passed": true,
+      "detail": "5 distinct -> 5 keys"
+    },
+    {
+      "check": "B0 measure count in model == spec",
+      "passed": true,
+      "detail": "29"
+    },
+    {
+      "check": "B1 every table[column] and [measure] referenced in DAX exists",
+      "passed": true,
+      "detail": "29 measures checked"
+    },
+    {
+      "check": "C1 the five requested pages exist with exact names",
+      "passed": true,
+      "detail": "['Supervised Results E3 and E4', 'Calorie Prediction', 'Activity and Sleep', 'Model Evaluation', 'Fitness Overview']"
+    },
+    {
+      "check": "C2 page order follows the requested sequence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "C3 no visual references a nonexistent column or measure (and every spec field is present)",
+      "passed": true,
+      "detail": "68 visuals, 149 field references (spec expects 149)"
+    },
+    {
+      "check": "C4 page 'Supervised Results E3 and E4': slicers >= 0 and data visuals >= 5",
+      "passed": true,
+      "detail": "0 slicers, 7 data visuals"
+    },
+    {
+      "check": "C4 page 'Calorie Prediction': slicers >= 2 and data visuals >= 5",
+      "passed": true,
+      "detail": "2 slicers, 10 data visuals"
+    },
+    {
+      "check": "C4 page 'Activity and Sleep': slicers >= 2 and data visuals >= 5",
+      "passed": true,
+      "detail": "4 slicers, 11 data visuals"
+    },
+    {
+      "check": "C4 page 'Model Evaluation': slicers >= 1 and data visuals >= 4",
+      "passed": true,
+      "detail": "1 slicers, 6 data visuals"
+    },
+    {
+      "check": "C4 page 'Fitness Overview': slicers >= 2 and data visuals >= 5",
+      "passed": true,
+      "detail": "4 slicers, 10 data visuals"
+    },
+    {
+      "check": "C5 every visual lies inside the 1280x720 page",
+      "passed": true,
+      "detail": "68"
+    },
+    {
+      "check": "C6 experiment ids E1-E5 preserved and distinct in experiments / supervised_results / crosscheck",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "C7 every visual showing Result Value names its experiment (column shown, or pinned to a single experiment by a filter) - results are never mixed",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "C8 page 4 shows only E3 and E4: every Result Value visual is pinned by a filter to E3 and/or E4",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "C9 page 4 states that E3 and E4 are never combined",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "C10 page 5: both cross-check cards show a title that names hdfs_rerun/sklearn_crosscheck.csv as their source",
+      "passed": true,
+      "detail": "[(True, \"'Passed - source: hdfs_rerun/sklearn_crosscheck.csv'\"), (True, \"'Checks - source: hdfs_rerun/sklearn_crosscheck.csv'\")]"
+    },
+    {
+      "check": "D0 every headline measure has a pandas emulation",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "D1 Total Users: emulated 437.0000 vs expected 'Distinct users' 437.0000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 User-Days: emulated 100,122.0000 vs expected 'Total days (rows)' 100,122.0000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Total Steps: emulated 863,529,003.0000 vs expected 'Total steps' 863,529,003.0000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Avg Daily Steps: emulated 8,624.7678 vs expected 'Average daily steps' 8,624.7678",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Avg Calories Burned: emulated 662.2013 vs expected 'Average calories burned' 662.2013",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Avg Active Minutes: emulated 69.9294 vs expected 'Average active minutes' 69.9294",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Step-Goal Achievement %: emulated 0.3375 vs expected 'Personal step-goal achievement rate' 0.3375",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Calorie-Goal Achievement %: emulated 0.3533 vs expected 'Calorie-goal achievement rate' 0.3533",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Avg Distance (km): emulated 6.5400 vs expected 'Average distance (km)' 6.5400",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Avg Sedentary Minutes: emulated 947.2411 vs expected 'Average sedentary minutes' 947.2411",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Avg Sleep Hours: emulated 7.0472 vs expected 'Average sleep hours' 7.0472",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Avg Sleep Quality: emulated 67.0993 vs expected 'Average sleep quality' 67.0993",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Avg Heart Rate: emulated 130.8156 vs expected 'Average heart rate (bpm)' 130.8156",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Active Share of Waking Time %: emulated 0.0687 vs expected 'Active share of waking time' 0.0687",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Test Days: emulated 14,985.0000 vs expected 'Test-set days' 14,985.0000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Test MAE (recomputed, kcal): emulated 199.7126 vs expected 'Test-set MAE (kcal)' 199.7126",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Test RMSE (recomputed, kcal): emulated 263.6442 vs expected 'Test-set RMSE (kcal)' 263.6442",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Test R2 (recomputed): emulated 0.6296 vs expected 'Test-set R2' 0.6296",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Avg Prediction Error (bias, kcal): emulated -3.6304 vs expected 'Test-set mean error / bias (kcal)' -3.6304",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Verified Test MAE (kcal): emulated 199.7126 vs expected 'Test-set MAE (kcal)' 199.7126",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Verified Test RMSE (kcal): emulated 263.6442 vs expected 'Test-set RMSE (kcal)' 263.6442",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Verified Test R2: emulated 0.6296 vs expected 'Test-set R2' 0.6296",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Baseline Test MAE (kcal): emulated 334.5102 vs expected 'Baseline (training mean) test MAE (kcal)' 334.5102",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Cross-check Checks: emulated 103.0000 vs expected 'Cross-check checks' 103.0000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 Cross-check Passed: emulated 103.0000 vs expected 'Cross-check checks passed' 103.0000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "D3 monthly average steps (page 1 trend) equals expected for all 12 months",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "E1 Microsoft PBIR validator (powerbi-report-author validate): 0 errors, 0 warnings",
+      "passed": true,
+      "detail": "succeeded, 0 errors, 0 warnings"
+    },
+    {
+      "check": "E2 Microsoft TMDL deserializer (TOM) parses the semantic model",
+      "passed": true,
+      "detail": "TMDL parsed OK: 6 tables, 55 columns, 29 measures, 4 relationships, 1 expressions"
+    },
+    {
+      "check": "F1 generated text files are UTF-8 without BOM",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "F2 longest project path < 260 characters (Windows limit)",
+      "passed": true,
+      "detail": "158"
+    }
+  ]
+}

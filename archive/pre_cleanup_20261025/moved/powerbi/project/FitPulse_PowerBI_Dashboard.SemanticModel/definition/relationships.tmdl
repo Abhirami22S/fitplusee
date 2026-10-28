@@ -1,0 +1,23 @@
+relationship edeffc59-60b0-563e-973b-0d66f10848a6
+	fromColumn: fact_daily.date
+	toColumn: dim_date.Date
+
+relationship 73e83929-30b7-5ab6-86d8-7ec8a84f5ee9
+	fromColumn: fact_daily.user_id
+	toColumn: dim_user.user_id
+
+relationship ca64b6aa-1177-5938-a6c9-ec078469492f
+	fromColumn: dim_user.segment_id
+	toColumn: segment_profile.cluster
+
+relationship 0b1fe2a4-d868-564c-b7fd-b22053f47301
+	fromColumn: model_evaluation.experiment_id
+	toColumn: experiments.experiment_id
+
+relationship e32bb619-599e-5639-9620-3c34110fa94c
+	fromColumn: confusion_matrices.experiment_id
+	toColumn: experiments.experiment_id
+
+relationship 0c5e5709-dea0-5a5e-96a4-54d2a9311e43
+	fromColumn: kmeans_k_selection.experiment_id
+	toColumn: experiments.experiment_id

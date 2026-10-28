@@ -1,0 +1,72 @@
+{
+  "experiment": "E3",
+  "storage_mode": "local",
+  "silver_source": "file:///D:/bigdata/fitpulsee/FitPulse/data/processed/fitpulse_silver",
+  "seed": 42,
+  "pyspark": "4.0.1",
+  "finished_utc": "2026-10-18T11:22:11+00:00",
+  "users": 437,
+  "high_achievers": 218,
+  "median_rate": 0.6136363636363636,
+  "chosen_settings_per_fold": {
+    "Random Forest": [
+      {
+        "trees": 100,
+        "depth": 4
+      },
+      {
+        "trees": 100,
+        "depth": 2
+      },
+      {
+        "trees": 100,
+        "depth": 2
+      },
+      {
+        "trees": 100,
+        "depth": 2
+      },
+      {
+        "trees": 100,
+        "depth": 2
+      }
+    ],
+    "Logistic Regression": [
+      {
+        "reg": 10.0
+      },
+      {
+        "reg": 10.0
+      },
+      {
+        "reg": 0.01
+      },
+      {
+        "reg": 10.0
+      },
+      {
+        "reg": 10.0
+      }
+    ]
+  },
+  "mode_settings": {
+    "Random Forest": {
+      "trees": 100,
+      "depth": 2
+    },
+    "Logistic Regression": {
+      "reg": 10.0
+    }
+  },
+  "features": [
+    "age",
+    "bmi",
+    "height_cm",
+    "weight_baseline_kg",
+    "avg_heart_rate",
+    "avg_sleep_minutes",
+    "avg_active_minutes",
+    "avg_stress",
+    "avg_hydration"
+  ]
+}

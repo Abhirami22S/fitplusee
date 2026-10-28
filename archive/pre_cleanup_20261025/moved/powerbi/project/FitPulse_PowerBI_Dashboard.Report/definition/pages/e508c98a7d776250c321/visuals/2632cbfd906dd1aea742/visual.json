@@ -1,0 +1,101 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "2632cbfd906dd1aea742",
+  "position": {
+    "x": 450,
+    "y": 56,
+    "z": 3000,
+    "height": 130,
+    "width": 810,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "experiments"
+                    }
+                  },
+                  "Property": "target"
+                }
+              },
+              "queryRef": "experiments.target",
+              "nativeQueryRef": "target"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "experiments"
+                    }
+                  },
+                  "Property": "data_granularity"
+                }
+              },
+              "queryRef": "experiments.data_granularity",
+              "nativeQueryRef": "data_granularity"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "experiments"
+                    }
+                  },
+                  "Property": "split_method"
+                }
+              },
+              "queryRef": "experiments.split_method",
+              "nativeQueryRef": "split_method"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'What was evaluated'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Target, granularity and split of the selected experiment'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+experiment_id,K,metric,value
+E3,2,Silhouette (Spark squaredEuclidean),0.3412860840282458
+E3,2,WCSS (Spark),2335.223832544448
+E3,3,Silhouette (Spark squaredEuclidean),0.2754278107611735
+E3,3,WCSS (Spark),2079.4839254354256
+E3,4,Silhouette (Spark squaredEuclidean),0.2453244009868107
+E3,4,WCSS (Spark),1884.7713146983408
+E3,5,Silhouette (Spark squaredEuclidean),0.250659722091913
+E3,5,WCSS (Spark),1708.567205934214
+E3,6,Silhouette (Spark squaredEuclidean),0.2251107135234391
+E3,6,WCSS (Spark),1641.275543147303
+E3,7,Silhouette (Spark squaredEuclidean),0.24433231171783
+E3,7,WCSS (Spark),1538.0697282723386
+E3,8,Silhouette (Spark squaredEuclidean),0.2379508910909311
+E3,8,WCSS (Spark),1451.4081459943982
+E3,9,Silhouette (Spark squaredEuclidean),0.25951494853313
+E3,9,WCSS (Spark),1368.4299809321951
+E3,10,Silhouette (Spark squaredEuclidean),0.249945021271511
+E3,10,WCSS (Spark),1330.672187989987
+E3,2,"Silhouette (Euclidean, scikit-learn)",0.2018450987271855
+E3,2,WCSS (scikit-learn),2335.184864452129
+E3,3,"Silhouette (Euclidean, scikit-learn)",0.1609308531484959
+E3,3,WCSS (scikit-learn),2052.669257594502
+E3,4,"Silhouette (Euclidean, scikit-learn)",0.155362625114335
+E3,4,WCSS (scikit-learn),1845.80816183233
+E3,5,"Silhouette (Euclidean, scikit-learn)",0.1515291210734485
+E3,5,WCSS (scikit-learn),1706.6065790588411
+E3,6,"Silhouette (Euclidean, scikit-learn)",0.142919656268092
+E3,6,WCSS (scikit-learn),1613.262940686161
+E3,7,"Silhouette (Euclidean, scikit-learn)",0.1485140713907168
+E3,7,WCSS (scikit-learn),1524.4706583952968
+E3,8,"Silhouette (Euclidean, scikit-learn)",0.1456034060985198
+E3,8,WCSS (scikit-learn),1437.9954375600914
+E3,9,"Silhouette (Euclidean, scikit-learn)",0.1498153087063267
+E3,9,WCSS (scikit-learn),1371.363364407275
+E3,10,"Silhouette (Euclidean, scikit-learn)",0.1545717351492933
+E3,10,WCSS (scikit-learn),1305.7740471979464
+E4,2,Silhouette (Spark squaredEuclidean),0.3528
+E4,2,WSSSE (Spark),385945.7
+E4,3,Silhouette (Spark squaredEuclidean),0.2879
+E4,3,WSSSE (Spark),339763.5
+E4,4,Silhouette (Spark squaredEuclidean),0.2676
+E4,4,WSSSE (Spark),305986.0
+E4,5,Silhouette (Spark squaredEuclidean),0.2664
+E4,5,WSSSE (Spark),280162.1
+E4,6,Silhouette (Spark squaredEuclidean),0.2777
+E4,6,WSSSE (Spark),255665.0

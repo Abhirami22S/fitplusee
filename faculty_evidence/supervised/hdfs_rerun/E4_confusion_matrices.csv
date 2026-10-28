@@ -1,0 +1,4 @@
+model,TN (Low->Low),FP (Low->High),FN (High->Low),TP (High->High)
+Random Forest,5188,1038,5022,1010
+Gradient-Boosted Trees,3593,2633,3452,2580
+Logistic Regression,5100,1126,4954,1078

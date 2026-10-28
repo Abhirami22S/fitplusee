@@ -1,0 +1,168 @@
+﻿{
+    "parsed":  true,
+    "compatibilityLevel":  1567,
+    "tables":  [
+                   {
+                       "name":  "fact_daily",
+                       "columns":  [
+                                       "row_id",
+                                       "user_id",
+                                       "date",
+                                       "month",
+                                       "day_of_week",
+                                       "activity_type",
+                                       "intensity",
+                                       "steps",
+                                       "distance_km",
+                                       "calories_burned",
+                                       "predicted_calories",
+                                       "calorie_error",
+                                       "model_split",
+                                       "active_minutes",
+                                       "sedentary_minutes",
+                                       "sleep_hours",
+                                       "sleep_quality_score",
+                                       "avg_heart_rate",
+                                       "daily_step_goal",
+                                       "goal_achieved",
+                                       "daily_calorie_goal",
+                                       "calorie_goal_achieved",
+                                       "age_group",
+                                       "gender",
+                                       "error_bin_kcal"
+                                   ],
+                       "measures":  [
+                                        "Total Users",
+                                        "User-Days",
+                                        "Total Steps",
+                                        "Avg Daily Steps",
+                                        "Avg Calories Burned",
+                                        "Avg Active Minutes",
+                                        "Step-Goal Achievement %",
+                                        "Calorie-Goal Achievement %",
+                                        "Avg Steps Prev Month",
+                                        "Steps MoM %",
+                                        "Avg Distance (km)",
+                                        "Avg Sedentary Minutes",
+                                        "Avg Sleep Hours",
+                                        "Avg Sleep Quality",
+                                        "Avg Heart Rate",
+                                        "Active Share of Waking Time %",
+                                        "Avg Predicted Calories",
+                                        "Test Days",
+                                        "Avg Prediction Error (bias, kcal)",
+                                        "Test MAE (recomputed, kcal)",
+                                        "Test RMSE (recomputed, kcal)",
+                                        "Test R2 (recomputed)"
+                                    ],
+                       "partitions":  [
+                                          "fact_daily"
+                                      ],
+                       "dataCategory":  ""
+                   },
+                   {
+                       "name":  "dim_user",
+                       "columns":  [
+                                       "user_id",
+                                       "age",
+                                       "age_group",
+                                       "gender",
+                                       "days",
+                                       "avg_steps",
+                                       "avg_calories"
+                                   ],
+                       "measures":  [
+
+                                    ],
+                       "partitions":  [
+                                          "dim_user"
+                                      ],
+                       "dataCategory":  ""
+                   },
+                   {
+                       "name":  "dim_date",
+                       "columns":  [
+                                       "Date",
+                                       "Year",
+                                       "MonthNumber",
+                                       "Month",
+                                       "YearMonth",
+                                       "DayOfWeek",
+                                       "DayOfWeekNumber"
+                                   ],
+                       "measures":  [
+
+                                    ],
+                       "partitions":  [
+                                          "dim_date"
+                                      ],
+                       "dataCategory":  "Time"
+                   },
+                   {
+                       "name":  "experiments",
+                       "columns":  [
+                                       "experiment_id",
+                                       "experiment_name"
+                                   ],
+                       "measures":  [
+
+                                    ],
+                       "partitions":  [
+                                          "experiments"
+                                      ],
+                       "dataCategory":  ""
+                   },
+                   {
+                       "name":  "supervised_results",
+                       "columns":  [
+                                       "experiment_id",
+                                       "model",
+                                       "metric",
+                                       "value",
+                                       "split_type",
+                                       "status",
+                                       "source_file"
+                                   ],
+                       "measures":  [
+                                        "Verified Test MAE (kcal)",
+                                        "Verified Test RMSE (kcal)",
+                                        "Verified Test R2",
+                                        "Baseline Test MAE (kcal)",
+                                        "Result Value"
+                                    ],
+                       "partitions":  [
+                                          "supervised_results"
+                                      ],
+                       "dataCategory":  ""
+                   },
+                   {
+                       "name":  "crosscheck",
+                       "columns":  [
+                                       "experiment_id",
+                                       "kind",
+                                       "check",
+                                       "abs_diff",
+                                       "tolerance",
+                                       "passed",
+                                       "source_file"
+                                   ],
+                       "measures":  [
+                                        "Cross-check Checks",
+                                        "Cross-check Passed"
+                                    ],
+                       "partitions":  [
+                                          "crosscheck"
+                                      ],
+                       "dataCategory":  ""
+                   }
+               ],
+    "relationships":  [
+                          "fact_daily.date -\u003e dim_date.Date [Many:One, OneDirection]",
+                          "fact_daily.user_id -\u003e dim_user.user_id [Many:One, OneDirection]",
+                          "supervised_results.experiment_id -\u003e experiments.experiment_id [Many:One, OneDirection]",
+                          "crosscheck.experiment_id -\u003e experiments.experiment_id [Many:One, OneDirection]"
+                      ],
+    "expressions":  [
+                        "DataFolder"
+                    ]
+}

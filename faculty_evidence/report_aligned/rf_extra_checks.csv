@@ -1,0 +1,5 @@
+Check,Value
+"RF with steps + distance_km included (leakage demo), test accuracy",0.9895241957285753
+"User-held-out (15% of users unseen), accuracy",0.7232011747430249
+"User-held-out, ROC AUC",0.7498230346626236
+User-held-out: users in held-out set,53.0

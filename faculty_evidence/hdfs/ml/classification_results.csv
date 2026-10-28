@@ -1,0 +1,10 @@
+Metric,Value,Formula / source,Actual Score
+Accuracy,0.7186901977461195,(TP+TN)/N,71.87%
+Precision (class 1 = achieved),0.5849408836341008,TP/(TP+FP),58.49%
+Recall (class 1 = achieved),0.8138528138528138,TP/(TP+FN),81.39%
+F1 Score (class 1 = achieved),0.6806661839246922,2PR/(P+R),68.07%
+ROC-AUC,0.8247428720076426,BinaryClassificationEvaluator,82.47%
+Weighted precision (both classes),0.758246156292662,class-size weighted,75.82%
+Weighted recall (both classes),0.7186901977461195,class-size weighted,71.87%
+Weighted F1 (both classes),0.7235885981586081,class-size weighted,72.36%
+Baseline: always predict majority class,0.6316181160961089,reference only,63.16%

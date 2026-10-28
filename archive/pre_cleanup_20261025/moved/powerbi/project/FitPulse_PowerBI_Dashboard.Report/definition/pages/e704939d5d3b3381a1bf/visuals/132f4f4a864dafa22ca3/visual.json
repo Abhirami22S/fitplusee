@@ -1,0 +1,109 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "132f4f4a864dafa22ca3",
+  "position": {
+    "x": 650,
+    "y": 222,
+    "z": 14000,
+    "height": 234,
+    "width": 610,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_user"
+                    }
+                  },
+                  "Property": "user_id"
+                }
+              },
+              "queryRef": "dim_user.user_id",
+              "nativeQueryRef": "user_id"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Avg Daily Steps"
+                }
+              },
+              "queryRef": "fact_daily.Avg Daily Steps",
+              "nativeQueryRef": "Avg Daily Steps"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Avg Calories Burned"
+                }
+              },
+              "queryRef": "fact_daily.Avg Calories Burned",
+              "nativeQueryRef": "Avg Calories Burned"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Steps vs calories - one point per user (437 users)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Scatter of each user''s average steps against average calories'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

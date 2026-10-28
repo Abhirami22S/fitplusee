@@ -1,0 +1,77 @@
+{
+  "timestamp": "2026-10-13 09:21:09",
+  "passed": 14,
+  "total": 14,
+  "checks": [
+    {
+      "check": "prediction file covers every Silver row",
+      "passed": true,
+      "detail": "100,122 rows"
+    },
+    {
+      "check": "serving formula == Spark MLlib predictions (max |diff| < 0.01 kcal; Spark file is rounded to 0.01)",
+      "passed": true,
+      "detail": "max diff 0.00500"
+    },
+    {
+      "check": "actual_calories column equals Silver calories_burned",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test MAE recomputed independently == Spark's",
+      "passed": true,
+      "detail": "199.713 vs 199.713"
+    },
+    {
+      "check": "test RMSE recomputed independently == Spark's",
+      "passed": true,
+      "detail": "263.644 vs 263.644"
+    },
+    {
+      "check": "test R2 recomputed independently == Spark's",
+      "passed": true,
+      "detail": "0.6296 vs 0.6296"
+    },
+    {
+      "check": "baseline (train mean) MAE recomputed == reported",
+      "passed": true,
+      "detail": "334.510 vs 334.510"
+    },
+    {
+      "check": "model beats the baseline on test MAE",
+      "passed": true,
+      "detail": "199.7 < 334.5"
+    },
+    {
+      "check": "no leakage columns among features",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "nearest-centroid assignment reproduces Spark cluster for every user",
+      "passed": true,
+      "detail": "437/437"
+    },
+    {
+      "check": "monthly summary day counts add up",
+      "passed": true,
+      "detail": "230 == 230"
+    },
+    {
+      "check": "monthly avg steps matches pandas groupby",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fitness score within 0..100 and weights sum to 1",
+      "passed": true,
+      "detail": "84.0"
+    },
+    {
+      "check": "probability bands: high -> On track, mid -> Uncertain, low -> At risk",
+      "passed": true,
+      "detail": "['On', 'Uncertain', 'At']"
+    }
+  ]
+}

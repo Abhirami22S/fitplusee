@@ -1,0 +1,42 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+======================================================================
+STORAGE MODE : HDFS (hdfs://localhost:9000)
+Silver source: hdfs://localhost:9000/fitpulse/silver
+[Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                        (0 + 12) / 12]                                                                                Rows / columns: 100,122 / 39
+======================================================================
+[Stage 4:>                                                        (0 + 12) / 12][Stage 4:====================================================>    (11 + 1) / 12]                                                                                [Stage 7:>                                                        (0 + 12) / 12]                                                                                rows used 100,122 -> train 70,085 / val 15,052 / test 14,985
+ regParam  val_MAE  val_RMSE  val_R2  fit_seconds
+     0.00 199.4953  264.8400  0.6363          2.8
+     0.01 199.4919  264.8404  0.6363          1.6
+     0.10 199.4624  264.8459  0.6362          1.6
+     1.00 199.2936  265.0153  0.6358          1.4
+                                                    Model               Set  MAE (kcal)  RMSE (kcal)      R2  Rows
+                             Linear Regression (selected)        validation    199.4953     264.8400  0.6363 15052
+                             Linear Regression (selected)              test    199.7126     263.6442  0.6296 14985
+                             Linear Regression (selected) train (in-sample)    199.2810     265.7993  0.6325 70085
+                                  Baseline: training mean        validation    339.9107     439.1259 -0.0000 15052
+                                  Baseline: training mean              test    334.5102     433.1706 -0.0000 14985
+                  Baseline: LinReg on active_minutes only        validation    248.4541     339.9101  0.4008 15052
+                  Baseline: LinReg on active_minutes only              test    247.4010     337.9889  0.3912 14985
+Chronological check: Linear Regression (train<2024-10-15)  test (>= cutoff)    247.1993     329.2855  0.5804 17573
+              Chronological check: training-mean baseline  test (>= cutoff)    395.2072     548.2178 -0.1630 17573
+           feature  coef_per_std  coef_original_units
+             steps     -362.0256              -0.1761
+       distance_km      386.6677             232.5865
+    active_minutes      274.9473               9.4508
+    avg_heart_rate       53.0481               2.9887
+resting_heart_rate       -0.6963              -0.1321
+               age       30.8985               2.2653
+         height_cm      -82.1841              -8.9867
+         weight_kg      153.5434               6.9152
+               bmi        0.6664               0.1901
+          gender=M       14.6363              29.2724
+          gender=F        9.8102              19.6463
+
+Saved model + config. Storage mode used: HDFS
+SUCCESS: The process with PID 11332 (child process of PID 21028) has been terminated.
+SUCCESS: The process with PID 21028 (child process of PID 19068) has been terminated.
+SUCCESS: The process with PID 19068 (child process of PID 16280) has been terminated.

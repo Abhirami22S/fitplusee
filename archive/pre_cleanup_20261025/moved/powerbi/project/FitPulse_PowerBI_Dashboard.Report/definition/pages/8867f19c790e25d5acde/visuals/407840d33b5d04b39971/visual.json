@@ -1,0 +1,157 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "407840d33b5d04b39971",
+  "position": {
+    "x": 650,
+    "y": 518,
+    "z": 13000,
+    "height": 150,
+    "width": 610,
+    "tabOrder": 13000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Test MAE (recomputed, kcal)"
+                }
+              },
+              "queryRef": "fact_daily.Test MAE (recomputed, kcal)",
+              "nativeQueryRef": "Test MAE (recomputed, kcal)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "model_evaluation"
+                    }
+                  },
+                  "Property": "Verified Test MAE (kcal)"
+                }
+              },
+              "queryRef": "model_evaluation.Verified Test MAE (kcal)",
+              "nativeQueryRef": "Verified Test MAE (kcal)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Test RMSE (recomputed, kcal)"
+                }
+              },
+              "queryRef": "fact_daily.Test RMSE (recomputed, kcal)",
+              "nativeQueryRef": "Test RMSE (recomputed, kcal)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "model_evaluation"
+                    }
+                  },
+                  "Property": "Verified Test RMSE (kcal)"
+                }
+              },
+              "queryRef": "model_evaluation.Verified Test RMSE (kcal)",
+              "nativeQueryRef": "Verified Test RMSE (kcal)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Test R2 (recomputed)"
+                }
+              },
+              "queryRef": "fact_daily.Test R2 (recomputed)",
+              "nativeQueryRef": "Test R2 (recomputed)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "model_evaluation"
+                    }
+                  },
+                  "Property": "Verified Test R2"
+                }
+              },
+              "queryRef": "model_evaluation.Verified Test R2",
+              "nativeQueryRef": "Verified Test R2"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_daily"
+                    }
+                  },
+                  "Property": "Avg Prediction Error (bias, kcal)"
+                }
+              },
+              "queryRef": "fact_daily.Avg Prediction Error (bias, kcal)",
+              "nativeQueryRef": "Avg Prediction Error (bias, kcal)"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cross-check: recomputed from exported predictions vs verified evaluation'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Recomputed versus verified regression metrics'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

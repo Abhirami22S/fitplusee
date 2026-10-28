@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "aba2f97137fa908ce4bb",
+  "displayName": "User Segmentation",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "annotations": [
+    {
+      "name": "description",
+      "value": "User-level K-Means (experiment E3, 437 users, K=2): cluster sizes, profiles and measured differences."
+    }
+  ]
+}

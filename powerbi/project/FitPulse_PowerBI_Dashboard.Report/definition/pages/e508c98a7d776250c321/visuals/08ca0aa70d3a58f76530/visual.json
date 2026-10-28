@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "08ca0aa70d3a58f76530",
+  "position": {
+    "x": 910,
+    "y": 56,
+    "z": 5000,
+    "height": 84,
+    "width": 350,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "The cross-check is the independent scikit-learn recomputation of the HDFS rerun (faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv). It is the only source on this page besides exports/E<n>_results.csv.",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

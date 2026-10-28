@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "74194cfe9d15137151db",
+  "position": {
+    "x": 20,
+    "y": 50,
+    "z": 2000,
+    "height": 34,
+    "width": 1240,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "E3: user-level classifier high_achiever, stratified 5-fold cross-validation, out-of-fold predictions. E4: user-day activity level, user-held-out test users. Every chart shows ONE experiment: E3 and E4 are never combined.",
+                    "textStyle": {
+                      "fontSize": "10pt",
+                      "fontWeight": "bold",
+                      "color": "#B5495B"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

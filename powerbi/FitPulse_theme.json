@@ -1,0 +1,33 @@
+{
+  "name": "FitPulse",
+  "dataColors": ["#20493A", "#C97A2B", "#2B7A78", "#B5495B", "#5B6472", "#7FB069", "#8E7DBE", "#D9B44A"],
+  "background": "#FFFFFF",
+  "foreground": "#1C1C1A",
+  "tableAccent": "#20493A",
+  "good": "#1F7A4D",
+  "neutral": "#B4791B",
+  "bad": "#B5495B",
+  "maximum": "#20493A",
+  "center": "#E4E2DC",
+  "minimum": "#C97A2B",
+  "textClasses": {
+    "title": { "fontFace": "Segoe UI Semibold", "fontSize": 14, "color": "#1C1C1A" },
+    "label": { "fontFace": "Segoe UI", "fontSize": 10, "color": "#52514E" },
+    "callout": { "fontFace": "Segoe UI Semibold", "fontSize": 28, "color": "#20493A" },
+    "header": { "fontFace": "Segoe UI Semibold", "fontSize": 12, "color": "#1C1C1A" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [{ "show": true, "fontColor": { "solid": { "color": "#1C1C1A" } }, "fontSize": 12 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#E4E2DC" } } }],
+        "background": [{ "show": true, "color": { "solid": { "color": "#FFFFFF" } }, "transparency": 0 }]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#F6F5F1" } }, "transparency": 0 }]
+      }
+    }
+  }
+}

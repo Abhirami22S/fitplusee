@@ -1,0 +1,28 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+======================================================================
+STORAGE MODE : HDFS (hdfs://localhost:9000)
+Silver source: hdfs://localhost:9000/fitpulse/silver
+[Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                        (0 + 12) / 12][Stage 1:===================>                                      (4 + 8) / 12]                                                                                Rows / columns: 100,122 / 39
+======================================================================
+[Stage 4:>                                                        (0 + 12) / 12][Stage 4:====>                                                    (1 + 11) / 12][Stage 4:=========>                                               (2 + 10) / 12][Stage 4:====================================================>    (11 + 1) / 12]                                                                                users: 437
+[Stage 10:>                                                       (0 + 12) / 12][Stage 10:====>                                                   (1 + 11) / 12][Stage 10:=======================>                                 (5 + 7) / 12][Stage 12:>                                                         (0 + 1) / 1]                                                                                [Stage 16:>                                                       (0 + 12) / 12][Stage 16:====>                                                   (1 + 11) / 12][Stage 18:>                                                         (0 + 1) / 1]                                                                                [Stage 22:>                                                       (0 + 12) / 12][Stage 22:=========>                                              (2 + 10) / 12][Stage 24:>                                                         (0 + 8) / 8]                                                                                [Stage 31:>                                                         (0 + 8) / 8]                                                                                 K      WCSS  Silhouette
+ 2 2335.2238      0.3413
+ 3 2079.4839      0.2754
+ 4 1884.7713      0.2453
+ 5 1708.5672      0.2507
+ 6 1641.2755      0.2251
+ 7 1538.0697      0.2443
+ 8 1451.4081      0.2380
+ 9 1368.4300      0.2595
+10 1330.6722      0.2499
+selected K (highest silhouette): 2
+ cluster  Users  AvgSteps  AvgActiveMin  AvgSedentaryMin  AvgCalories  AvgHeartRate  AvgSleep  AvgIntensity Segment label (from measured AvgActiveMin rank)
+       0    228   8620.72         71.09           944.61       674.96        131.26    424.30          0.07                             Highest active-time
+       1    209   8630.54         68.68           950.10       647.32        130.38    421.23          0.07                              Lowest active-time
+[Stage 755:>                                                        (0 + 8) / 8]                                                                                Storage mode used: HDFS
+SUCCESS: The process with PID 17716 (child process of PID 17824) has been terminated.
+SUCCESS: The process with PID 17824 (child process of PID 20808) has been terminated.
+SUCCESS: The process with PID 20808 (child process of PID 17996) has been terminated.

@@ -1,0 +1,28 @@
+{
+  "experiment": "E5",
+  "storage_mode": "hdfs",
+  "silver_source": "hdfs://localhost:9000/fitpulse/silver",
+  "seed": 42,
+  "pyspark": "4.0.1",
+  "finished_utc": "2026-10-18T16:03:23+00:00",
+  "rows": {
+    "train": 70085,
+    "validation": 15052,
+    "test": 14985
+  },
+  "same_split_as_existing_E5": true,
+  "settings": {
+    "linreg": {
+      "reg": 0.0
+    },
+    "rf": {
+      "depth": 10
+    },
+    "gbt": {
+      "depth": 5,
+      "iters": 100
+    }
+  },
+  "reproduction_max_abs_diff": 5.684341886080802e-14,
+  "train_mean_kcal": 662.4594891916964
+}

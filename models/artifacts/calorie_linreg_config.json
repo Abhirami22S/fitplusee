@@ -1,0 +1,65 @@
+{
+  "task": "same-day calorie-burn estimation (not a forecast)",
+  "target": "calories_burned",
+  "numeric_features": [
+    "steps",
+    "distance_km",
+    "active_minutes",
+    "avg_heart_rate",
+    "resting_heart_rate",
+    "age",
+    "height_cm",
+    "weight_kg",
+    "bmi"
+  ],
+  "categorical_features": [
+    "gender"
+  ],
+  "excluded_for_leakage_or_collinearity": [
+    "sedentary_minutes",
+    "sleep_minutes",
+    "calories_lag1",
+    "calories_roll7_avg",
+    "daily_calorie_goal"
+  ],
+  "split": "seeded xxhash64(user_id, date, 42) -> 70/15/15",
+  "seed": 42,
+  "regParam": 0.0,
+  "elasticNetParam": 0.0,
+  "rows": {
+    "train": 70085,
+    "validation": 15052,
+    "test": 14985
+  },
+  "storage_mode": "hdfs",
+  "silver_source": "hdfs://localhost:9000/fitpulse/silver",
+  "intercept_original_units": 357.1258638221379,
+  "coefficients_original_units": {
+    "steps": -0.17612736811944463,
+    "distance_km": 232.58649601642253,
+    "active_minutes": 9.450807823706757,
+    "avg_heart_rate": 2.9886603586419094,
+    "resting_heart_rate": -0.13211817144372023,
+    "age": 2.2653128460608185,
+    "height_cm": -8.986729549147078,
+    "weight_kg": 6.9151957892773295,
+    "bmi": 0.19009202120671462,
+    "gender=M": 29.27240302350879,
+    "gender=F": 19.646288632453803
+  },
+  "test_metrics": {
+    "MAE": 199.71263311260105,
+    "RMSE": 263.64418934697864,
+    "R2": 0.6295587174061572
+  },
+  "baseline_mean_test_metrics": {
+    "MAE": 334.51018668646066,
+    "RMSE": 433.17058257844974,
+    "R2": -2.029875471265541e-06
+  },
+  "gender_labels_encoded": [
+    "M",
+    "F"
+  ],
+  "gender_reference_category": "Other"
+}

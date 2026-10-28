@@ -1,0 +1,10 @@
+experiment_id,model,feature,importance,kind
+E3,Random Forest,height_cm,0.20018378727091415,tree impurity importance
+E3,Random Forest,weight_baseline_kg,0.17107022820767953,tree impurity importance
+E3,Random Forest,avg_sleep_minutes,0.15273636743581484,tree impurity importance
+E3,Random Forest,bmi,0.11437144892324656,tree impurity importance
+E3,Random Forest,avg_hydration,0.09986795515022434,tree impurity importance
+E3,Random Forest,avg_stress,0.08710633795769504,tree impurity importance
+E3,Random Forest,avg_active_minutes,0.06201919376405749,tree impurity importance
+E3,Random Forest,avg_heart_rate,0.057965197555294994,tree impurity importance
+E3,Random Forest,age,0.05467948373507301,tree impurity importance

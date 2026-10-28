@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "e508c98a7d776250c321",
+  "displayName": "Model Evaluation",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "annotations": [
+    {
+      "name": "description",
+      "value": "All five supervised experiments E1-E5: model comparison against the baseline, leakage runs (INVALID) and the independent cross-check, read from exports/E<n>_results.csv."
+    }
+  ]
+}

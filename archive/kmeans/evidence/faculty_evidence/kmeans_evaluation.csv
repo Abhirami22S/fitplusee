@@ -1,0 +1,20 @@
+experiment,K,silhouette,wcss,source_file
+"notebook: user-DAYS (100,122 points)",2,0.3528,385945.7,faculty_evidence\silhouette_scores.csv
+"notebook: user-DAYS (100,122 points)",3,0.2879,339763.5,faculty_evidence\silhouette_scores.csv
+"notebook: user-DAYS (100,122 points)",4,0.2676,305986.0,faculty_evidence\silhouette_scores.csv
+"notebook: user-DAYS (100,122 points)",5,0.2664,280162.1,faculty_evidence\silhouette_scores.csv
+"notebook: user-DAYS (100,122 points)",6,0.2777,255665.0,faculty_evidence\silhouette_scores.csv
+notebook re-run from HDFS: user-DAYS,2,0.3528,385945.7,faculty_evidence\hdfs\ml\silhouette_scores.csv
+notebook re-run from HDFS: user-DAYS,3,0.2879,339763.5,faculty_evidence\hdfs\ml\silhouette_scores.csv
+notebook re-run from HDFS: user-DAYS,4,0.2676,305986.0,faculty_evidence\hdfs\ml\silhouette_scores.csv
+notebook re-run from HDFS: user-DAYS,5,0.2664,280162.1,faculty_evidence\hdfs\ml\silhouette_scores.csv
+notebook re-run from HDFS: user-DAYS,6,0.2777,255665.0,faculty_evidence\hdfs\ml\silhouette_scores.csv
+REPORT-aligned: USERS (437 points),2,0.3412860840282458,2335.223832544448,faculty_evidence\report_aligned\kmeans_evaluation.csv
+REPORT-aligned: USERS (437 points),3,0.2754278107611735,2079.4839254354256,faculty_evidence\report_aligned\kmeans_evaluation.csv
+REPORT-aligned: USERS (437 points),4,0.2453244009868107,1884.7713146983408,faculty_evidence\report_aligned\kmeans_evaluation.csv
+REPORT-aligned: USERS (437 points),5,0.250659722091913,1708.567205934214,faculty_evidence\report_aligned\kmeans_evaluation.csv
+REPORT-aligned: USERS (437 points),6,0.2251107135234391,1641.275543147303,faculty_evidence\report_aligned\kmeans_evaluation.csv
+REPORT-aligned: USERS (437 points),7,0.24433231171783,1538.0697282723386,faculty_evidence\report_aligned\kmeans_evaluation.csv
+REPORT-aligned: USERS (437 points),8,0.2379508910909311,1451.4081459943982,faculty_evidence\report_aligned\kmeans_evaluation.csv
+REPORT-aligned: USERS (437 points),9,0.25951494853313,1368.4299809321951,faculty_evidence\report_aligned\kmeans_evaluation.csv
+REPORT-aligned: USERS (437 points),10,0.249945021271511,1330.672187989987,faculty_evidence\report_aligned\kmeans_evaluation.csv

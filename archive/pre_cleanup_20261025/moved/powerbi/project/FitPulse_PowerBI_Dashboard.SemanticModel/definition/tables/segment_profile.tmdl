@@ -1,0 +1,73 @@
+/// K-Means (E3) segment averages measured by Spark MLlib.
+table segment_profile
+	lineageTag: b5c2f256-10b6-55d6-b390-99c0955ede3a
+
+	column cluster
+		dataType: int64
+		lineageTag: 567d631a-4ab8-53e4-bc80-afd8a9ce2996
+		summarizeBy: none
+		sourceColumn: cluster
+
+	column Users
+		dataType: int64
+		lineageTag: 8753dcdf-a634-564e-b925-8e19e38db81e
+		summarizeBy: none
+		sourceColumn: Users
+
+	column AvgSteps
+		dataType: double
+		lineageTag: 06acf638-a772-5a56-bec9-d5b1ccc0c8af
+		summarizeBy: none
+		sourceColumn: AvgSteps
+
+	column AvgActiveMin
+		dataType: double
+		lineageTag: 8e79cec5-ee61-50a9-89bc-cc3090c24398
+		summarizeBy: none
+		sourceColumn: AvgActiveMin
+
+	column AvgSedentaryMin
+		dataType: double
+		lineageTag: 6d0775a6-215b-5ed9-a052-bb86c48700b9
+		summarizeBy: none
+		sourceColumn: AvgSedentaryMin
+
+	column AvgCalories
+		dataType: double
+		lineageTag: 06176ada-a91b-570d-aa83-d7507ac4fc18
+		summarizeBy: none
+		sourceColumn: AvgCalories
+
+	column AvgHeartRate
+		dataType: double
+		lineageTag: d27b4909-0a89-5c85-8ecd-3fbd8b981ae2
+		summarizeBy: none
+		sourceColumn: AvgHeartRate
+
+	column AvgSleep
+		dataType: double
+		lineageTag: 48e87ff1-f16f-5776-afd1-cc44fe10ac26
+		summarizeBy: none
+		sourceColumn: AvgSleep
+
+	column AvgIntensity
+		dataType: double
+		lineageTag: ee34b81a-9397-5252-9e63-acda2cd5fd24
+		summarizeBy: none
+		sourceColumn: AvgIntensity
+
+	column segment_label
+		dataType: string
+		lineageTag: e44d205b-33e6-53b3-a03c-d307a5934ce3
+		summarizeBy: none
+		sourceColumn: segment_label
+
+	partition segment_profile = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "segment_profile.csv"), [Delimiter = ",", Columns = 10, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"cluster", Int64.Type}, {"Users", Int64.Type}, {"AvgSteps", type number}, {"AvgActiveMin", type number}, {"AvgSedentaryMin", type number}, {"AvgCalories", type number}, {"AvgHeartRate", type number}, {"AvgSleep", type number}, {"AvgIntensity", type number}, {"segment_label", type text}}, "en-US")
+				in
+					Typed

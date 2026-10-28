@@ -1,0 +1,55 @@
+SELF-TEST path: hdfs://localhost:9000/fitpulse/_selftest_1792332662
+struct<id:int,name:string,value:double>
+[(1, 'alpha', 10.5), (2, 'beta', 20.25), (3, 'gamma', 30.0)]
+
+SILVER on HDFS: hdfs://localhost:9000/fitpulse/silver
+rows=100122
+columns=39
+partitions=2024-01, 2024-02, 2024-03, 2024-04, 2024-05, 2024-06, 2024-07, 2024-08, 2024-09, 2024-10, 2024-11, 2024-12
+
+SCHEMA:
+root
+ |-- user_id: integer (nullable = true)
+ |-- date: date (nullable = true)
+ |-- steps: integer (nullable = true)
+ |-- calories_burned: double (nullable = true)
+ |-- distance_km: double (nullable = true)
+ |-- active_minutes: integer (nullable = true)
+ |-- sedentary_minutes: integer (nullable = true)
+ |-- resting_heart_rate: double (nullable = true)
+ |-- avg_heart_rate: integer (nullable = true)
+ |-- max_heart_rate: integer (nullable = true)
+ |-- sleep_minutes: integer (nullable = true)
+ |-- sleep_quality_score: double (nullable = true)
+ |-- activity_type: string (nullable = true)
+ |-- intensity: string (nullable = true)
+ |-- age: integer (nullable = true)
+ |-- gender: string (nullable = true)
+ |-- height_cm: double (nullable = true)
+ |-- weight_kg: double (nullable = true)
+ |-- bmi: double (nullable = true)
+ |-- health_condition: string (nullable = true)
+ |-- smoking_status: string (nullable = true)
+ |-- stress_level: integer (nullable = true)
+ |-- hydration_level: double (nullable = true)
+ |-- day_of_week: string (nullable = true)
+ |-- is_rest_day: integer (nullable = true)
+ |-- steps_lag1: integer (nullable = true)
+ |-- steps_lag2: integer (nullable = true)
+ |-- steps_lag7: integer (nullable = true)
+ |-- calories_lag1: double (nullable = true)
+ |-- sleep_quality_lag1: double (nullable = true)
+ |-- steps_roll7_avg: double (nullable = true)
+ |-- calories_roll7_avg: double (nullable = true)
+ |-- active_minutes_roll7_avg: double (nullable = true)
+ |-- resting_hr_roll7_avg: double (nullable = true)
+ |-- daily_step_goal: double (nullable = true)
+ |-- daily_calorie_goal: double (nullable = true)
+ |-- goal_achieved: integer (nullable = true)
+ |-- calorie_goal_achieved: integer (nullable = true)
+ |-- month: string (nullable = true)
+
+
+ETL rows: bronze=100122 clean=100122 silver=100122
+
+COMPARISON local(100122) vs hdfs(100122): local-minus-hdfs=0, hdfs-minus-local=0

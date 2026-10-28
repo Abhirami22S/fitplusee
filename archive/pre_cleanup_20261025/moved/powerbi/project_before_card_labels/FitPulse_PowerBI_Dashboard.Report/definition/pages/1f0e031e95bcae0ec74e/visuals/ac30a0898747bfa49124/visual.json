@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "ac30a0898747bfa49124",
+  "position": {
+    "x": 20,
+    "y": 672,
+    "z": 10000,
+    "height": 44,
+    "width": 1240,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Sources: exports/E3_results.csv and exports/E4_results.csv (rows with status VALID). INVALID rows are runs with a forbidden column added to show the leakage; they are listed only to be rejected. Read every score against its majority baseline.",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

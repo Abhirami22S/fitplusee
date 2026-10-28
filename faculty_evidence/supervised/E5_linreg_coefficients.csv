@@ -1,0 +1,12 @@
+experiment_id,model,feature,importance,kind
+E5,Linear Regression,steps,362.0255891030863,abs standardised coefficient
+E5,Linear Regression,distance_km,386.6676667852002,abs standardised coefficient
+E5,Linear Regression,active_minutes,274.9472853661037,abs standardised coefficient
+E5,Linear Regression,avg_heart_rate,53.04814589451192,abs standardised coefficient
+E5,Linear Regression,resting_heart_rate,0.6963314840133745,abs standardised coefficient
+E5,Linear Regression,age,30.89851291331603,abs standardised coefficient
+E5,Linear Regression,height_cm,82.18405044928716,abs standardised coefficient
+E5,Linear Regression,weight_kg,153.54344202579765,abs standardised coefficient
+E5,Linear Regression,bmi,0.6663963475717753,abs standardised coefficient
+E5,Linear Regression,gender=M,14.636294653468605,abs standardised coefficient
+E5,Linear Regression,gender=F,9.810181666331909,abs standardised coefficient

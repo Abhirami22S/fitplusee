@@ -1,0 +1,76 @@
+experiment_id,model,metric,value,split_type,status
+E2,Random Forest,Accuracy,0.745278673422386,validation,VALID
+E2,Random Forest,Precision (positive class),0.4120287253141831,validation,VALID
+E2,Random Forest,Recall (positive class),0.3137388926862611,validation,VALID
+E2,Random Forest,F1 (positive class),0.35622817229336434,validation,VALID
+E2,Random Forest,F1 (weighted),0.7322842600915381,validation,VALID
+E2,Random Forest,F1 (macro),0.598728499009157,validation,VALID
+E2,Random Forest,ROC AUC,0.6502250225022502,validation,VALID
+E2,Random Forest,Baseline accuracy (always majority class),0.7753723322585598,validation,VALID
+E2,Random Forest,Baseline accuracy (always TRAINING-majority class),0.2246276677414402,validation,BASELINE
+E2,Random Forest,Accuracy,0.5823198639989539,chronological test,VALID
+E2,Random Forest,Precision (positive class),0.49537928378898727,chronological test,VALID
+E2,Random Forest,Recall (positive class),0.8178639542275906,chronological test,VALID
+E2,Random Forest,F1 (positive class),0.6170263788968825,chronological test,VALID
+E2,Random Forest,F1 (weighted),0.5720985607905906,chronological test,VALID
+E2,Random Forest,F1 (macro),0.5788611905988583,chronological test,VALID
+E2,Random Forest,ROC AUC,0.6706116589475843,chronological test,VALID
+E2,Random Forest,Baseline accuracy (always majority class),0.588596835360272,chronological test,VALID
+E2,Random Forest,Baseline accuracy (always TRAINING-majority class),0.411403164639728,chronological test,BASELINE
+E2,Gradient-Boosted Trees,Accuracy,0.7546445570397666,validation,VALID
+E2,Gradient-Boosted Trees,Precision (positive class),0.42508324084350724,validation,VALID
+E2,Gradient-Boosted Trees,Recall (positive class),0.2617908407382092,validation,VALID
+E2,Gradient-Boosted Trees,F1 (positive class),0.3240270727580372,validation,VALID
+E2,Gradient-Boosted Trees,F1 (weighted),0.7319464679226844,validation,VALID
+E2,Gradient-Boosted Trees,F1 (macro),0.5870745005508438,validation,VALID
+E2,Gradient-Boosted Trees,ROC AUC,0.6470401250651381,validation,VALID
+E2,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.7753723322585598,validation,VALID
+E2,Gradient-Boosted Trees,Baseline accuracy (always TRAINING-majority class),0.2246276677414402,validation,BASELINE
+E2,Gradient-Boosted Trees,Accuracy,0.5990584542958023,chronological test,VALID
+E2,Gradient-Boosted Trees,Precision (positive class),0.5080353555644838,chronological test,VALID
+E2,Gradient-Boosted Trees,Recall (positive class),0.8038779402415767,chronological test,VALID
+E2,Gradient-Boosted Trees,F1 (positive class),0.6225997045790251,chronological test,VALID
+E2,Gradient-Boosted Trees,F1 (weighted),0.593043451434036,chronological test,VALID
+E2,Gradient-Boosted Trees,F1 (macro),0.5974923209087595,chronological test,VALID
+E2,Gradient-Boosted Trees,ROC AUC,0.6969582446395678,chronological test,VALID
+E2,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.588596835360272,chronological test,VALID
+E2,Gradient-Boosted Trees,Baseline accuracy (always TRAINING-majority class),0.411403164639728,chronological test,BASELINE
+E2,Logistic Regression,Accuracy,0.7343773990480578,validation,VALID
+E2,Logistic Regression,Precision (positive class),0.41952983725135623,validation,VALID
+E2,Logistic Regression,Recall (positive class),0.47573479152426523,validation,VALID
+E2,Logistic Regression,F1 (positive class),0.44586803331197955,validation,VALID
+E2,Logistic Regression,F1 (weighted),0.7400869947350803,validation,VALID
+E2,Logistic Regression,F1 (macro),0.6355955675445197,validation,VALID
+E2,Logistic Regression,ROC AUC,0.6528697305820806,validation,VALID
+E2,Logistic Regression,Baseline accuracy (always majority class),0.7753723322585598,validation,VALID
+E2,Logistic Regression,Baseline accuracy (always TRAINING-majority class),0.2246276677414402,validation,BASELINE
+E2,Logistic Regression,Accuracy,0.6835360272002092,chronological test,VALID
+E2,Logistic Regression,Precision (positive class),0.6648501362397821,chronological test,VALID
+E2,Logistic Regression,Recall (positive class),0.4653528289891926,chronological test,VALID
+E2,Logistic Regression,F1 (positive class),0.5474943904263276,chronological test,VALID
+E2,Logistic Regression,F1 (weighted),0.6706239715884514,chronological test,VALID
+E2,Logistic Regression,F1 (macro),0.6520902476965743,chronological test,VALID
+E2,Logistic Regression,ROC AUC,0.700393731816042,chronological test,VALID
+E2,Logistic Regression,Baseline accuracy (always majority class),0.588596835360272,chronological test,VALID
+E2,Logistic Regression,Baseline accuracy (always TRAINING-majority class),0.411403164639728,chronological test,BASELINE
+E2,Random Forest + rolling mean INCLUDING the prediction day (LEAKAGE),Accuracy,0.6174970576696743,chronological test,INVALID
+E2,Random Forest + rolling mean INCLUDING the prediction day (LEAKAGE),F1 (positive class),0.6368715083798883,chronological test,INVALID
+E2,Random Forest + rolling mean INCLUDING the prediction day (LEAKAGE),ROC AUC,0.7517536895452914,chronological test,INVALID
+E2,Gradient-Boosted Trees + rolling mean INCLUDING the prediction day (LEAKAGE),Accuracy,0.7550673466718975,chronological test,INVALID
+E2,Gradient-Boosted Trees + rolling mean INCLUDING the prediction day (LEAKAGE),F1 (positive class),0.7063803103934785,chronological test,INVALID
+E2,Gradient-Boosted Trees + rolling mean INCLUDING the prediction day (LEAKAGE),ROC AUC,0.8256841419572934,chronological test,INVALID
+E2,Logistic Regression + rolling mean INCLUDING the prediction day (LEAKAGE),Accuracy,0.798352295017654,chronological test,INVALID
+E2,Logistic Regression + rolling mean INCLUDING the prediction day (LEAKAGE),F1 (positive class),0.7515307766677409,chronological test,INVALID
+E2,Logistic Regression + rolling mean INCLUDING the prediction day (LEAKAGE),ROC AUC,0.8786728611414034,chronological test,INVALID
+E2,Random Forest,Accuracy,0.7732471933912307,random split (NOT headline),REFERENCE
+E2,Random Forest,F1 (positive class),0.8295789222319508,random split (NOT headline),REFERENCE
+E2,Random Forest,ROC AUC,0.8190625199709822,random split (NOT headline),REFERENCE
+E2,Random Forest,Baseline accuracy (always majority class),0.6459436560050836,random split (NOT headline),REFERENCE
+E2,Gradient-Boosted Trees,Accuracy,0.7780131328108452,random split (NOT headline),REFERENCE
+E2,Gradient-Boosted Trees,F1 (positive class),0.8348305752561073,random split (NOT headline),REFERENCE
+E2,Gradient-Boosted Trees,ROC AUC,0.8300518511074401,random split (NOT headline),REFERENCE
+E2,Gradient-Boosted Trees,Baseline accuracy (always majority class),0.6459436560050836,random split (NOT headline),REFERENCE
+E2,Logistic Regression,Accuracy,0.776954035162042,random split (NOT headline),REFERENCE
+E2,Logistic Regression,F1 (positive class),0.8347976153122059,random split (NOT headline),REFERENCE
+E2,Logistic Regression,ROC AUC,0.8294674906617342,random split (NOT headline),REFERENCE
+E2,Logistic Regression,Baseline accuracy (always majority class),0.6459436560050836,random split (NOT headline),REFERENCE

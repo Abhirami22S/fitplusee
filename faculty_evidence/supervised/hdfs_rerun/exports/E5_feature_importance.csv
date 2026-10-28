@@ -1,0 +1,21 @@
+experiment_id,model,feature,importance,kind
+E5,GBT Regressor,active_minutes,0.3350425243342241,tree impurity importance
+E5,GBT Regressor,avg_heart_rate,0.22265453840817653,tree impurity importance
+E5,GBT Regressor,weight_kg,0.16734334026306466,tree impurity importance
+E5,GBT Regressor,age,0.09784051342309334,tree impurity importance
+E5,GBT Regressor,steps,0.05955305104248546,tree impurity importance
+E5,GBT Regressor,distance_km,0.048726229977296434,tree impurity importance
+E5,GBT Regressor,height_cm,0.029194105266008068,tree impurity importance
+E5,GBT Regressor,resting_heart_rate,0.018669613094934614,tree impurity importance
+E5,GBT Regressor,bmi,0.017288614408724527,tree impurity importance
+E5,GBT Regressor,gender_idx,0.0036874697819923425,tree impurity importance
+E5,Random Forest Regressor,active_minutes,0.5996090615129176,tree impurity importance
+E5,Random Forest Regressor,weight_kg,0.1837098156574055,tree impurity importance
+E5,Random Forest Regressor,avg_heart_rate,0.11226639332546631,tree impurity importance
+E5,Random Forest Regressor,age,0.03362131604064653,tree impurity importance
+E5,Random Forest Regressor,bmi,0.020607115279838245,tree impurity importance
+E5,Random Forest Regressor,height_cm,0.013571770091925051,tree impurity importance
+E5,Random Forest Regressor,distance_km,0.012907278009844621,tree impurity importance
+E5,Random Forest Regressor,steps,0.012449915072058594,tree impurity importance
+E5,Random Forest Regressor,resting_heart_rate,0.007370124426507429,tree impurity importance
+E5,Random Forest Regressor,gender_idx,0.003887210583390184,tree impurity importance

@@ -1,0 +1,104 @@
+experiment_id,kind,check,abs_diff,tolerance,passed,source_file
+E1,recompute,Random Forest: validation accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Random Forest: validation weighted F1 recomputed,1.1102230246251563e-16,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Random Forest: validation ROC-AUC recomputed,2.634455753547371e-07,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Random Forest: validation majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Random Forest: test accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Random Forest: test weighted F1 recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Random Forest: test ROC-AUC recomputed,1.4170712551164757e-06,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Random Forest: test majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Logistic Regression: validation accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Logistic Regression: validation weighted F1 recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Logistic Regression: validation ROC-AUC recomputed,7.432928732509225e-07,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Logistic Regression: validation majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Logistic Regression: test accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Logistic Regression: test weighted F1 recomputed,1.1102230246251563e-16,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Logistic Regression: test ROC-AUC recomputed,3.7595768009879293e-07,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Logistic Regression: test majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Gradient-Boosted Trees: validation accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Gradient-Boosted Trees: validation weighted F1 recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Gradient-Boosted Trees: validation ROC-AUC recomputed,5.645262313169753e-08,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Gradient-Boosted Trees: validation majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Gradient-Boosted Trees: test accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Gradient-Boosted Trees: test weighted F1 recomputed,1.1102230246251563e-16,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Gradient-Boosted Trees: test ROC-AUC recomputed,5.340527042374532e-06,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,recompute,Gradient-Boosted Trees: test majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,refit,"Logistic Regression: independent sklearn refit, test accuracy",0.0004055150040551,0.005,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,refit,"Logistic Regression: independent sklearn refit, test ROC-AUC",2.6885794082609493e-05,0.005,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E1,refit (approx.),"Random Forest: independent sklearn refit (approximate, different implementation), test ROC-AUC",0.0015172013170472,0.03,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Random Forest: test accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Random Forest: test precision (positive) recomputed,5.551115123125783e-17,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Random Forest: test recall (positive) recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Random Forest: test F1 (positive) recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Random Forest: test ROC-AUC recomputed,5.473107409947886e-06,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Random Forest: test-majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Gradient-Boosted Trees: test accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Gradient-Boosted Trees: test precision (positive) recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Gradient-Boosted Trees: test recall (positive) recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Gradient-Boosted Trees: test F1 (positive) recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Gradient-Boosted Trees: test ROC-AUC recomputed,8.156695559757843e-06,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Gradient-Boosted Trees: test-majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Logistic Regression: test accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Logistic Regression: test precision (positive) recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Logistic Regression: test recall (positive) recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Logistic Regression: test F1 (positive) recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Logistic Regression: test ROC-AUC recomputed,1.0593111121615097e-07,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,recompute,Logistic Regression: test-majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,features,"feature rows: same (user, day) set in pandas and Spark",0.0,0.0,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,features,feature rows: pandas keeps no extra row,0.0,0.0,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,features,all 18 numeric features: max |pandas - Spark|,5.000000058430487e-07,2e-05,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,no-future-info,features of day t unchanged when day t and all LATER days are altered (25 users),0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,refit,"Logistic Regression: independent sklearn refit, chronological test ROC-AUC",0.0004280676202068,0.01,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,refit,"Logistic Regression: independent sklearn refit, chronological test accuracy",0.0,0.02,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E2,refit (approx.),"Random Forest: independent sklearn refit (approximate), chronological test ROC-AUC",0.0234737692676333,0.05,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,recompute,Random Forest: OOF accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,recompute,Random Forest: OOF weighted F1 recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,recompute,Random Forest: OOF ROC-AUC recomputed,0.0,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,recompute,Random Forest: majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,recompute,Logistic Regression: OOF accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,recompute,Logistic Regression: OOF weighted F1 recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,recompute,Logistic Regression: OOF ROC-AUC recomputed,1.1102230246251563e-16,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,recompute,Logistic Regression: majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,label,high_achiever label equals the independently recomputed label (mismatches),0.0,0.0,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,leakage rule,no step- or distance-based feature among the model features (count),0.0,0.0,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,refit (approx.),"Logistic Regression: independent sklearn CV (same folds), pooled OOF accuracy",0.0045766590389015,0.05,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,refit (approx.),"Logistic Regression: independent sklearn CV (same folds), pooled OOF ROC-AUC",0.0207364584642452,0.05,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,refit (approx.),"Random Forest: independent sklearn CV (same folds), pooled OOF accuracy",0.0137299771167047,0.05,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E3,refit (approx.),"Random Forest: independent sklearn CV (same folds), pooled OOF ROC-AUC",0.009383771103012,0.05,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Random Forest: test accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Random Forest: test macro F1 recomputed,5.551115123125783e-17,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Random Forest: test ROC-AUC recomputed,4.393528975077388e-07,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Random Forest: confusion matrix TP recomputed,0.0,0.0,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Random Forest: confusion matrix FN recomputed,0.0,0.0,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Random Forest: majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Gradient-Boosted Trees: test accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Gradient-Boosted Trees: test macro F1 recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Gradient-Boosted Trees: test ROC-AUC recomputed,3.062156559430207e-07,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Gradient-Boosted Trees: confusion matrix TP recomputed,0.0,0.0,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Gradient-Boosted Trees: confusion matrix FN recomputed,0.0,0.0,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Gradient-Boosted Trees: majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Logistic Regression: test accuracy recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Logistic Regression: test macro F1 recomputed,5.551115123125783e-17,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Logistic Regression: test ROC-AUC recomputed,1.49113710695703e-06,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Logistic Regression: confusion matrix TP recomputed,0.0,0.0,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Logistic Regression: confusion matrix FN recomputed,0.0,0.0,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,recompute,Logistic Regression: majority baseline recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,split,users present in both train and test (user-held-out),0.0,0.0,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,label,median active_minutes of TRAINING users recomputed,0.0,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,refit,"Logistic Regression: independent sklearn refit, test ROC-AUC",0.0002955114216841,0.02,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,refit,"Logistic Regression: independent sklearn refit, test accuracy",0.000734214390602,0.02,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,leakage,"LEAKAGE run (+ sedentary_minutes, status INVALID) reproduces in sklearn",8.157937673358706e-05,0.03,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E4,status,every leakage row is marked INVALID (rows not INVALID),0.0,0.0,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E5,recompute,Linear Regression: test MAE recomputed,2.8421709430404014e-14,1e-06,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E5,recompute,Linear Regression: test RMSE recomputed,5.684341886080803e-14,1e-06,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E5,recompute,Linear Regression: test R2 recomputed,1.1102230246251563e-16,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E5,recompute,Random Forest Regressor: test MAE recomputed,0.0,1e-06,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E5,recompute,Random Forest Regressor: test RMSE recomputed,0.0,1e-06,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E5,recompute,Random Forest Regressor: test R2 recomputed,1.1102230246251563e-16,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E5,recompute,GBT Regressor: test MAE recomputed,0.0,1e-06,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E5,recompute,GBT Regressor: test RMSE recomputed,8.526512829121202e-14,1e-06,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E5,recompute,GBT Regressor: test R2 recomputed,2.220446049250313e-16,1e-09,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E5,recompute,training-mean baseline test MAE recomputed (expected 334.5 kcal),0.0,1e-06,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E5,refit,"Linear Regression: independent sklearn OLS, test MAE",3.780087354243733e-12,0.5,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E5,refit,"Linear Regression: independent sklearn OLS, test R2",1.3322676295501878e-15,0.002,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv
+E5,refit (approx.),"Random Forest Regressor: independent sklearn refit (approximate), test R2",0.0025174049934675,0.05,1,faculty_evidence/supervised/hdfs_rerun/sklearn_crosscheck.csv

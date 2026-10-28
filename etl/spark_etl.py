@@ -15,35 +15,88 @@ combines those results across a group) — this is the MapReduce pattern,
 and it is what to point to if asked "where is MapReduce in this project?"
 in the viva.
 
-Run with:  python3 etl/spark_etl.py
+Storage modes (explicit, never silently mixed):
+    python etl/spark_etl.py                       # LOCAL Parquet (original behaviour, fallback)
+    python etl/spark_etl.py --storage hdfs --hdfs-uri hdfs://localhost:9000
+                                                  # reads Bronze from HDFS, writes Silver to HDFS
+In HDFS mode the job aborts (exit code 2) if the NameNode is unreachable; it never
+falls back to local disk. Output goes to a staging directory and is swapped in only
+after the write and a read-back row-count check succeed.
+
 (Needs JAVA_HOME set to a JDK 11/17 — see README.md "Environment setup".)
 """
+
+import argparse
+import json
+import sys
+import time
 
 from pyspark.sql import SparkSession, Window
 from pyspark.sql import functions as F
 
-RAW_PATH = "data/raw/fitpulse_raw.csv"
-SILVER_PATH = "data/processed/fitpulse_silver"
+import storage
 
 DAILY_STEP_GOAL_STRETCH = 1.10     # personal goal = 10% above the user's own historical average
 DAILY_CALORIE_GOAL_STRETCH = 1.10
 
 
-def build_spark() -> SparkSession:
-    return (
+def build_spark(extra_conf=None) -> SparkSession:
+    builder = (
         SparkSession.builder
         .appName("FitPulse-ETL")
         .master("local[*]")
         .config("spark.sql.shuffle.partitions", "8")   # small dataset -> fewer shuffle partitions than the 200 default
         .config("spark.driver.memory", "2g")
         .config("spark.driver.host", "127.0.0.1")      # avoids local hostname-resolution hangs on macOS
-        .getOrCreate()
     )
+    for k, v in (extra_conf or {}).items():
+        builder = builder.config(k, v)
+    return builder.getOrCreate()
+
+
+def parse_args():
+    ap = argparse.ArgumentParser(description="FitPulse Spark ETL (Bronze -> Silver)")
+    ap.add_argument("--storage", choices=["local", "hdfs"], default=None,
+                    help="storage backend (default: env FITPULSE_STORAGE, else local)")
+    ap.add_argument("--hdfs-uri", default=None, help="e.g. hdfs://localhost:9000 (default: env FITPULSE_HDFS_URI)")
+    ap.add_argument("--input", default=None, help="Bronze CSV path (HDFS path/URI in hdfs mode)")
+    ap.add_argument("--output", default=None, help="Silver Parquet dir (HDFS path/URI in hdfs mode)")
+    ap.add_argument("--report", default=None, help="write a JSON run report to this file")
+    return ap.parse_args()
 
 
 def main():
-    spark = build_spark()
+    args = parse_args()
+    try:
+        cfg = storage.resolve(args.storage, args.hdfs_uri, args.input, args.output)
+        storage.require_hdfs(cfg)
+    except storage.HdfsUnavailable as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        sys.exit(2)
+
+    print("=" * 70)
+    print(f"STORAGE MODE : {cfg.label()}")
+    print(f"Bronze input : {cfg.input_path}")
+    print(f"Silver output: {cfg.output_path}")
+    print("=" * 70)
+
+    spark = build_spark(storage.spark_hadoop_conf(cfg))
     spark.sparkContext.setLogLevel("WARN")
+    try:
+        storage.verify_hdfs_reachable(spark, cfg)
+        if not storage.path_exists(spark, cfg.input_path):
+            raise FileNotFoundError(f"Bronze input not found: {cfg.input_path}")
+        run_etl(spark, cfg, args.report)
+    except storage.HdfsUnavailable as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        spark.stop()
+        sys.exit(2)
+    spark.stop()
+
+
+def run_etl(spark, cfg, report_path=None):
+    t0 = time.time()
+    RAW_PATH, SILVER_PATH = cfg.input_path, cfg.output_path
 
     print("[1/7] Reading Bronze layer (raw CSV) into a Spark DataFrame")
     df = spark.read.csv(RAW_PATH, header=True, inferSchema=True)
@@ -120,26 +173,47 @@ def main():
         "calorie_goal_achieved", (F.col("calories_burned") >= F.col("daily_calorie_goal")).cast("int")
     )
 
-    print("[7/7] Writing Silver layer as partitioned Parquet (HDFS-style storage)")
+    print(f"[7/7] Writing Silver layer as partitioned Parquet ({cfg.label()})")
     # Partitioning by month means any downstream query filtering on month only
     # reads the matching partition's files (partition pruning) — the same
     # benefit a real HDFS + Hive-partitioned table gives at far larger scale.
+    # Written to a staging directory first, then swapped in (storage.staged_replace).
+    staging = SILVER_PATH.rstrip("/") + f"._staging_{int(time.time())}"
     (
-        df.write.mode("overwrite")
+        df.write.mode("errorifexists")
         .partitionBy("month")
-        .parquet(SILVER_PATH)
+        .parquet(staging)
     )
-
+    written = spark.read.parquet(staging).count()
     final_count = df.count()
+    if written != final_count:
+        raise RuntimeError(f"read-back check failed: staged {written:,} rows, expected {final_count:,}; "
+                           f"existing Silver left untouched (staging kept at {staging})")
+    storage.staged_replace(spark, staging, SILVER_PATH)
+    readback = spark.read.parquet(SILVER_PATH).count()
+    if readback != final_count:
+        raise RuntimeError(f"post-swap read-back mismatch: {readback:,} != {final_count:,}")
     print("\n--- Summary ---")
     print(f"Bronze rows read      : {raw_count:,}")
     print(f"Rows after cleaning   : {clean_count:,} ({raw_count - clean_count:,} dropped)")
     print(f"Silver rows written   : {final_count:,}")
     print(f"Silver columns        : {len(df.columns)}")
     print(f"Users                 : {df.select('user_id').distinct().count()}")
+    print(f"Read back from storage: {readback:,} rows (matches)")
     print(f"Written to            : {SILVER_PATH}/ (partitioned by month)")
+    print(f"Storage mode used     : {cfg.mode.upper()}  [{cfg.label()}]")
 
-    spark.stop()
+    if report_path:
+        report = {
+            "storage_mode": cfg.mode, "hdfs_uri": cfg.hdfs_uri,
+            "input_path": RAW_PATH, "output_path": SILVER_PATH,
+            "bronze_rows": raw_count, "clean_rows": clean_count,
+            "silver_rows_written": final_count, "silver_rows_read_back": readback,
+            "silver_columns": len(df.columns), "elapsed_seconds": round(time.time() - t0, 1),
+        }
+        with open(report_path, "w", encoding="utf-8") as fh:
+            json.dump(report, fh, indent=2)
+        print(f"Run report            : {report_path}")
 
 
 if __name__ == "__main__":

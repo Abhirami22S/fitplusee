@@ -1,0 +1,104 @@
+experiment,check,kind,spark_value,sklearn_value,abs_diff,tolerance,pass
+E1,Random Forest: validation accuracy recomputed,recompute,0.7293046911597404,0.7293046911597404,0.0,1e-09,True
+E1,Random Forest: validation weighted F1 recomputed,recompute,0.728217248812576,0.7282172488125759,1.1102230246251565e-16,1e-09,True
+E1,Random Forest: validation ROC-AUC recomputed,recompute,0.7548685024583048,0.7548687659038802,2.634455753547371e-07,0.002,True
+E1,Random Forest: validation majority baseline recomputed,recompute,0.6095830823797096,0.6095830823797096,0.0,1e-09,True
+E1,Random Forest: test accuracy recomputed,recompute,0.735198702351987,0.735198702351987,0.0,1e-09,True
+E1,Random Forest: test weighted F1 recomputed,recompute,0.7345566152197562,0.7345566152197562,0.0,1e-09,True
+E1,Random Forest: test ROC-AUC recomputed,recompute,0.7585353864864229,0.7585339694151678,1.4170712551164755e-06,0.002,True
+E1,Random Forest: test majority baseline recomputed,recompute,0.6143552311435523,0.6143552311435523,0.0,1e-09,True
+E1,Logistic Regression: validation accuracy recomputed,recompute,0.7333199491400656,0.7333199491400656,0.0,1e-09,True
+E1,Logistic Regression: validation weighted F1 recomputed,recompute,0.7282683808986852,0.7282683808986852,0.0,1e-09,True
+E1,Logistic Regression: validation ROC-AUC recomputed,recompute,0.7365301594564561,0.7365294161635828,7.432928732509225e-07,0.002,True
+E1,Logistic Regression: validation majority baseline recomputed,recompute,0.6095830823797096,0.6095830823797096,0.0,1e-09,True
+E1,Logistic Regression: test accuracy recomputed,recompute,0.7356042173560422,0.7356042173560422,0.0,1e-09,True
+E1,Logistic Regression: test weighted F1 recomputed,recompute,0.7304651424740691,0.7304651424740692,1.1102230246251565e-16,1e-09,True
+E1,Logistic Regression: test ROC-AUC recomputed,recompute,0.7395994585438216,0.7395990825861415,3.7595768009879293e-07,0.002,True
+E1,Logistic Regression: test majority baseline recomputed,recompute,0.6143552311435523,0.6143552311435523,0.0,1e-09,True
+E1,Gradient-Boosted Trees: validation accuracy recomputed,recompute,0.7293046911597404,0.7293046911597404,0.0,1e-09,True
+E1,Gradient-Boosted Trees: validation weighted F1 recomputed,recompute,0.7288957801657834,0.7288957801657834,0.0,1e-09,True
+E1,Gradient-Boosted Trees: validation ROC-AUC recomputed,recompute,0.7700870006431458,0.7700869441905227,5.645262313169752e-08,0.002,True
+E1,Gradient-Boosted Trees: validation majority baseline recomputed,recompute,0.6095830823797096,0.6095830823797096,0.0,1e-09,True
+E1,Gradient-Boosted Trees: test accuracy recomputed,recompute,0.7381724790483915,0.7381724790483915,0.0,1e-09,True
+E1,Gradient-Boosted Trees: test weighted F1 recomputed,recompute,0.7381124156555368,0.7381124156555366,1.1102230246251565e-16,1e-09,True
+E1,Gradient-Boosted Trees: test ROC-AUC recomputed,recompute,0.7734647527143181,0.7734700932413605,5.340527042374532e-06,0.002,True
+E1,Gradient-Boosted Trees: test majority baseline recomputed,recompute,0.6143552311435523,0.6143552311435523,0.0,1e-09,True
+E1,"Logistic Regression: independent sklearn refit, test accuracy",refit,0.7356042173560422,0.735198702351987,0.00040551500405516805,0.005,True
+E1,"Logistic Regression: independent sklearn refit, test ROC-AUC",refit,0.7395994585438216,0.739572572749739,2.6885794082609493e-05,0.005,True
+E1,"Random Forest: independent sklearn refit (approximate, different implementation), test ROC-AUC",refit (approx.),0.7585353864864229,0.7570181851693757,0.0015172013170472454,0.03,True
+E2,Random Forest: test accuracy recomputed,recompute,0.5823198639989539,0.5823198639989539,0.0,1e-09,True
+E2,Random Forest: test precision (positive) recomputed,recompute,0.4953792837889872,0.49537928378898727,5.551115123125783e-17,1e-09,True
+E2,Random Forest: test recall (positive) recomputed,recompute,0.8178639542275906,0.8178639542275906,0.0,1e-09,True
+E2,Random Forest: test F1 (positive) recomputed,recompute,0.6170263788968825,0.6170263788968825,0.0,1e-09,True
+E2,Random Forest: test ROC-AUC recomputed,recompute,0.6706116589475843,0.6706171320549943,5.473107409947886e-06,0.002,True
+E2,Random Forest: test-majority baseline recomputed,recompute,0.588596835360272,0.588596835360272,0.0,1e-09,True
+E2,Gradient-Boosted Trees: test accuracy recomputed,recompute,0.5990584542958023,0.5990584542958023,0.0,1e-09,True
+E2,Gradient-Boosted Trees: test precision (positive) recomputed,recompute,0.5080353555644838,0.5080353555644838,0.0,1e-09,True
+E2,Gradient-Boosted Trees: test recall (positive) recomputed,recompute,0.8038779402415767,0.8038779402415767,0.0,1e-09,True
+E2,Gradient-Boosted Trees: test F1 (positive) recomputed,recompute,0.6225997045790251,0.6225997045790251,0.0,1e-09,True
+E2,Gradient-Boosted Trees: test ROC-AUC recomputed,recompute,0.6969582446395678,0.6969664013351275,8.156695559757843e-06,0.002,True
+E2,Gradient-Boosted Trees: test-majority baseline recomputed,recompute,0.588596835360272,0.588596835360272,0.0,1e-09,True
+E2,Logistic Regression: test accuracy recomputed,recompute,0.6835360272002092,0.6835360272002092,0.0,1e-09,True
+E2,Logistic Regression: test precision (positive) recomputed,recompute,0.6648501362397821,0.6648501362397821,0.0,1e-09,True
+E2,Logistic Regression: test recall (positive) recomputed,recompute,0.4653528289891926,0.4653528289891926,0.0,1e-09,True
+E2,Logistic Regression: test F1 (positive) recomputed,recompute,0.5474943904263276,0.5474943904263276,0.0,1e-09,True
+E2,Logistic Regression: test ROC-AUC recomputed,recompute,0.700393731816042,0.7003936258849308,1.0593111121615095e-07,0.002,True
+E2,Logistic Regression: test-majority baseline recomputed,recompute,0.588596835360272,0.588596835360272,0.0,1e-09,True
+E2,"feature rows: same (user, day) set in pandas and Spark",features,64174.0,64174.0,0.0,0.0,True
+E2,feature rows: pandas keeps no extra row,features,64174.0,64174.0,0.0,0.0,True
+E2,all 18 numeric features: max |pandas - Spark|,features,0.0,5.000000058430487e-07,5.000000058430487e-07,2e-05,True
+E2,features of day t unchanged when day t and all LATER days are altered (25 users),no-future-info,0.0,0.0,0.0,1e-09,True
+E2,"Logistic Regression: independent sklearn refit, chronological test ROC-AUC",refit,0.700393731816042,0.6999656641958352,0.0004280676202068623,0.01,True
+E2,"Logistic Regression: independent sklearn refit, chronological test accuracy",refit,0.6835360272002092,0.6835360272002092,0.0,0.02,True
+E2,"Random Forest: independent sklearn refit (approximate), chronological test ROC-AUC",refit (approx.),0.6706116589475843,0.647137889679951,0.023473769267633338,0.05,True
+E3,Random Forest: OOF accuracy recomputed,recompute,0.5354691075514875,0.5354691075514875,0.0,1e-09,True
+E3,Random Forest: OOF weighted F1 recomputed,recompute,0.5318366855353487,0.5318366855353487,0.0,1e-09,True
+E3,Random Forest: OOF ROC-AUC recomputed,recompute,0.542478320975242,0.542478320975242,0.0,0.002,True
+E3,Random Forest: majority baseline recomputed,recompute,0.5011441647597255,0.5011441647597255,0.0,1e-09,True
+E3,Logistic Regression: OOF accuracy recomputed,recompute,0.5377574370709383,0.5377574370709383,0.0,1e-09,True
+E3,Logistic Regression: OOF weighted F1 recomputed,recompute,0.536051727024806,0.536051727024806,0.0,1e-09,True
+E3,Logistic Regression: OOF ROC-AUC recomputed,recompute,0.5485526370910311,0.548552637091031,1.1102230246251565e-16,0.002,True
+E3,Logistic Regression: majority baseline recomputed,recompute,0.5011441647597255,0.5011441647597255,0.0,1e-09,True
+E3,high_achiever label equals the independently recomputed label (mismatches),label,0.0,0.0,0.0,0.0,True
+E3,no step- or distance-based feature among the model features (count),leakage rule,0.0,0.0,0.0,0.0,True
+E3,"Logistic Regression: independent sklearn CV (same folds), pooled OOF accuracy",refit (approx.),0.5377574370709383,0.5423340961098398,0.004576659038901587,0.05,True
+E3,"Logistic Regression: independent sklearn CV (same folds), pooled OOF ROC-AUC",refit (approx.),0.5485526370910311,0.5692890955552763,0.02073645846424521,0.05,True
+E3,"Random Forest: independent sklearn CV (same folds), pooled OOF accuracy",refit (approx.),0.5354691075514875,0.5491990846681922,0.013729977116704761,0.05,True
+E3,"Random Forest: independent sklearn CV (same folds), pooled OOF ROC-AUC",refit (approx.),0.542478320975242,0.5330945498722299,0.009383771103012029,0.05,True
+E4,Random Forest: test accuracy recomputed,recompute,0.5056289769946157,0.5056289769946157,0.0,1e-09,True
+E4,Random Forest: test macro F1 recomputed,recompute,0.4406485762959358,0.44064857629593573,5.551115123125783e-17,1e-09,True
+E4,Random Forest: test ROC-AUC recomputed,recompute,0.4964867611522143,0.4964863217993168,4.3935289750773876e-07,0.002,True
+E4,Random Forest: confusion matrix TP recomputed,recompute,1010.0,1010.0,0.0,0.0,True
+E4,Random Forest: confusion matrix FN recomputed,recompute,5022.0,5022.0,0.0,0.0,True
+E4,Random Forest: majority baseline recomputed,recompute,0.5079131995431555,0.5079131995431555,0.0,1e-09,True
+E4,Gradient-Boosted Trees: test accuracy recomputed,recompute,0.5035894925762767,0.5035894925762767,0.0,1e-09,True
+E4,Gradient-Boosted Trees: test macro F1 recomputed,recompute,0.5001760174123051,0.5001760174123051,0.0,1e-09,True
+E4,Gradient-Boosted Trees: test ROC-AUC recomputed,recompute,0.4998594470139341,0.49985914079827815,3.062156559430207e-07,0.002,True
+E4,Gradient-Boosted Trees: confusion matrix TP recomputed,recompute,2580.0,2580.0,0.0,0.0,True
+E4,Gradient-Boosted Trees: confusion matrix FN recomputed,recompute,3452.0,3452.0,0.0,0.0,True
+E4,Gradient-Boosted Trees: majority baseline recomputed,recompute,0.5079131995431555,0.5079131995431555,0.0,1e-09,True
+E4,Logistic Regression: test accuracy recomputed,recompute,0.5039973894599445,0.5039973894599445,0.0,1e-09,True
+E4,Logistic Regression: test macro F1 recomputed,recompute,0.4441565942294451,0.44415659422944515,5.551115123125783e-17,1e-09,True
+E4,Logistic Regression: test ROC-AUC recomputed,recompute,0.4999244046741609,0.4999229135370539,1.49113710695703e-06,0.002,True
+E4,Logistic Regression: confusion matrix TP recomputed,recompute,1078.0,1078.0,0.0,0.0,True
+E4,Logistic Regression: confusion matrix FN recomputed,recompute,4954.0,4954.0,0.0,0.0,True
+E4,Logistic Regression: majority baseline recomputed,recompute,0.5079131995431555,0.5079131995431555,0.0,1e-09,True
+E4,users present in both train and test (user-held-out),split,0.0,0.0,0.0,0.0,True
+E4,median active_minutes of TRAINING users recomputed,label,70.0,70.0,0.0,1e-09,True
+E4,"Logistic Regression: independent sklearn refit, test ROC-AUC",refit,0.4999244046741609,0.4996288932524768,0.0002955114216841026,0.02,True
+E4,"Logistic Regression: independent sklearn refit, test accuracy",refit,0.5039973894599445,0.5032631750693425,0.0007342143906020615,0.02,True
+E4,"LEAKAGE run (+ sedentary_minutes, status INVALID) reproduces in sklearn",leakage,0.9693261543481808,0.9692445749714472,8.157937673358706e-05,0.03,True
+E4,every leakage row is marked INVALID (rows not INVALID),status,0.0,0.0,0.0,0.0,True
+E5,Linear Regression: test MAE recomputed,recompute,199.7126331126011,199.71263311260114,2.842170943040401e-14,1e-06,True
+E5,Linear Regression: test RMSE recomputed,recompute,263.64418934697864,263.6441893469786,5.684341886080802e-14,1e-06,True
+E5,Linear Regression: test R2 recomputed,recompute,0.6295587174061572,0.6295587174061573,1.1102230246251565e-16,1e-09,True
+E5,Random Forest Regressor: test MAE recomputed,recompute,188.61411637848147,188.61411637848147,0.0,1e-06,True
+E5,Random Forest Regressor: test RMSE recomputed,recompute,258.6774213224942,258.6774213224942,0.0,1e-06,True
+E5,Random Forest Regressor: test R2 recomputed,recompute,0.6433846629655691,0.643384662965569,1.1102230246251565e-16,1e-09,True
+E5,GBT Regressor: test MAE recomputed,recompute,183.28060718759247,183.28060718759247,0.0,1e-06,True
+E5,GBT Regressor: test RMSE recomputed,recompute,250.41439715393884,250.41439715393892,8.526512829121202e-14,1e-06,True
+E5,GBT Regressor: test R2 recomputed,recompute,0.6658037597473698,0.6658037597473696,2.220446049250313e-16,1e-09,True
+E5,training-mean baseline test MAE recomputed (expected 334.5 kcal),recompute,334.51018668646066,334.51018668646066,0.0,1e-06,True
+E5,"Linear Regression: independent sklearn OLS, test MAE",refit,199.7126331126011,199.7126331126049,3.780087354243733e-12,0.5,True
+E5,"Linear Regression: independent sklearn OLS, test R2",refit,0.6295587174061572,0.6295587174061585,1.3322676295501878e-15,0.002,True
+E5,"Random Forest Regressor: independent sklearn refit (approximate), test R2",refit (approx.),0.6433846629655691,0.6459020679590366,0.0025174049934675313,0.05,True

@@ -1,0 +1,22 @@
+Model,Column,Role
+Random Forest,steps_lag1,numeric
+Random Forest,steps_lag2,numeric
+Random Forest,steps_lag7,numeric
+Random Forest,steps_roll7_avg,numeric
+Random Forest,calories_lag1,numeric
+Random Forest,calories_roll7_avg,numeric
+Random Forest,active_minutes_roll7_avg,numeric
+Random Forest,resting_hr_roll7_avg,numeric
+Random Forest,age,numeric
+Random Forest,bmi,numeric
+Random Forest,month_sin,numeric
+Random Forest,month_cos,numeric
+Random Forest,day_of_week,categorical
+Random Forest,activity_type,categorical
+Random Forest,gender,categorical
+Random Forest,label,TARGET
+K-Means,steps,numeric (standardised)
+K-Means,active_minutes,numeric (standardised)
+K-Means,calories_burned,numeric (standardised)
+K-Means,avg_heart_rate,numeric (standardised)
+K-Means,sleep_minutes,numeric (standardised)

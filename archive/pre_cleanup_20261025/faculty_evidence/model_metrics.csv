@@ -1,0 +1,70 @@
+model,experiment,set,metric,value,source_file
+Random Forest (Spark MLlib),notebook: next-day personalised goal [local Parquet run],test,Accuracy,0.7186901977461195,faculty_evidence\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [local Parquet run],test,Precision (class 1 = achieved),0.5849408836341008,faculty_evidence\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [local Parquet run],test,Recall (class 1 = achieved),0.8138528138528138,faculty_evidence\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [local Parquet run],test,F1 Score (class 1 = achieved),0.6806661839246922,faculty_evidence\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [local Parquet run],test,ROC-AUC,0.8247416818532792,faculty_evidence\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [local Parquet run],test,Weighted precision (both classes),0.758246156292662,faculty_evidence\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [local Parquet run],test,Weighted recall (both classes),0.7186901977461195,faculty_evidence\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [local Parquet run],test,Weighted F1 (both classes),0.7235885981586081,faculty_evidence\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [local Parquet run],test,Baseline: always predict majority class,0.6316181160961089,faculty_evidence\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [HDFS re-run],test,Accuracy,0.7186901977461195,faculty_evidence\hdfs\ml\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [HDFS re-run],test,Precision (class 1 = achieved),0.5849408836341008,faculty_evidence\hdfs\ml\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [HDFS re-run],test,Recall (class 1 = achieved),0.8138528138528138,faculty_evidence\hdfs\ml\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [HDFS re-run],test,F1 Score (class 1 = achieved),0.6806661839246922,faculty_evidence\hdfs\ml\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [HDFS re-run],test,ROC-AUC,0.8247428720076426,faculty_evidence\hdfs\ml\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [HDFS re-run],test,Weighted precision (both classes),0.758246156292662,faculty_evidence\hdfs\ml\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [HDFS re-run],test,Weighted recall (both classes),0.7186901977461195,faculty_evidence\hdfs\ml\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [HDFS re-run],test,Weighted F1 (both classes),0.7235885981586081,faculty_evidence\hdfs\ml\classification_results.csv
+Random Forest (Spark MLlib),notebook: next-day personalised goal [HDFS re-run],test,Baseline: always predict majority class,0.6316181160961089,faculty_evidence\hdfs\ml\classification_results.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,validation,Accuracy,0.7293046911597404,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,test,Accuracy,0.735198702351987,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,validation,Baseline accuracy (always majority class),0.6095830823797096,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,test,Baseline accuracy (always majority class),0.6143552311435523,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,validation,F1 (goal-achieved class),0.7808657023674088,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,test,F1 (goal-achieved class),0.7861587162973475,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,validation,F1 (weighted),0.7282172488125759,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,test,F1 (weighted),0.7345566152197562,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,validation,Precision (goal-achieved class),0.7708021390374331,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,test,Precision (goal-achieved class),0.7801126516464472,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,validation,Precision (weighted),0.7275165837149836,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,test,Precision (weighted),0.7340524441205325,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,validation,ROC AUC,0.7548701019492978,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,test,ROC AUC,0.7585330729007007,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,validation,Recall (goal-achieved class),0.7911955209133824,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,test,Recall (goal-achieved class),0.7922992299229923,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,validation,Recall (weighted),0.7293046911597403,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,test,Recall (weighted),0.735198702351987,faculty_evidence\report_aligned\rf_metrics.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,extra check,"RF with steps + distance_km included (leakage demo), test accuracy",0.9895241957285752,faculty_evidence\report_aligned\rf_extra_checks.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,extra check,"User-held-out (15% of users unseen), accuracy",0.7232011747430249,faculty_evidence\report_aligned\rf_extra_checks.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,extra check,"User-held-out, ROC AUC",0.7498230346626236,faculty_evidence\report_aligned\rf_extra_checks.csv
+Random Forest (Spark MLlib),REPORT-aligned: same-day steps >= 8000,extra check,User-held-out: users in held-out set,53.0,faculty_evidence\report_aligned\rf_extra_checks.csv
+Linear Regression (selected),calorie_burned (same-day estimation),validation,MAE (kcal),199.49533120920543,faculty_evidence\regression_results.csv
+Linear Regression (selected),calorie_burned (same-day estimation),validation,RMSE (kcal),264.8400144790687,faculty_evidence\regression_results.csv
+Linear Regression (selected),calorie_burned (same-day estimation),validation,R2,0.6362594051014518,faculty_evidence\regression_results.csv
+Linear Regression (selected),calorie_burned (same-day estimation),test,MAE (kcal),199.71263311260105,faculty_evidence\regression_results.csv
+Linear Regression (selected),calorie_burned (same-day estimation),test,RMSE (kcal),263.64418934697864,faculty_evidence\regression_results.csv
+Linear Regression (selected),calorie_burned (same-day estimation),test,R2,0.6295587174061572,faculty_evidence\regression_results.csv
+Linear Regression (selected),calorie_burned (same-day estimation),train (in-sample),MAE (kcal),199.2810390767752,faculty_evidence\regression_results.csv
+Linear Regression (selected),calorie_burned (same-day estimation),train (in-sample),RMSE (kcal),265.7993252812345,faculty_evidence\regression_results.csv
+Linear Regression (selected),calorie_burned (same-day estimation),train (in-sample),R2,0.6324550626212068,faculty_evidence\regression_results.csv
+Baseline: training mean,calorie_burned (same-day estimation),validation,MAE (kcal),339.9107342033764,faculty_evidence\regression_results.csv
+Baseline: training mean,calorie_burned (same-day estimation),validation,RMSE (kcal),439.1259341567061,faculty_evidence\regression_results.csv
+Baseline: training mean,calorie_burned (same-day estimation),validation,R2,-6.309580106167445e-06,faculty_evidence\regression_results.csv
+Baseline: training mean,calorie_burned (same-day estimation),test,MAE (kcal),334.51018668646066,faculty_evidence\regression_results.csv
+Baseline: training mean,calorie_burned (same-day estimation),test,RMSE (kcal),433.17058257844974,faculty_evidence\regression_results.csv
+Baseline: training mean,calorie_burned (same-day estimation),test,R2,-2.029875471265541e-06,faculty_evidence\regression_results.csv
+Baseline: LinReg on active_minutes only,calorie_burned (same-day estimation),validation,MAE (kcal),248.45405410412215,faculty_evidence\regression_results.csv
+Baseline: LinReg on active_minutes only,calorie_burned (same-day estimation),validation,RMSE (kcal),339.9100747140316,faculty_evidence\regression_results.csv
+Baseline: LinReg on active_minutes only,calorie_burned (same-day estimation),validation,R2,0.4008264399981405,faculty_evidence\regression_results.csv
+Baseline: LinReg on active_minutes only,calorie_burned (same-day estimation),test,MAE (kcal),247.4010149675612,faculty_evidence\regression_results.csv
+Baseline: LinReg on active_minutes only,calorie_burned (same-day estimation),test,RMSE (kcal),337.9889031998236,faculty_evidence\regression_results.csv
+Baseline: LinReg on active_minutes only,calorie_burned (same-day estimation),test,R2,0.3911814803154103,faculty_evidence\regression_results.csv
+Chronological check: Linear Regression (train<2024-10-15),calorie_burned (same-day estimation),test (>= cutoff),MAE (kcal),247.19925603633064,faculty_evidence\regression_results.csv
+Chronological check: Linear Regression (train<2024-10-15),calorie_burned (same-day estimation),test (>= cutoff),RMSE (kcal),329.2855317166045,faculty_evidence\regression_results.csv
+Chronological check: Linear Regression (train<2024-10-15),calorie_burned (same-day estimation),test (>= cutoff),R2,0.5804257598670424,faculty_evidence\regression_results.csv
+Chronological check: training-mean baseline,calorie_burned (same-day estimation),test (>= cutoff),MAE (kcal),395.207218401578,faculty_evidence\regression_results.csv
+Chronological check: training-mean baseline,calorie_burned (same-day estimation),test (>= cutoff),RMSE (kcal),548.2178380973107,faculty_evidence\regression_results.csv
+Chronological check: training-mean baseline,calorie_burned (same-day estimation),test (>= cutoff),R2,-0.162973567910007,faculty_evidence\regression_results.csv
+Logistic Regression (dashboard),"next-day personalised goal, chronological split",test,ROC-AUC,0.755,models/metrics_report.md (earlier training run; not re-run in this task)
+"Random Forest (scikit-learn, dashboard comparison)","next-day personalised goal, chronological split",test,ROC-AUC,0.718,models/metrics_report.md (earlier training run; not re-run in this task)

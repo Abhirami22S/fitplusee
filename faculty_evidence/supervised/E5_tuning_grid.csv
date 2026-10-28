@@ -1,0 +1,12 @@
+reg,validation_score,seconds,status,model,depth,iters
+0.0,-264.8400144790687,4.1,ok,Linear Regression,,
+0.01,-264.8404443529232,1.7,ok,Linear Regression,,
+0.1,-264.8459122921735,1.5,ok,Linear Regression,,
+1.0,-265.015277842814,1.6,ok,Linear Regression,,
+,-287.22039163054376,4.3,ok,Random Forest Regressor,5.0,
+,-265.7006333476345,6.1,ok,Random Forest Regressor,8.0,
+,-259.6123317178762,17.2,ok,Random Forest Regressor,10.0,
+,-261.4415195074106,37.1,ok,GBT Regressor,3.0,50.0
+,-255.69398965162534,71.1,ok,GBT Regressor,3.0,100.0
+,-256.00697186055356,60.2,ok,GBT Regressor,5.0,50.0
+,-252.17677984118762,120.7,ok,GBT Regressor,5.0,100.0

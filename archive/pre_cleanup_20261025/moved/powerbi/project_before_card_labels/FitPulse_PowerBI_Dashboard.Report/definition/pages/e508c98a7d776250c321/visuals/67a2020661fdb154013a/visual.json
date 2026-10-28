@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "67a2020661fdb154013a",
+  "position": {
+    "x": 20,
+    "y": 672,
+    "z": 11000,
+    "height": 44,
+    "width": 1240,
+    "tabOrder": 11000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Sources: exports/E1_results.csv ... exports/E5_results.csv (copied row for row into powerbi/data/supervised_results.csv) and the cross-check file named above. ROC-AUC is not defined for the regression experiment E5; its MAE and R2 are in the comparison table.",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "8867f19c790e25d5acde",
+  "displayName": "Calorie Prediction",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "annotations": [
+    {
+      "name": "description",
+      "value": "Linear Regression (experiment E5): actual vs predicted calories, error distribution, MAE / RMSE / R2 on test days."
+    }
+  ]
+}

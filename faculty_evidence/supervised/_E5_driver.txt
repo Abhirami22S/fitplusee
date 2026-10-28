@@ -1,0 +1,47 @@
+﻿=== E5 (local) -> D:\bigdata\fitpulsee\FitPulse\faculty_evidence\supervised\E5_run.log
+
+[Stage 3845:=========================================>             (9 + 3) / 12]
+[Stage 3845:=================================================>    (11 + 1) / 12]
+[Stage 3846:>                                                     (0 + 12) / 12]
+LEAKAGE Random Forest Regressor    test MAE 163.71  R2 0.7237   -> INVALID
+LEAKAGE GBT Regressor              test MAE 157.77  R2 0.7450   -> INVALID
+REFERENCE formula recovery Linear Regression          test MAE 110.02  R2 0.8720   (MET x weight x minutes can be 
+reconstructed)
+[Stage 4932:=============================================>        (10 + 2) / 12]
+[Stage 4934:=========================================>             (9 + 3) / 12]
+[Stage 4936:>                                                     (0 + 12) / 12]
+[Stage 4936:=========>                                            (2 + 10) / 12]
+[Stage 4936:=========================================>             (9 + 3) / 12]
+[Stage 4938:>                                                     (0 + 12) / 12]
+[Stage 4938:=========>                                            (2 + 10) / 12]
+[Stage 4940:>                                                     (0 + 12) / 12]
+[Stage 4940:====>                                                 (1 + 11) / 12]
+[Stage 4941:>                                                     (0 + 12) / 12]
+REFERENCE formula recovery Random Forest Regressor    test MAE 49.44  R2 0.9721   (MET x weight x minutes can be 
+reconstructed)
+[Stage 5363:=============================================>        (10 + 2) / 12]
+[Stage 5379:>                                                     (0 + 12) / 12]
+[Stage 5452:======================>                                (5 + 7) / 12]
+[Stage 5453:=============================================>        (10 + 2) / 12]
+[Stage 5455:====================================>                  (8 + 4) / 12]
+[Stage 5460:====================================>                  (8 + 4) / 12]
+[Stage 5468:======================>                                (5 + 7) / 12]
+[Stage 5474:=========>                                            (2 + 10) / 12]
+[Stage 5480:======================>                                (5 + 7) / 12]
+[Stage 5500:=========>                                            (2 + 10) / 12]
+[Stage 5500:=============>                                         (3 + 9) / 12]
+[Stage 5520:================================>                      (7 + 5) / 12]
+REFERENCE formula recovery GBT Regressor              test MAE 21.70  R2 0.9948   (MET x weight x minutes can be 
+reconstructed)
+wrote D:\bigdata\fitpulsee\FitPulse\exports\E5_results.csv (60 rows)
+E5 comparison table (test set):
+metric                                              MAE (kcal)  RMSE (kcal)      R2
+model                                                                              
+Baseline: Linear Regression on active_minutes only    247.4010     337.9889  0.3912
+Baseline: training mean                               334.5102     433.1706 -0.0000
+GBT Regressor                                         183.2806     250.4144  0.6658
+Linear Regression                                     199.7126     263.6442  0.6296
+Random Forest Regressor                               188.6141     258.6774  0.6434
+Storage mode used: LOCAL
+
+
